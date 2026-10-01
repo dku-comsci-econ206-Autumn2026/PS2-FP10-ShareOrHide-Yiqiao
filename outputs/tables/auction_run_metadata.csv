@@ -1,0 +1,17 @@
+item,value
+python_version,3.13.7
+package_numpy,2.3.5
+package_matplotlib,3.10.8
+package_nbformat,5.10.4
+package_nbclient,0.10.2
+package_ipykernel,7.1.0
+truthful_seed,206
+stress_seed,1206
+simulation_rounds,10000
+eligible_bidders_per_round,4
+capacity_K,1
+value_distribution,"iid Uniform[0,10] normalized units"
+fcfs_arrival_order,independent uniformly random permutation
+stress_noise,mean-one multiplicative lognormal
+table_output_path,outputs/tables
+figure_output_path,outputs/figures

@@ -1,0 +1,3 @@
+mechanism,rounds,seed,mean_allocated_value,mean_payment_revenue,payment_revenue_sd,payment_revenue_median,payment_revenue_q95,mean_winner_utility,mean_allocative_efficiency,mean_social_welfare_transfer_neutral
+FCFS,10000,206,4.968558238253884,0.0,0.0,0.0,0.0,4.968558238253884,0.6223078074284918,4.968558238253884
+Second-price auction (truthful IPV benchmark),10000,206,7.999828606802081,5.992069244988238,1.975861796607607,6.1005045066701005,9.020349527956833,2.007759361813843,1.0,7.999828606802081

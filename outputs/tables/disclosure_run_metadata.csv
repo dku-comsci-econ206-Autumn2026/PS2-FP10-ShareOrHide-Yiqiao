@@ -1,0 +1,16 @@
+item,value
+python_version,3.13.7
+package_numpy,2.3.5
+package_matplotlib,3.10.8
+package_nbformat,5.10.4
+package_nbclient,0.10.2
+package_ipykernel,7.1.0
+actions,"('M', 'P', 'F')"
+types,"('L', 'H')"
+type_probabilities,"{'L': 0.5, 'H': 0.5}"
+congestion,"{'Low': 0.3, 'Medium': 0.6, 'High': 1.0}"
+benefit_scale_B,7.5
+lambda,0.5
+benchmark_alpha_M,0.7
+table_output_path,outputs/tables
+figure_output_path,outputs/figures

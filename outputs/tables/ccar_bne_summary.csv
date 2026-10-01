@@ -1,0 +1,4 @@
+Congestion,d,alpha_M,Equilibrium index,"A strategy (L,H)","B strategy (L,H)",Number of pure BNE,Underlying expected welfare,CCAR operator-utility sum,Full-information first-best welfare
+Low,0.3,0.7,1,"(M,M)","(M,M)",1,0.0,0.0,0.6390946521519896
+Medium,0.6,0.7,1,"(P,P)","(P,P)",1,3.089085029457019,3.089085029457019,3.1390850294570187
+High,1.0,0.7,1,"(P,P)","(P,P)",1,6.881808382428366,6.881808382428366,7.3852377939372555
