@@ -34,6 +34,20 @@ CCAR equilibrium behavior uses restricted operator utility, but welfare comparis
 
 The allocation notebook compares FCFS with a single-unit second-price auction after residual corridor scarcity has been identified. Emergency and public-safety flights are handled outside the payment mechanism. **The auction is a bounded downstream application rather than the main research innovation.** It is not merged into the Bayesian disclosure game.
 
+## Behavioral Science Artifact
+
+`hf_space/` contains the self-contained Gradio source for a planned Hugging Face Space. The classroom exercise asks participants to choose disclosure before seeing the rival or theoretical benchmark, compare baseline and CCAR decisions, optionally use same-device peer play, and try the bounded downstream auction. It stores no accounts or durable behavioral dataset and prominently states the evidence boundary.
+
+Hugging Face Space URL: to be added after deployment
+
+Run locally with:
+
+```bash
+cd hf_space
+python -m pip install -r requirements.txt
+python app.py
+```
+
 ## Notebooks
 
 - `notebooks/01_strategic_disclosure_game.ipynb`: core Bayesian disclosure model, full-information first best, CCAR, sensitivity analysis, failure-region search, tables, and figures.
@@ -73,4 +87,3 @@ No output is hard-coded; tables and figures are regenerated from source-model co
 The disclosure game has two operators, two independent private types, three discrete disclosure levels, exogenous public congestion, stylized common functional forms, and a pure-strategy focus. The first best assumes type observability. CCAR omits enforcement, administrative, and implementation costs. Future work should examine correlated/interdependent information, mixed equilibria, continuous disclosure, dynamics and reputation, compliance, endogenous congestion, empirical calibration, and institutional feasibility.
 
 The auction uses an independent-private-values benchmark for tractability. Real urgency can include common or interdependent components, and payment-based priority raises ability-to-pay and unequal-access concerns.
-
