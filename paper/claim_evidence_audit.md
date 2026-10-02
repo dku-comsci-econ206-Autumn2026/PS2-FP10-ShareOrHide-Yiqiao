@@ -1,0 +1,18 @@
+# Claim-evidence audit
+
+| Claim | Evidence source | Exact file/table/notebook | Status | Caution |
+|---|---|---|---|---|
+| Unique benchmark BNE is `(M,M)` at Low, `(P,M)` at Medium, `(P,P)` at High, ordered by type | Exhaustive enumeration of 81 strategy profiles at each congestion | `outputs/tables/baseline_bne_summary.csv`; notebook 01 | Verified | Tuples describe low/high types, not operators. |
+| Baseline expected welfare / first-best / gaps are Low `0/0.639/0.639`, Medium `2.193/3.139/0.946`, High `6.882/7.385/0.503` | Programmatic equilibrium welfare and realized-type first-best enumeration | `outputs/tables/baseline_welfare_gap.csv`; `outputs/tables/first_best_by_type.csv` | Verified | First best observes realized types and is not necessarily implementable. |
+| The largest benchmark welfare gap is at Medium congestion | Comparison of all three benchmark rows | `outputs/tables/baseline_welfare_gap.csv` | Verified | Statement is limited to the benchmark parameterization. |
+| CCAR at `alpha_M=0.7` changes Medium to `(P,P)`, raises underlying welfare `2.193 -> 3.089`, and lowers the gap `0.946 -> 0.050` | CCAR equilibrium enumeration with separate underlying-welfare accounting | `outputs/tables/ccar_bne_summary.csv`; `outputs/tables/ccar_alpha_sensitivity.csv` | Verified | Mandatory safety is unconditional; mechanism applies only to enhanced non-safety services. |
+| CCAR is not universally beneficial | 760-cell failure-region grid | `outputs/tables/ccar_failure_regions.csv`; notebook 01 | Verified | Diagnostic categories overlap and are not empirical frequencies. |
+| Failure-grid counts are 401 no-effect, 334 robust-improvement, 18 excessive-disclosure, 3 increased-gap, 66 multiple-BNE, 0 no-pure-BNE | Boolean-column counts over the full tracked grid | `outputs/tables/ccar_failure_regions.csv` | Verified | “Increased gap” uses the notebook's stated worst-baseline-gap diagnostic. |
+| Deterministic auction example gives FCFS efficiency `0.625` and truthful second-price efficiency `1`, payment `5`, winner utility `3` | Direct mechanism functions | `outputs/tables/auction_benchmark_example.csv`; notebook 02 | Verified | Emergency/public-safety flights are outside the payment mechanism. |
+| In 10,000 seeded IPV rounds, mean FCFS efficiency is `0.622308` and truthful second-price efficiency is `1` | Monte Carlo simulation, seed 206 | `outputs/tables/auction_simulation_summary.csv`; notebook 02 | Verified | Efficiency result depends on truthful IPV benchmark; it is not a complete social ranking. |
+| Behavioral artifact is working but not representative data | Browser-tested implementation and documentation; no durable telemetry | `hf_space/README.md`; `hf_static/README.md`; artifact source/tests | Verified | No participant-behavior claim is made. |
+| Prior AAM studies design limited-information/privacy-preserving protocols; this project instead endogenizes disclosure granularity under private confidentiality cost and congestion-dependent value | Verified literature comparison | `paper/references.bib`; `paper/tables/literature_comparison.tex` | Supported, narrowly worded | Not a claim that privacy, limited-information UTM, reciprocal sharing, or airspace auctions are new. |
+
+## Audit outcome
+
+All major numerical claims in `paper/main.tex` have a tracked computational source. Literature claims are stated as distinctions and do not assert absolute priority. Behavioral claims remain within the artifact’s validated evidence boundary. Unresolved GitHub/notebook, poster, symposium-session, and current-topic peer-review requirements are disclosed rather than invented.
