@@ -4,6 +4,8 @@ from pathlib import Path
 
 import nbformat as nbf
 
+from notebook_bootstrap import BOOTSTRAP_SOURCE
+
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "notebooks" / "02_priority_slot_allocation.ipynb"
@@ -51,24 +53,17 @@ This priority-slot auction represents a short-run downstream allocation problem 
 """
     ),
     code(
-        """
-from pathlib import Path
+        BOOTSTRAP_SOURCE
+        + """
+
 import csv
 import importlib.metadata as metadata
 import platform
-import sys
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-
-ROOT = Path.cwd()
-if ROOT.name == "notebooks":
-    ROOT = ROOT.parent
-if not (ROOT / "src").exists():
-    raise RuntimeError(f"Run from the repository root or notebooks directory; got {ROOT}")
-sys.path.insert(0, str(ROOT))
 
 from src.priority_slot_allocation import (
     allocate_fcfs,
@@ -96,7 +91,7 @@ def write_csv(path, rows):
         writer.writeheader()
         writer.writerows(rows)
 
-print(f"Repository root: {ROOT}")
+print(f"Repository ready: {REPO_NAME}")
 print(f"Tables: {TABLE_DIR.relative_to(ROOT)}")
 print(f"Figures: {FIGURE_DIR.relative_to(ROOT)}")
 """

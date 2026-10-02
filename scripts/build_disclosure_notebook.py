@@ -4,6 +4,8 @@ from pathlib import Path
 
 import nbformat as nbf
 
+from notebook_bootstrap import BOOTSTRAP_SOURCE
+
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "notebooks" / "01_strategic_disclosure_game.ipynb"
@@ -57,24 +59,17 @@ Benchmark primitives are imported from the reusable module rather than reconstru
 """
     ),
     code(
-        r"""
-from pathlib import Path
+        BOOTSTRAP_SOURCE
+        + r"""
+
 import csv
 import importlib.metadata as metadata
 import platform
-import sys
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
-
-ROOT = Path.cwd()
-if ROOT.name == "notebooks":
-    ROOT = ROOT.parent
-if not (ROOT / "src").exists():
-    raise RuntimeError(f"Run from the repository root or notebooks directory; got {ROOT}")
-sys.path.insert(0, str(ROOT))
 
 from src.disclosure_model import (
     ACTIONS,
@@ -712,4 +707,3 @@ notebook = nbf.v4.new_notebook(
 NOTEBOOK.parent.mkdir(parents=True, exist_ok=True)
 nbf.write(notebook, NOTEBOOK)
 print(f"Wrote {NOTEBOOK}")
-

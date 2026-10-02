@@ -58,6 +58,13 @@ python app.py
 
 Both notebooks import reusable logic from `src/`; notebook cells do not duplicate the economic mechanisms.
 
+### Run in Google Colab
+
+- [Strategic Disclosure](https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/01_strategic_disclosure_game.ipynb)
+- [Priority Allocation](https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb)
+
+When running in Google Colab, each notebook automatically clones the public repository into `/content/PS2-FP10-ShareOrHide-Yiqiao` if it is not already present in the session, then imports the validated model from that clone. Local runs continue to work from either the repository root or `notebooks/` directory.
+
 ## Reproduction
 
 Python 3.13 is recommended.
