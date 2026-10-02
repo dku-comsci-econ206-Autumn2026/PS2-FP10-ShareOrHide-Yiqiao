@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An exploratory classroom exercise about strategic flight-intent disclosure.">
+  <title>Share or Hide? Drone Disclosure Decision Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">COMSCI/ECON 206 · Behavioral decision lab</p>
+      <h1>Share or Hide?</h1>
+      <p class="subtitle">Strategic Disclosure in Congested Low-Altitude Drone Traffic</p>
+      <p class="research-question"><strong>Research question:</strong> When competing drone operators have privately known commercial-confidentiality costs, how much flight-intent information will they strategically disclose as low-altitude traffic congestion changes, and when does the resulting equilibrium disclosure differ from the socially desirable level?</p>
+      <p class="plain-language">In plain language: sharing more may improve coordination, but it can also expose commercially sensitive route and timing patterns.</p>
+      <div class="evidence-badge" role="note">
+        <strong>Evidence boundary:</strong> This Space is an exploratory classroom decision exercise. Participant choices are not a representative sample of drone operators, firms, or the public. They do not establish how real operators would behave and do not validate the model's external accuracy.
+      </div>
+      <p class="warning">Numerical parameters are stylized normalized benchmarks rather than empirically calibrated estimates.</p>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div id="load-status" class="status-card" role="status">Loading validated model data…</div>
+    <nav class="tabs" aria-label="Application sections">
+      <button class="tab is-active" data-tab="solo" aria-selected="true">Solo Decision</button>
+      <button class="tab" data-tab="peer" aria-selected="false">Peer Play</button>
+      <button class="tab" data-tab="results" aria-selected="false" disabled title="Complete a disclosure choice first">Model Results</button>
+      <button class="tab" data-tab="about" aria-selected="false">About / Methods</button>
+    </nav>
+
+    <section id="tab-solo" class="tab-panel is-active" aria-labelledby="Solo Decision">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Individual exercise</p>
+          <h2>Solo Decision</h2>
+        </div>
+        <button id="new-solo" class="button secondary">Generate new scenario</button>
+      </div>
+      <div class="card intro-card">
+        <h3>Your role</h3>
+        <p>You are one of two competing commercial drone operators using the same congested low-altitude traffic network.</p>
+        <p>Choose how much <em>additional</em> flight-intent information to disclose. Mandatory safety information is always available and is not part of this choice.</p>
+        <label class="seed-field">Optional demo seed <input id="solo-seed" inputmode="numeric" placeholder="Leave blank for random"></label>
+        <button id="start-solo" class="button primary">Start decision</button>
+      </div>
+      <div id="solo-workspace" aria-live="polite"></div>
+    </section>
+
+    <section id="tab-peer" class="tab-panel" aria-labelledby="Peer Play" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Same-device mode</p>
+          <h2>Peer Play</h2>
+        </div>
+        <button id="new-peer" class="button secondary">New peer scenario</button>
+      </div>
+      <div class="card intro-card">
+        <p>Two participants become Operator A and Operator B. Each sees only their own private type before choosing, then passes the screen.</p>
+        <label class="seed-field">Optional demo seed <input id="peer-seed" inputmode="numeric" placeholder="Leave blank for random"></label>
+        <button id="start-peer" class="button primary">Start Peer Play</button>
+      </div>
+      <div id="peer-workspace" aria-live="polite"></div>
+    </section>
+
+    <section id="tab-results" class="tab-panel" aria-labelledby="Model Results" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Validated computational benchmark</p><h2>Model Results</h2></div></div>
+      <p>These values are loaded from the JSON artifact exported by the validated Python model.</p>
+      <div id="model-results" class="results-grid"></div>
+      <div class="card note-card">
+        <h3>CCAR sensitivity</h3>
+        <p>CCAR does not always change equilibrium. The validated sensitivity analysis contains regions with welfare improvement, excessive disclosure, increased welfare gaps, and multiple pure equilibria. The mechanism is not claimed to succeed universally.</p>
+      </div>
+      <div id="auction-results" class="card"></div>
+    </section>
+
+    <section id="tab-about" class="tab-panel" aria-labelledby="About / Methods" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Study scope</p><h2>About / Methods</h2></div></div>
+      <div class="two-column">
+        <article class="card">
+          <h3>Model</h3>
+          <ul>
+            <li>Two commercial operators choose Minimum, Partial, or Full voluntary disclosure.</li>
+            <li>Private Low/High confidentiality sensitivity is independently drawn with probability 0.5.</li>
+            <li>The benchmark is a simultaneous pure-strategy Bayesian Nash equilibrium.</li>
+            <li>Social welfare is the sum of modeled utilities; disclosure-model payments do not exist.</li>
+            <li>The first best assumes a planner observes both realized types and may not be implementable.</li>
+            <li>CCAR changes only enhanced non-safety coordination access; mandatory safety information stays universal.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Privacy</h3>
+          <p>No app account, name, email, student ID, database, analytics library, external API, or LLM is used. Choices and reflections remain in browser memory and disappear on refresh.</p>
+          <h3>Limitations</h3>
+          <p>Two operators; independent binary types; three discrete actions; pure strategies; stylized parameters; multiple-equilibrium regions outside the benchmark; omitted CCAR implementation costs; and potentially interdependent real mission values.</p>
+        </article>
+      </div>
+      <div class="evidence-badge about-boundary" role="note">
+        <strong>Evidence boundary:</strong> This Space is an exploratory classroom decision exercise. Participant choices are not a representative sample of drone operators, firms, or the public. They do not establish how real operators would behave and do not validate the model's external accuracy.
+      </div>
+      <p class="warning">Numerical parameters are stylized normalized benchmarks rather than empirically calibrated estimates.</p>
+      <p id="provenance" class="provenance"></p>
+    </section>
+  </main>
+
+  <footer>Static client-side classroom artifact · No behavioral responses are transmitted or persisted by this project.</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

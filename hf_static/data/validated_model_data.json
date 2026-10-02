@@ -1,0 +1,5678 @@
+{
+  "auction": {
+    "benchmark_example": {
+      "arrival_order": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "fcfs": {
+        "allocative_efficiency": 0.625,
+        "winner": "B"
+      },
+      "second_price": {
+        "allocative_efficiency": 1.0,
+        "payment": 5.0,
+        "winner": "A",
+        "winner_utility": 3.0
+      },
+      "values": {
+        "A": 8.0,
+        "B": 5.0,
+        "C": 3.0,
+        "D": 2.0
+      }
+    },
+    "excluded_operator_types": [
+      "emergency",
+      "public-safety"
+    ],
+    "monte_carlo": {
+      "distribution": "iid Uniform[0,10]",
+      "eligible_bidders": 4,
+      "fcfs_mean_efficiency": 0.6223078074284918,
+      "rounds": 10000,
+      "truthful_second_price_mean_efficiency": 1.0
+    },
+    "session_scenarios": [
+      {
+        "id": 0,
+        "rival_bids": {
+          "B": 2.0,
+          "C": 5.0,
+          "D": 4.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 2.0,
+          "C": 5.0,
+          "D": 4.0,
+          "Participant": 1.0
+        }
+      },
+      {
+        "id": 1,
+        "rival_bids": {
+          "B": 4.0,
+          "C": 4.0,
+          "D": 3.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 4.0,
+          "C": 4.0,
+          "D": 3.0,
+          "Participant": 3.0
+        }
+      },
+      {
+        "id": 2,
+        "rival_bids": {
+          "B": 5.0,
+          "C": 9.0,
+          "D": 3.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 5.0,
+          "C": 9.0,
+          "D": 3.0,
+          "Participant": 6.0
+        }
+      },
+      {
+        "id": 3,
+        "rival_bids": {
+          "B": 4.0,
+          "C": 3.0,
+          "D": 4.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 4.0,
+          "C": 3.0,
+          "D": 4.0,
+          "Participant": 9.0
+        }
+      },
+      {
+        "id": 4,
+        "rival_bids": {
+          "B": 7.0,
+          "C": 5.0,
+          "D": 8.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 7.0,
+          "C": 5.0,
+          "D": 8.0,
+          "Participant": 5.0
+        }
+      },
+      {
+        "id": 5,
+        "rival_bids": {
+          "B": 2.0,
+          "C": 9.0,
+          "D": 5.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 2.0,
+          "C": 9.0,
+          "D": 5.0,
+          "Participant": 7.0
+        }
+      },
+      {
+        "id": 6,
+        "rival_bids": {
+          "B": 6.0,
+          "C": 6.0,
+          "D": 6.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 6.0,
+          "C": 6.0,
+          "D": 6.0,
+          "Participant": 2.0
+        }
+      },
+      {
+        "id": 7,
+        "rival_bids": {
+          "B": 4.0,
+          "C": 9.0,
+          "D": 8.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 4.0,
+          "C": 9.0,
+          "D": 8.0,
+          "Participant": 2.0
+        }
+      },
+      {
+        "id": 8,
+        "rival_bids": {
+          "B": 2.0,
+          "C": 1.0,
+          "D": 8.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 2.0,
+          "C": 1.0,
+          "D": 8.0,
+          "Participant": 4.0
+        }
+      },
+      {
+        "id": 9,
+        "rival_bids": {
+          "B": 9.0,
+          "C": 2.0,
+          "D": 9.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 9.0,
+          "C": 2.0,
+          "D": 9.0,
+          "Participant": 9.0
+        }
+      },
+      {
+        "id": 10,
+        "rival_bids": {
+          "B": 2.0,
+          "C": 1.0,
+          "D": 3.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 2.0,
+          "C": 1.0,
+          "D": 3.0,
+          "Participant": 2.0
+        }
+      },
+      {
+        "id": 11,
+        "rival_bids": {
+          "B": 6.0,
+          "C": 7.0,
+          "D": 3.0
+        },
+        "setting": "Truthful IPV benchmark",
+        "values": {
+          "B": 6.0,
+          "C": 7.0,
+          "D": 3.0,
+          "Participant": 6.0
+        }
+      }
+    ]
+  },
+  "benchmarks": {
+    "baseline": {
+      "High": {
+        "d": 1.0,
+        "expected_first_best_welfare": 7.3852377939372555,
+        "expected_induced_underlying_welfare": 6.881808382428366,
+        "strategy_A": {
+          "H": "P",
+          "L": "P"
+        },
+        "strategy_B": {
+          "H": "P",
+          "L": "P"
+        },
+        "welfare_gap": 0.5034294115088898
+      },
+      "Low": {
+        "d": 0.3,
+        "expected_first_best_welfare": 0.6390946521519896,
+        "expected_induced_underlying_welfare": 0.0,
+        "strategy_A": {
+          "H": "M",
+          "L": "M"
+        },
+        "strategy_B": {
+          "H": "M",
+          "L": "M"
+        },
+        "welfare_gap": 0.6390946521519896
+      },
+      "Medium": {
+        "d": 0.6,
+        "expected_first_best_welfare": 3.1390850294570187,
+        "expected_induced_underlying_welfare": 2.1928832886574043,
+        "strategy_A": {
+          "H": "M",
+          "L": "P"
+        },
+        "strategy_B": {
+          "H": "M",
+          "L": "P"
+        },
+        "welfare_gap": 0.9462017407996144
+      }
+    },
+    "ccar": {
+      "High": {
+        "d": 1.0,
+        "expected_first_best_welfare": 7.3852377939372555,
+        "expected_induced_underlying_welfare": 6.881808382428366,
+        "strategy_A": {
+          "H": "P",
+          "L": "P"
+        },
+        "strategy_B": {
+          "H": "P",
+          "L": "P"
+        },
+        "welfare_gap": 0.5034294115088898
+      },
+      "Low": {
+        "d": 0.3,
+        "expected_first_best_welfare": 0.6390946521519896,
+        "expected_induced_underlying_welfare": 0.0,
+        "strategy_A": {
+          "H": "M",
+          "L": "M"
+        },
+        "strategy_B": {
+          "H": "M",
+          "L": "M"
+        },
+        "welfare_gap": 0.6390946521519896
+      },
+      "Medium": {
+        "d": 0.6,
+        "expected_first_best_welfare": 3.1390850294570187,
+        "expected_induced_underlying_welfare": 3.089085029457019,
+        "strategy_A": {
+          "H": "P",
+          "L": "P"
+        },
+        "strategy_B": {
+          "H": "P",
+          "L": "P"
+        },
+        "welfare_gap": 0.04999999999999982
+      }
+    }
+  },
+  "labels": {
+    "actions": {
+      "F": "Full disclosure",
+      "M": "Minimum disclosure",
+      "P": "Partial disclosure"
+    },
+    "congestion": {
+      "High": 1.0,
+      "Low": 0.3,
+      "Medium": 0.6
+    },
+    "mechanisms": [
+      "baseline",
+      "ccar"
+    ],
+    "type_probabilities": {
+      "H": 0.5,
+      "L": 0.5
+    },
+    "types": {
+      "H": "High confidentiality sensitivity",
+      "L": "Low confidentiality sensitivity"
+    }
+  },
+  "metadata": {
+    "behavioral_checkpoint": "ea7ce241de34b8d21b036d39157ca974c019bb31",
+    "ccar_alpha_M": 0.7,
+    "generated_at": "2026-10-02T02:51:09.529625+00:00",
+    "model_parameter_hash": "a1ce6ebef029b22bec5e103e1d050bb852295790da13a72e8a04bb06720a8240",
+    "source_commit": "791e12224576e5963fd5672f8f90acdcea5556a0",
+    "source_file_hashes": {
+      "src/disclosure_model.py": "9f2cde4806e128aa8b8fb795cef2c845494a47905dfbe238d92279274fe61bb3",
+      "src/priority_slot_allocation.py": "a3653c26a8ac284f0198c17e2e196ac5a221f10fe6739d5fc52976f6b9b7d946"
+    },
+    "state_record_count": 216,
+    "stylized_parameter_warning": "Numerical parameters are stylized normalized benchmarks rather than empirically calibrated estimates."
+  },
+  "state_index": {
+    "baseline|High|H|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 2.4849853757254046,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 2.4849853757254046,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.969970751450809,
+      "welfare_gap": 1.3118376309775561
+    },
+    "baseline|High|H|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.7409041912141827,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 4.740904191214183,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 0.7999999999999998
+    },
+    "baseline|High|H|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 1.8265237988867762,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 4.226523798886776,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.053047597773552,
+      "welfare_gap": 0.22876078465481342
+    },
+    "baseline|High|H|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 4.740904191214183,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.7409041912141827,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 0.7999999999999998
+    },
+    "baseline|High|H|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 6.281808382428365
+    },
+    "baseline|High|H|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.951020052155249,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.3510200521552491,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 1.9797682781178674
+    },
+    "baseline|High|H|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 4.226523798886776,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 1.8265237988867762,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.053047597773552,
+      "welfare_gap": 0.22876078465481342
+    },
+    "baseline|High|H|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.3510200521552491,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.951020052155249,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 1.9797682781178674
+    },
+    "baseline|High|H|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 3.1409041912141826,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 3.1409041912141826,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.281808382428365,
+      "welfare_gap": 0.0
+    },
+    "baseline|High|H|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 2.4849853757254046,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 3.9849853757254046,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.469970751450809,
+      "welfare_gap": 1.0830768463227427
+    },
+    "baseline|High|H|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.7409041912141827,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 4.740904191214183,
+      "rival_type": "L",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 2.0712392153451864
+    },
+    "baseline|High|H|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 1.8265237988867762,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 4.826523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.653047597773552,
+      "welfare_gap": 0.8999999999999995
+    },
+    "baseline|High|H|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 4.740904191214183,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 2.2409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 0.5712392153451864
+    },
+    "baseline|High|H|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 7.553047597773552
+    },
+    "baseline|High|H|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.951020052155249,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.9510200521552492,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 2.6510074934630534
+    },
+    "baseline|High|H|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 4.226523798886776,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 3.326523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.553047597773552,
+      "welfare_gap": 0.0
+    },
+    "baseline|High|H|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.3510200521552491,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.951020052155249,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "baseline|High|H|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 3.1409041912141826,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 3.7409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.881808382428366,
+      "welfare_gap": 0.671239215345186
+    },
+    "baseline|High|L|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 3.9849853757254046,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 2.4849853757254046,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.469970751450809,
+      "welfare_gap": 1.0830768463227427
+    },
+    "baseline|High|L|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 2.2409041912141827,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 4.740904191214183,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 0.5712392153451864
+    },
+    "baseline|High|L|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 3.326523798886776,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 4.226523798886776,
+      "rival_type": "H",
+      "underlying_social_welfare": 7.553047597773552,
+      "welfare_gap": 0.0
+    },
+    "baseline|High|L|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 4.740904191214183,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.7409041912141827,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 2.0712392153451864
+    },
+    "baseline|High|L|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 7.553047597773552
+    },
+    "baseline|High|L|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.951020052155249,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.3510200521552491,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "baseline|High|L|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 4.826523798886776,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 1.8265237988867762,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.653047597773552,
+      "welfare_gap": 0.8999999999999995
+    },
+    "baseline|High|L|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.9510200521552492,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.951020052155249,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 2.6510074934630534
+    },
+    "baseline|High|L|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 3.7409041912141827,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 3.1409041912141826,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.881808382428366,
+      "welfare_gap": 0.671239215345186
+    },
+    "baseline|High|L|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 3.9849853757254046,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 3.9849853757254046,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.969970751450809,
+      "welfare_gap": 0.18307684632274324
+    },
+    "baseline|High|L|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 2.2409041912141827,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 4.740904191214183,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 1.171239215345187
+    },
+    "baseline|High|L|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 3.326523798886776,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 4.826523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 8.153047597773552,
+      "welfare_gap": 0.0
+    },
+    "baseline|High|L|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 4.740904191214183,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 2.2409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 1.171239215345187
+    },
+    "baseline|High|L|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 8.153047597773552
+    },
+    "baseline|High|L|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.951020052155249,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.9510200521552492,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "baseline|High|L|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 4.826523798886776,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 3.326523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 8.153047597773552,
+      "welfare_gap": 0.0
+    },
+    "baseline|High|L|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.9510200521552492,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.951020052155249,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "baseline|High|L|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 3.7409041912141827,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 3.7409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.481808382428365,
+      "welfare_gap": 0.6712392153451869
+    },
+    "baseline|Low|H|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.0545043872823783,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.0545043872823783,
+      "rival_type": "H",
+      "underlying_social_welfare": -4.1090087745647565,
+      "welfare_gap": 4.279620805857906
+    },
+    "baseline|Low|H|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.5777287426357454,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.3260695165646403
+    },
+    "baseline|Low|H|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.252042860333967,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.14795713966603286,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.104085720667934,
+      "welfare_gap": 2.274697751961084
+    },
+    "baseline|Low|H|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.5777287426357454,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.3260695165646403
+    },
+    "baseline|Low|H|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.1706120312931496
+    },
+    "baseline|Low|H|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.7146939843534252,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.0
+    },
+    "baseline|Low|H|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.14795713966603286,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.252042860333967,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.104085720667934,
+      "welfare_gap": 2.274697751961084
+    },
+    "baseline|Low|H|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.7146939843534252,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.0
+    },
+    "baseline|Low|H|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.17772874263574545,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.17772874263574545,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.3554574852714909,
+      "welfare_gap": 0.5260695165646405
+    },
+    "baseline|Low|H|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.0545043872823783,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.5545043872823785,
+      "rival_type": "L",
+      "underlying_social_welfare": -2.6090087745647565,
+      "welfare_gap": 3.3796208058579063
+    },
+    "baseline|Low|H|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.5777287426357454,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.9260695165646404
+    },
+    "baseline|Low|H|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -2.252042860333967,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.7479571396660329,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.5040857206679341,
+      "welfare_gap": 2.274697751961084
+    },
+    "baseline|Low|H|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -1.0777287426357454,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.4260695165646404
+    },
+    "baseline|Low|H|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.7706120312931497
+    },
+    "baseline|Low|H|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.11469398435342515,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.0
+    },
+    "baseline|Low|H|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.14795713966603286,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.7520428603339671,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.6040857206679342,
+      "welfare_gap": 1.374697751961084
+    },
+    "baseline|Low|H|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.7146939843534252,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.6000000000000001
+    },
+    "baseline|Low|H|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.17772874263574545,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.42227125736425464,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.24454251472850919,
+      "welfare_gap": 0.5260695165646405
+    },
+    "baseline|Low|L|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.5545043872823785,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.0545043872823783,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.6090087745647565,
+      "welfare_gap": 3.3796208058579063
+    },
+    "baseline|Low|L|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -1.0777287426357454,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.4260695165646404
+    },
+    "baseline|Low|L|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.7520428603339671,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.14795713966603286,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.6040857206679342,
+      "welfare_gap": 1.374697751961084
+    },
+    "baseline|Low|L|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.5777287426357454,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.9260695165646404
+    },
+    "baseline|Low|L|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.7706120312931497
+    },
+    "baseline|Low|L|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.7146939843534252,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.6000000000000001
+    },
+    "baseline|Low|L|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.7479571396660329,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.252042860333967,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.5040857206679341,
+      "welfare_gap": 2.274697751961084
+    },
+    "baseline|Low|L|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.11469398435342515,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.0
+    },
+    "baseline|Low|L|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.42227125736425464,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.17772874263574545,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.24454251472850919,
+      "welfare_gap": 0.5260695165646405
+    },
+    "baseline|Low|L|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.5545043872823785,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.5545043872823785,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.109008774564757,
+      "welfare_gap": 1.9535512892932663
+    },
+    "baseline|Low|L|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -1.0777287426357454,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.5
+    },
+    "baseline|Low|L|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.7520428603339671,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.7479571396660329,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.004085720667934112,
+      "welfare_gap": 0.8486282353964434
+    },
+    "baseline|Low|L|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -1.0777287426357454,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.5
+    },
+    "baseline|Low|L|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.8445425147285093
+    },
+    "baseline|Low|L|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.11469398435342515,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.07393048343535957
+    },
+    "baseline|Low|L|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.7479571396660329,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.7520428603339671,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.004085720667934112,
+      "welfare_gap": 0.8486282353964434
+    },
+    "baseline|Low|L|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": -0.11469398435342515,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.07393048343535957
+    },
+    "baseline|Low|L|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.42227125736425464,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.42227125736425464,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.8445425147285093,
+      "welfare_gap": 0.0
+    },
+    "baseline|Medium|H|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.109008774564757,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.109008774564757,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.218017549129514,
+      "welfare_gap": 2.7071025785865324
+    },
+    "baseline|Medium|H|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -1.1554574852714907,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.8445425147285093,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 0.7999999999999998
+    },
+    "baseline|Medium|H|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.5040857206679341,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.8959142793320658,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.3918285586641317,
+      "welfare_gap": 1.0972564707928867
+    },
+    "baseline|Medium|H|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.8445425147285093,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -1.1554574852714907,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 0.7999999999999998
+    },
+    "baseline|Medium|H|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 2.4890850294570184
+    },
+    "baseline|Medium|H|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.7706120312931497,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.1706120312931496,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 0.5478609668707191
+    },
+    "baseline|Medium|H|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.8959142793320658,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.5040857206679341,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.3918285586641317,
+      "welfare_gap": 1.0972564707928867
+    },
+    "baseline|Medium|H|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.1706120312931496,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.7706120312931497,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 0.5478609668707191
+    },
+    "baseline|Medium|H|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.2445425147285092,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.2445425147285092,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.4890850294570184,
+      "welfare_gap": 0.0
+    },
+    "baseline|Medium|H|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.109008774564757,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 1.390991225435243,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.281982450870486,
+      "welfare_gap": 1.9071025785865325
+    },
+    "baseline|Medium|H|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -1.1554574852714907,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 1.5
+    },
+    "baseline|Medium|H|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": -0.5040857206679341,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 2.495914279332066,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.9918285586641318,
+      "welfare_gap": 1.1972564707928868
+    },
+    "baseline|Medium|H|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.8445425147285093,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.3445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.0
+    },
+    "baseline|Medium|H|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.1890850294570185
+    },
+    "baseline|Medium|H|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.7706120312931497,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 0.6478609668707191
+    },
+    "baseline|Medium|H|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.8959142793320658,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.9959142793320659,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.8918285586641317,
+      "welfare_gap": 0.29725647079288686
+    },
+    "baseline|Medium|H|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.1706120312931496,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 1.2478609668707192
+    },
+    "baseline|Medium|H|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.2445425147285092,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.0890850294570185,
+      "welfare_gap": 0.10000000000000009
+    },
+    "baseline|Medium|L|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 1.390991225435243,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.109008774564757,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.281982450870486,
+      "welfare_gap": 1.9071025785865325
+    },
+    "baseline|Medium|L|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.3445425147285093,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.8445425147285093,
+      "rival_type": "H",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.0
+    },
+    "baseline|Medium|L|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.9959142793320659,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.8959142793320658,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.8918285586641317,
+      "welfare_gap": 0.29725647079288686
+    },
+    "baseline|Medium|L|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.8445425147285093,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -1.1554574852714907,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 1.5
+    },
+    "baseline|Medium|L|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.1890850294570185
+    },
+    "baseline|Medium|L|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.7706120312931497,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.1706120312931496,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 1.2478609668707192
+    },
+    "baseline|Medium|L|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 2.495914279332066,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.5040857206679341,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9918285586641318,
+      "welfare_gap": 1.1972564707928868
+    },
+    "baseline|Medium|L|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.7706120312931497,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.7706120312931497,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 0.6478609668707191
+    },
+    "baseline|Medium|L|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.8445425147285093,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.2445425147285092,
+      "rival_type": "H",
+      "underlying_social_welfare": 3.0890850294570185,
+      "welfare_gap": 0.10000000000000009
+    },
+    "baseline|Medium|L|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 1.390991225435243,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 1.390991225435243,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.781982450870486,
+      "welfare_gap": 0.9071025785865325
+    },
+    "baseline|Medium|L|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.3445425147285093,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.5
+    },
+    "baseline|Medium|L|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "F",
+      "own_payoff": 0.9959142793320659,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 2.495914279332066,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.4918285586641318,
+      "welfare_gap": 0.19725647079288677
+    },
+    "baseline|Medium|L|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 2.8445425147285093,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.3445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.5
+    },
+    "baseline|Medium|L|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.6890850294570185
+    },
+    "baseline|Medium|L|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "M",
+      "own_payoff": 1.7706120312931497,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 1.1478609668707191
+    },
+    "baseline|Medium|L|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 2.495914279332066,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.9959142793320659,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.4918285586641318,
+      "welfare_gap": 0.19725647079288677
+    },
+    "baseline|Medium|L|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 0.7706120312931497,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 1.1478609668707191
+    },
+    "baseline|Medium|L|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "baseline",
+      "own_action": "P",
+      "own_payoff": 1.8445425147285093,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.6890850294570185,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|H|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 2.4849853757254046,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 2.4849853757254046,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.969970751450809,
+      "welfare_gap": 1.3118376309775561
+    },
+    "ccar|High|H|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.7409041912141827,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 3.3186329338499276,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 0.7999999999999998
+    },
+    "ccar|High|H|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 1.8265237988867762,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 4.226523798886776,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.053047597773552,
+      "welfare_gap": 0.22876078465481342
+    },
+    "ccar|High|H|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 3.3186329338499276,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.7409041912141827,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 0.7999999999999998
+    },
+    "ccar|High|H|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 6.281808382428365
+    },
+    "ccar|High|H|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 2.065714036508674,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.3510200521552491,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 1.9797682781178674
+    },
+    "ccar|High|H|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 4.226523798886776,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 1.8265237988867762,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.053047597773552,
+      "welfare_gap": 0.22876078465481342
+    },
+    "ccar|High|H|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.3510200521552491,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.065714036508674,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 1.9797682781178674
+    },
+    "ccar|High|H|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 6.281808382428365,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 3.1409041912141826,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 3.1409041912141826,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.281808382428365,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|H|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 2.4849853757254046,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 3.9849853757254046,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.469970751450809,
+      "welfare_gap": 1.0830768463227427
+    },
+    "ccar|High|H|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.7409041912141827,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 3.3186329338499276,
+      "rival_type": "L",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 2.0712392153451864
+    },
+    "ccar|High|H|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 1.8265237988867762,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 4.826523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.653047597773552,
+      "welfare_gap": 0.8999999999999995
+    },
+    "ccar|High|H|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 3.3186329338499276,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 2.2409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 0.5712392153451864
+    },
+    "ccar|High|H|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 7.553047597773552
+    },
+    "ccar|High|H|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 2.065714036508674,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.9510200521552492,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 2.6510074934630534
+    },
+    "ccar|High|H|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 4.226523798886776,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 3.326523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.553047597773552,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|H|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.3510200521552491,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 2.065714036508674,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "ccar|High|H|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 3.1409041912141826,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 3.7409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.881808382428366,
+      "welfare_gap": 0.671239215345186
+    },
+    "ccar|High|L|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 3.9849853757254046,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 2.4849853757254046,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.469970751450809,
+      "welfare_gap": 1.0830768463227427
+    },
+    "ccar|High|L|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 2.2409041912141827,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 3.3186329338499276,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 0.5712392153451864
+    },
+    "ccar|High|L|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 3.326523798886776,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 4.226523798886776,
+      "rival_type": "H",
+      "underlying_social_welfare": 7.553047597773552,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|L|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 3.3186329338499276,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.7409041912141827,
+      "rival_type": "H",
+      "underlying_social_welfare": 5.481808382428365,
+      "welfare_gap": 2.0712392153451864
+    },
+    "ccar|High|L|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 7.553047597773552
+    },
+    "ccar|High|L|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 2.065714036508674,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.3510200521552491,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.302040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "ccar|High|L|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 4.826523798886776,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 1.8265237988867762,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.653047597773552,
+      "welfare_gap": 0.8999999999999995
+    },
+    "ccar|High|L|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.9510200521552492,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.065714036508674,
+      "rival_type": "H",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 2.6510074934630534
+    },
+    "ccar|High|L|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 7.553047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 3.7409041912141827,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 3.1409041912141826,
+      "rival_type": "H",
+      "underlying_social_welfare": 6.881808382428366,
+      "welfare_gap": 0.671239215345186
+    },
+    "ccar|High|L|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 3.9849853757254046,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 3.9849853757254046,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.969970751450809,
+      "welfare_gap": 0.18307684632274324
+    },
+    "ccar|High|L|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 2.2409041912141827,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 3.3186329338499276,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 1.171239215345187
+    },
+    "ccar|High|L|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 3.326523798886776,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 4.826523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 8.153047597773552,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|L|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 3.3186329338499276,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 2.2409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 6.981808382428365,
+      "welfare_gap": 1.171239215345187
+    },
+    "ccar|High|L|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 8.153047597773552
+    },
+    "ccar|High|L|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 2.065714036508674,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.9510200521552492,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "ccar|High|L|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 4.826523798886776,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 3.326523798886776,
+      "rival_type": "L",
+      "underlying_social_welfare": 8.153047597773552,
+      "welfare_gap": 0.0
+    },
+    "ccar|High|L|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.9510200521552492,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 2.065714036508674,
+      "rival_type": "L",
+      "underlying_social_welfare": 4.902040104310498,
+      "welfare_gap": 3.251007493463054
+    },
+    "ccar|High|L|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "High",
+      "d": 1.0,
+      "first_best_profiles": [
+        [
+          "P",
+          "F"
+        ],
+        [
+          "F",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 8.153047597773552,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 3.7409041912141827,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 3.7409041912141827,
+      "rival_type": "L",
+      "underlying_social_welfare": 7.481808382428365,
+      "welfare_gap": 0.6712392153451869
+    },
+    "ccar|Low|H|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.0545043872823783,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.0545043872823783,
+      "rival_type": "H",
+      "underlying_social_welfare": -4.1090087745647565,
+      "welfare_gap": 4.279620805857906
+    },
+    "ccar|Low|H|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.5777287426357454,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.3260695165646403
+    },
+    "ccar|Low|H|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.252042860333967,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.14795713966603286,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.104085720667934,
+      "welfare_gap": 2.274697751961084
+    },
+    "ccar|Low|H|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.5777287426357454,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.3260695165646403
+    },
+    "ccar|Low|H|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.1706120312931496
+    },
+    "ccar|Low|H|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.7146939843534252,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.0
+    },
+    "ccar|Low|H|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.14795713966603286,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -2.252042860333967,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.104085720667934,
+      "welfare_gap": 2.274697751961084
+    },
+    "ccar|Low|H|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.7146939843534252,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.0
+    },
+    "ccar|Low|H|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ],
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.1706120312931496,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.17772874263574545,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.17772874263574545,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.3554574852714909,
+      "welfare_gap": 0.5260695165646405
+    },
+    "ccar|Low|H|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.0545043872823783,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.5545043872823785,
+      "rival_type": "L",
+      "underlying_social_welfare": -2.6090087745647565,
+      "welfare_gap": 3.3796208058579063
+    },
+    "ccar|Low|H|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.5777287426357454,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.9260695165646404
+    },
+    "ccar|Low|H|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -2.252042860333967,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.7479571396660329,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.5040857206679341,
+      "welfare_gap": 2.274697751961084
+    },
+    "ccar|Low|H|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -1.0777287426357454,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.4260695165646404
+    },
+    "ccar|Low|H|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.7706120312931497
+    },
+    "ccar|Low|H|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": -0.11469398435342515,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.0
+    },
+    "ccar|Low|H|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.14795713966603286,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.7520428603339671,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.6040857206679342,
+      "welfare_gap": 1.374697751961084
+    },
+    "ccar|Low|H|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.7146939843534252,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.6000000000000001
+    },
+    "ccar|Low|H|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "M",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.17772874263574545,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.42227125736425464,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.24454251472850919,
+      "welfare_gap": 0.5260695165646405
+    },
+    "ccar|Low|L|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.5545043872823785,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.0545043872823783,
+      "rival_type": "H",
+      "underlying_social_welfare": -2.6090087745647565,
+      "welfare_gap": 3.3796208058579063
+    },
+    "ccar|Low|L|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -1.0777287426357454,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.4260695165646404
+    },
+    "ccar|Low|L|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.7520428603339671,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.14795713966603286,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.6040857206679342,
+      "welfare_gap": 1.374697751961084
+    },
+    "ccar|Low|L|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.5777287426357454,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.1554574852714907,
+      "welfare_gap": 1.9260695165646404
+    },
+    "ccar|Low|L|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.7706120312931497
+    },
+    "ccar|Low|L|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.7146939843534252,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.1706120312931496,
+      "welfare_gap": 0.6000000000000001
+    },
+    "ccar|Low|L|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.7479571396660329,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -2.252042860333967,
+      "rival_type": "H",
+      "underlying_social_welfare": -1.5040857206679341,
+      "welfare_gap": 2.274697751961084
+    },
+    "ccar|Low|L|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.11469398435342515,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.0
+    },
+    "ccar|Low|L|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 0.7706120312931497,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.42227125736425464,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.17772874263574545,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.24454251472850919,
+      "welfare_gap": 0.5260695165646405
+    },
+    "ccar|Low|L|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.5545043872823785,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.5545043872823785,
+      "rival_type": "L",
+      "underlying_social_welfare": -1.109008774564757,
+      "welfare_gap": 1.9535512892932663
+    },
+    "ccar|Low|L|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -1.0777287426357454,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.4222712573642546,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.5
+    },
+    "ccar|Low|L|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.7520428603339671,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.7479571396660329,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.004085720667934112,
+      "welfare_gap": 0.8486282353964434
+    },
+    "ccar|Low|L|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.4222712573642546,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -1.0777287426357454,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.3445425147285093,
+      "welfare_gap": 0.5
+    },
+    "ccar|Low|L|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 0.8445425147285093
+    },
+    "ccar|Low|L|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.8853060156465749,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": -0.11469398435342515,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.07393048343535957
+    },
+    "ccar|Low|L|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.7479571396660329,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.7520428603339671,
+      "rival_type": "L",
+      "underlying_social_welfare": -0.004085720667934112,
+      "welfare_gap": 0.8486282353964434
+    },
+    "ccar|Low|L|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": -0.11469398435342515,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.8853060156465749,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.7706120312931497,
+      "welfare_gap": 0.07393048343535957
+    },
+    "ccar|Low|L|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "M",
+      "ccar_bne_action_rival": "M",
+      "congestion_label": "Low",
+      "d": 0.3,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 0.8445425147285093,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.42227125736425464,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.42227125736425464,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.8445425147285093,
+      "welfare_gap": 0.0
+    },
+    "ccar|Medium|H|H|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.109008774564757,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.109008774564757,
+      "rival_type": "H",
+      "underlying_social_welfare": -0.218017549129514,
+      "welfare_gap": 2.7071025785865324
+    },
+    "ccar|Medium|H|H|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -1.1554574852714907,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.9911797603099564,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 0.7999999999999998
+    },
+    "ccar|Medium|H|H|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.5040857206679341,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.8959142793320658,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.3918285586641317,
+      "welfare_gap": 1.0972564707928867
+    },
+    "ccar|Medium|H|H|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.9911797603099564,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -1.1554574852714907,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 0.7999999999999998
+    },
+    "ccar|Medium|H|H|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 2.4890850294570184
+    },
+    "ccar|Medium|H|H|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.2394284219052047,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.1706120312931496,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 0.5478609668707191
+    },
+    "ccar|Medium|H|H|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.8959142793320658,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": -0.5040857206679341,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.3918285586641317,
+      "welfare_gap": 1.0972564707928867
+    },
+    "ccar|Medium|H|H|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.1706120312931496,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.2394284219052047,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 0.5478609668707191
+    },
+    "ccar|Medium|H|H|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 2.4890850294570184,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.2445425147285092,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.2445425147285092,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.4890850294570184,
+      "welfare_gap": 0.0
+    },
+    "ccar|Medium|H|L|F|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.109008774564757,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 1.390991225435243,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.281982450870486,
+      "welfare_gap": 1.9071025785865325
+    },
+    "ccar|Medium|H|L|F|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -1.1554574852714907,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.9911797603099564,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 1.5
+    },
+    "ccar|Medium|H|L|F|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": -0.5040857206679341,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 2.495914279332066,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.9918285586641318,
+      "welfare_gap": 1.1972564707928868
+    },
+    "ccar|Medium|H|L|M|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.9911797603099564,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.3445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.0
+    },
+    "ccar|Medium|H|L|M|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.1890850294570185
+    },
+    "ccar|Medium|H|L|M|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.2394284219052047,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 0.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 0.6478609668707191
+    },
+    "ccar|Medium|H|L|P|F": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.8959142793320658,
+      "own_type": "H",
+      "rival_action": "F",
+      "rival_payoff": 0.9959142793320659,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.8918285586641317,
+      "welfare_gap": 0.29725647079288686
+    },
+    "ccar|Medium|H|L|P|M": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.1706120312931496,
+      "own_type": "H",
+      "rival_action": "M",
+      "rival_payoff": 1.2394284219052047,
+      "rival_type": "L",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 1.2478609668707192
+    },
+    "ccar|Medium|H|L|P|P": {
+      "baseline_bne_action_own": "M",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "M",
+          "F"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.2445425147285092,
+      "own_type": "H",
+      "rival_action": "P",
+      "rival_payoff": 1.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.0890850294570185,
+      "welfare_gap": 0.10000000000000009
+    },
+    "ccar|Medium|L|H|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 1.390991225435243,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.109008774564757,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.281982450870486,
+      "welfare_gap": 1.9071025785865325
+    },
+    "ccar|Medium|L|H|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.3445425147285093,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.9911797603099564,
+      "rival_type": "H",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.0
+    },
+    "ccar|Medium|L|H|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.9959142793320659,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.8959142793320658,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.8918285586641317,
+      "welfare_gap": 0.29725647079288686
+    },
+    "ccar|Medium|L|H|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.9911797603099564,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -1.1554574852714907,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.6890850294570185,
+      "welfare_gap": 1.5
+    },
+    "ccar|Medium|L|H|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "H",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.1890850294570185
+    },
+    "ccar|Medium|L|H|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.2394284219052047,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.1706120312931496,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9412240625862993,
+      "welfare_gap": 1.2478609668707192
+    },
+    "ccar|Medium|L|H|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 2.495914279332066,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": -0.5040857206679341,
+      "rival_type": "H",
+      "underlying_social_welfare": 1.9918285586641318,
+      "welfare_gap": 1.1972564707928868
+    },
+    "ccar|Medium|L|H|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.7706120312931497,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.2394284219052047,
+      "rival_type": "H",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 0.6478609668707191
+    },
+    "ccar|Medium|L|H|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "M",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "F",
+          "M"
+        ]
+      ],
+      "first_best_welfare": 3.1890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.8445425147285093,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.2445425147285092,
+      "rival_type": "H",
+      "underlying_social_welfare": 3.0890850294570185,
+      "welfare_gap": 0.10000000000000009
+    },
+    "ccar|Medium|L|L|F|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 1.390991225435243,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 1.390991225435243,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.781982450870486,
+      "welfare_gap": 0.9071025785865325
+    },
+    "ccar|Medium|L|L|F|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.3445425147285093,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.9911797603099564,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.5
+    },
+    "ccar|Medium|L|L|F|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "F",
+      "own_payoff": 0.9959142793320659,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 2.495914279332066,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.4918285586641318,
+      "welfare_gap": 0.19725647079288677
+    },
+    "ccar|Medium|L|L|M|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.9911797603099564,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.3445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.1890850294570185,
+      "welfare_gap": 0.5
+    },
+    "ccar|Medium|L|L|M|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 0.0,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 0.0,
+      "rival_type": "L",
+      "underlying_social_welfare": 0.0,
+      "welfare_gap": 3.6890850294570185
+    },
+    "ccar|Medium|L|L|M|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "M",
+      "own_payoff": 1.2394284219052047,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 0.7706120312931497,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 1.1478609668707191
+    },
+    "ccar|Medium|L|L|P|F": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 2.495914279332066,
+      "own_type": "L",
+      "rival_action": "F",
+      "rival_payoff": 0.9959142793320659,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.4918285586641318,
+      "welfare_gap": 0.19725647079288677
+    },
+    "ccar|Medium|L|L|P|M": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 0.7706120312931497,
+      "own_type": "L",
+      "rival_action": "M",
+      "rival_payoff": 1.2394284219052047,
+      "rival_type": "L",
+      "underlying_social_welfare": 2.5412240625862994,
+      "welfare_gap": 1.1478609668707191
+    },
+    "ccar|Medium|L|L|P|P": {
+      "baseline_bne_action_own": "P",
+      "baseline_bne_action_rival": "P",
+      "ccar_bne_action_own": "P",
+      "ccar_bne_action_rival": "P",
+      "congestion_label": "Medium",
+      "d": 0.6,
+      "first_best_profiles": [
+        [
+          "P",
+          "P"
+        ]
+      ],
+      "first_best_welfare": 3.6890850294570185,
+      "mechanism": "ccar",
+      "own_action": "P",
+      "own_payoff": 1.8445425147285093,
+      "own_type": "L",
+      "rival_action": "P",
+      "rival_payoff": 1.8445425147285093,
+      "rival_type": "L",
+      "underlying_social_welfare": 3.6890850294570185,
+      "welfare_gap": 0.0
+    }
+  }
+}

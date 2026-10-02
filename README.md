@@ -36,9 +36,12 @@ The allocation notebook compares FCFS with a single-unit second-price auction af
 
 ## Behavioral Science Artifact
 
-`hf_space/` contains the self-contained Gradio source for a planned Hugging Face Space. The classroom exercise asks participants to choose disclosure before seeing the rival or theoretical benchmark, compare baseline and CCAR decisions, optionally use same-device peer play, and try the bounded downstream auction. It stores no accounts or durable behavioral dataset and prominently states the evidence boundary.
+`hf_space/` preserves the locally validated Gradio implementation. `hf_static/` contains the deployed, fully client-side Static Hugging Face Space. The classroom exercise asks participants to choose disclosure before seeing the rival or theoretical benchmark, compare baseline and CCAR decisions, optionally use same-device peer play, and try the bounded downstream auction. It stores no accounts or durable behavioral dataset and prominently states the evidence boundary.
 
-Hugging Face Space URL: to be added after deployment
+- Hugging Face Space repository: https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure
+- Direct hosted Space: https://dku-comsci-econ206-2026-ps2-share-or-hide-drone-96834c7.static.hf.space/index.html
+
+The hosted classroom artifact uses a static client-side implementation backed by model outputs exported from the validated Python computational model. The browser performs finite lookups and the bounded live auction arithmetic; it does not rerun the Bayesian solver.
 
 Run locally with:
 
