@@ -23,7 +23,7 @@ Overall pre-commit freeze gate: **PASS**
 - [x] `PS2-FP10-Yiqiao-A0-Poster.pptx` contains one editable A0 landscape slide at 1189 × 841 mm.
 - [x] `PS2-FP10-Yiqiao-A0-Poster.pdf` contains one A0 landscape page.
 - [x] Poster package, font, native-table, geometry, overflow, and visual checks pass.
-- [x] Poster status is `PEER REVIEW: PARTIAL`; no current-topic `PENDING` label remains.
+- [x] Poster status is `PEER REVIEW: PARTIAL`; the unchanged future-facing prompt is labeled `OPEN DESIGN QUESTION`; no unresolved current-topic review label or invented reviewer attribution remains.
 - [x] GitHub and Hugging Face QR codes decode to the exact intended URLs.
 
 ## Public-facing artifacts
@@ -45,7 +45,7 @@ Overall pre-commit freeze gate: **PASS**
 - [x] Monte Carlo mean efficiencies are 0.6223078074284918 for FCFS and 1.0 for truthful second price.
 - [x] Full test matrix is 65 passed, 0 failed.
 - [x] Current-facing stale-content scan passes. Superseded-project language appears only in explicitly labeled historical/development records.
-- [x] Peer-review status is **PARTIAL**, not PASS and not open-ended PENDING.
+- [x] Peer-review status is **PARTIAL**, not PASS, and accurately records the final submission state.
 
 ## Security and release hygiene
 

@@ -10,9 +10,9 @@ This manifest records the source of every major quantitative claim shown on the 
 | Source-template SHA-256 | `2c0bfad24ded809e845d01fd94b814abc4486d431731e0562b24d7bf8f9c0b58` |
 | Slide geometry | Source OOXML `ppt/presentation.xml`: `42804000 × 30276000` EMU = `1189 × 841 mm` |
 | Reproducibility checkpoint printed on poster | `ffa4836208a3f647181771646c5639286c0726e6` |
-| Final PPTX SHA-256 | `f5d9ade666d16bf3a44191b7f2b17fec6dad86cdb9eebefcb7f05352d8f54c03` |
-| Final PDF SHA-256 | `f11a657f0ae33223357e8e53c794266b77e54b6aff7f5be61a2013f2f22eb136` |
-| Finalization evidence | Finalizer revision v5 passed package, font, native-table, geometry, first-party import, and overflow checks; temporary receipts were not committed |
+| Final PPTX SHA-256 | `968aea3f705effec1bfe80c2cbb244292717c3586de18351bb71f7fe07848137` |
+| Final PDF SHA-256 | `90aeafc1f528ac8f96db1429f03a1bcbe75b60f94702d5d391782f5c0f985ec4` |
+| Finalization evidence | Finalizer revision v6 passed package, font, native-table, geometry, first-party import, and overflow checks; temporary receipts were not committed |
 
 ## Quantitative claims
 
@@ -73,7 +73,7 @@ Bibliographic metadata was taken from `paper/references.bib`:
 
 ## Test-status provenance
 
-Re-run on 2026-10-02:
+Re-run on 2026-10-03:
 
 | Suite | Passed | Failed |
 |---|---:|---:|

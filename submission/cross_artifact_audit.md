@@ -29,7 +29,7 @@ The tracked CSV outputs are the numerical source of truth. README, both notebook
 - **Notebook 01:** clean in-memory execution completed all 23 code cells; 8 table outputs and 7 plot outputs rendered; fresh plot hashes equal the saved plot hashes.
 - **Notebook 02:** clean in-memory execution completed all 10 code cells; 4 table outputs and 5 plot outputs rendered; fresh plot hashes equal the saved plot hashes.
 - **Paper:** 8 pages total; exactly 2 main-paper pages; Author Notes starts on page 3; clean Overleaf build has exact extracted-text parity with the submitted PDF and no unresolved citations.
-- **Poster:** one editable slide and one PDF page at 1189 × 841 mm; one native table, native text objects, and three images; the `0.946` medium-gap and CCAR result remain unchanged.
+- **Poster:** one editable slide and one PDF page at 1189 × 841 mm; one native table, native text objects, and three images; the unchanged future-facing prompt is labeled `OPEN DESIGN QUESTION`, while the `0.946` medium-gap and CCAR result remain unchanged.
 - **Behavioral boundary:** the Decision Lab remains an exploratory classroom artifact and is not represented as population evidence.
 - **Model boundary:** the two root model modules are unchanged; this freeze modified only final-facing presentation/audit materials.
 
@@ -37,4 +37,6 @@ The tracked CSV outputs are the numerical source of truth. README, both notebook
 
 Status: **PARTIAL — one authentic review was received for a superseded project version; no topic-specific peer review of the final drone-disclosure version was available before final submission.**
 
-No current-facing README, notebook, poster, or main-paper section contains TBD metadata, the superseded interruption project, old public URLs, or an open-ended current-topic PENDING label. “Stay or Switch?” and memory portability remain only in explicitly labeled Appendix B/D or methodological-development records.
+The poster's forward-looking prompt is an **open design question** and is not attributed to a final-version reviewer; no reviewer decision was invented for the final drone-disclosure version.
+
+No current-facing README, notebook, poster, or main-paper section contains TBD metadata, the superseded interruption project, old public URLs, or an unresolved current-topic review label. “Stay or Switch?” and memory portability remain only in explicitly labeled Appendix B/D or methodological-development records.

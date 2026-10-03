@@ -10,7 +10,7 @@ The verified university email and Session B metadata are not required by the off
 | A0 dimensions | PASS | PPTX `42804000 × 30276000` EMU; PDF `3370.39 × 2383.94 pt`, identified as A0 (`1189 × 841 mm`) |
 | Single slide/page | PASS | PPTX slide count 1; PDF page count 1 |
 | Editable PPTX | PASS | Text, headings, panels, callouts, connectors, and BNE table remain native editable objects; only logo and QR codes are images |
-| PDF export | PASS | Genuine tagged PDF 1.7 exported with LibreOffice Impress |
+| PDF export | PASS | Genuine PDF 1.4 exported with Microsoft PowerPoint; embedded text uses the deck's Calibri family (plus Cambria Math where required), with no substituted font family |
 | Header | PASS | Course, symposium, term, DKU logo, project title, author/team, instructor preserved |
 | Course instructor | PASS | Professor Luyao Zhang |
 | Title | PASS | “Share or Hide? Strategic Disclosure in Congested Low-Altitude Drone Traffic” |
@@ -48,16 +48,17 @@ The verified university email and Session B metadata are not required by the off
 | University email | PASS | Verified as `yl1081@duke.edu`; not required in the official visible poster layout |
 | Symposium session | PASS | Verified as Session B; not required in the official visible poster layout |
 | Peer-review status | PASS | `PARTIAL`: authentic superseded-version review only; no topic-specific review of the final drone-disclosure version was available before final submission, and no review outcome was fabricated |
+| Open design question | PASS | The unchanged future-facing question is labeled `OPEN DESIGN QUESTION` and is not attributed to a final-version reviewer |
 
 ## Rendering and inspection evidence
 
-- Final PPTX package integrity: PASS, 0 findings (finalizer revision v5).
+- Final PPTX package integrity: PASS, 0 findings (finalizer revision v6).
 - Exact-template dimensions: PASS.
 - Template-fidelity coverage: PASS, `1.0` against the single official reference slide.
 - Font policy: PASS, 127 checked text runs, Calibri only.
 - Native table requirement: PASS, one editable BNE table.
 - Presentation overflow test: PASS, no overflow detected.
-- PDF render: `poster/assets/poster-pdf-preview-144dpi.png` at `6741 × 4768` pixels.
+- PDF render: `poster/assets/poster-pdf-preview-144dpi.png` at `6740 × 4768` pixels.
 - PDF page count: 1.
 - QR crops from exported PDF: `poster/assets/github-qr-pdf-export.png` and `poster/assets/hf-qr-pdf-export.png`.
 
@@ -67,4 +68,4 @@ The final poster-facing files were checked against all eight prohibited stale-pr
 
 ## Change-boundary check
 
-The final poster-status correction changed only the peer-review label and its validation records. No source-model logic, benchmark parameter, computed result, notebook calculation, behavioral-artifact behavior, or public URL changed.
+The final poster consistency repair relabeled the unchanged future-facing prompt as an open design question and clarified the validated computational checkpoint label. Peer-review status remains `PARTIAL`. No source-model logic, benchmark parameter, computed result, notebook calculation, behavioral-artifact behavior, or public URL changed.
