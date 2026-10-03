@@ -101,6 +101,37 @@ def arrow(x1: float, y1: float, x2: float, y2: float, color: str = ROYAL) -> str
     )
 
 
+def compact_arrow(
+    x1: float,
+    y1: float,
+    x2: float,
+    y2: float,
+    color: str = ROYAL,
+    *,
+    stroke_width: int = 3,
+    head_length: int = 12,
+    head_half_width: int = 7,
+) -> str:
+    """Draw a small self-contained arrow that stays inside narrow node gaps."""
+    dx, dy = x2 - x1, y2 - y1
+    length = math.hypot(dx, dy)
+    if length == 0:
+        raise ValueError("Arrow endpoints must be distinct")
+    ux, uy = dx / length, dy / length
+    px, py = -uy, ux
+    base_x = x2 - ux * head_length
+    base_y = y2 - uy * head_length
+    left_x = base_x + px * head_half_width
+    left_y = base_y + py * head_half_width
+    right_x = base_x - px * head_half_width
+    right_y = base_y - py * head_half_width
+    return (
+        f'<line x1="{x1}" y1="{y1}" x2="{base_x}" y2="{base_y}" '
+        f'stroke="{color}" stroke-width="{stroke_width}" stroke-linecap="round"/>'
+        f'<polygon points="{x2},{y2} {left_x},{left_y} {right_x},{right_y}" fill="{color}"/>'
+    )
+
+
 def svg_document(width: int, height: int, title_value: str, description: str, body: str) -> str:
     marker_colors = [ROYAL, TEAL, ORANGE]
     markers = "".join(
@@ -198,13 +229,13 @@ def build_pipeline() -> None:
         ["Probe behavior", "Decision Lab"],
     ]
     body = text(60, 55, "From private information to testable institutional design", size=31, color=BLUE, weight=700)
-    card_w, card_h, gap = 216, 98, 18
-    top_y, bottom_y = 92, 246
+    card_w, card_h, gap = 220, 100, 34
+    top_y, bottom_y = 92, 252
     positions: list[tuple[float, float]] = []
     for index in range(5):
-        positions.append((30 + index * (card_w + gap), top_y))
+        positions.append((22 + index * (card_w + gap), top_y))
     for index in range(4):
-        positions.append((147 + index * (card_w + gap), bottom_y))
+        positions.append((149 + index * (card_w + gap), bottom_y))
     for index, ((x, y), lines) in enumerate(zip(positions, stages), 1):
         color = BLUE if index <= 5 else TEAL
         fill = BLUE_PALE if index <= 5 else GREEN_PALE
@@ -215,23 +246,24 @@ def build_pipeline() -> None:
     for index in range(4):
         x, y = positions[index]
         nx, ny = positions[index + 1]
-        body += arrow(x + card_w + 3, y + card_h / 2, nx - 8, ny + card_h / 2)
+        body += compact_arrow(x + card_w + 6, y + card_h / 2, nx - 10, ny + card_h / 2)
     x5, y5 = positions[4]
     x6, y6 = positions[5]
     body += (
-        f'<path d="M {x5 + card_w / 2} {y5 + card_h + 3} L {x5 + card_w / 2} 224 '
-        f'L {x6 + card_w / 2} 224 L {x6 + card_w / 2} {y6 - 8}" fill="none" '
-        f'stroke="{TEAL}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" '
-        f'marker-end="url(#arrow-{TEAL[1:]})"/>'
+        f'<path d="M {x5 + card_w / 2} {y5 + card_h + 6} L {x5 + card_w / 2} 226 '
+        f'L {x6 + card_w / 2} 226" fill="none" stroke="{TEAL}" stroke-width="3" '
+        f'stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<polygon points="{x6 + card_w / 2},{y6 - 10} {x6 + card_w / 2 - 7},226 '
+        f'{x6 + card_w / 2 + 7},226" fill="{TEAL}"/>'
     )
     for index in range(5, 8):
         x, y = positions[index]
         nx, ny = positions[index + 1]
-        body += arrow(x + card_w + 3, y + card_h / 2, nx - 8, ny + card_h / 2, TEAL)
+        body += compact_arrow(x + card_w + 6, y + card_h / 2, nx - 10, ny + card_h / 2, TEAL)
     write_svg(
         "project_pipeline.svg",
-        1200,
-        374,
+        1280,
+        390,
         "Project pipeline",
         "Nine-stage pipeline from congestion and private confidentiality cost through disclosure, equilibrium, welfare, CCAR, robustness, allocation, and the behavioral Decision Lab.",
         body,
@@ -323,9 +355,9 @@ def build_ccar(data: dict[str, object]) -> None:
     body += text(240, 158, "BASELINE", size=20, color=ROYAL, weight=750, anchor="middle")
     body += text(90, 205, [f'Low type   {baseline["low"]}', f'High type  {baseline["high"]}'], size=22, color=INK, weight=650, line_height=42)
     body += text(90, 306, [f"Welfare  {baseline_welfare:.3f}", f"Gap          {baseline_gap:.3f}"], size=18, color=MUTED, line_height=28)
-    body += arrow(450, 235, 650, 235, ORANGE)
-    body += rect(476, 174, 148, 58, fill=ORANGE_PALE, stroke=ORANGE, radius=12)
-    body += text(550, 200, ["CCAR", f'alpha_M = {float(ccar["alpha"]):.1f}'], size=17, color=ORANGE, weight=750, anchor="middle", line_height=21)
+    body += rect(465, 145, 170, 66, fill=ORANGE_PALE, stroke=ORANGE, radius=12)
+    body += text(550, 174, ["CCAR", f'alpha_M = {float(ccar["alpha"]):.1f}'], size=17, color=ORANGE, weight=750, anchor="middle", line_height=22)
+    body += compact_arrow(450, 252, 650, 252, ORANGE)
     body += rect(670, 120, 380, 230, fill=GREEN_PALE, stroke=TEAL, radius=18, stroke_width=3)
     body += text(860, 158, "WITH CCAR", size=20, color=TEAL, weight=750, anchor="middle")
     body += text(710, 205, [f'Low type   {ccar["low"]}', f'High type  {ccar["high"]}'], size=22, color=INK, weight=650, line_height=42)
@@ -407,23 +439,25 @@ def build_behavioral_lab() -> None:
     body = text(50, 54, "Behavioral Decision Lab", size=31, color=BLUE, weight=700)
     body += text(50, 86, "Interactive probes for reflection—not population evidence", size=18, color=MUTED)
     lanes = [
-        (125, "SOLO", ["Decision", "Benchmark reveal", "CCAR decision", "Reflection"], ROYAL, BLUE_PALE),
-        (245, "PEER PLAY", ["Private type", "Pass-the-screen choice", "Reveal"], TEAL, GREEN_PALE),
-        (365, "AUCTION", ["Priority-slot", "choice exercise"], ORANGE, ORANGE_PALE),
+        (125, "SOLO", ["Decision", "Benchmark reveal", "CCAR decision", "Reflection"], ROYAL, BLUE_PALE, 190, 36),
+        (245, "PEER PLAY", ["Private type", ["Pass-the-screen", "choice"], "Reveal"], TEAL, GREEN_PALE, 240, 48),
+        (365, "AUCTION", ["Priority-slot", "choice exercise"], ORANGE, ORANGE_PALE, 260, 56),
     ]
-    for y, label, steps, color, fill in lanes:
+    flow_left, flow_right = 245, 1135
+    for y, label, steps, color, fill, card_w, gap in lanes:
         body += text(155, y + 42, label, size=18, color=color, weight=750, anchor="middle")
         n = len(steps)
-        start_x = 260
-        usable = 850
-        card_w = min(190, (usable - (n - 1) * 45) / n)
-        gap = 45
+        total_width = n * card_w + (n - 1) * gap
+        start_x = flow_left + (flow_right - flow_left - total_width) / 2
         for index, step in enumerate(steps):
             x = start_x + index * (card_w + gap)
             body += rect(x, y, card_w, 78, fill=fill, stroke=color, radius=14, stroke_width=2)
-            body += text(x + card_w / 2, y + 46, step, size=18, color=INK, weight=650, anchor="middle")
+            if isinstance(step, list):
+                body += text(x + card_w / 2, y + 33, step, size=17, color=INK, weight=650, anchor="middle", line_height=22)
+            else:
+                body += text(x + card_w / 2, y + 46, step, size=18, color=INK, weight=650, anchor="middle")
             if index < n - 1:
-                body += arrow(x + card_w + 5, y + 39, x + card_w + gap - 8, y + 39, color)
+                body += compact_arrow(x + card_w + 7, y + 39, x + card_w + gap - 11, y + 39, color)
     body += rect(90, 470, 1020, 62, fill=WHITE, stroke=RED, radius=14, stroke_width=2)
     body += text(600, 496, ["Evidence boundary: exploratory classroom decision artifact.", "Not representative evidence about real drone operators."], size=17, color=RED, weight=700, anchor="middle", line_height=21)
     write_svg(
