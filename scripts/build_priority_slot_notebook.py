@@ -64,6 +64,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from IPython.display import Image, Markdown, display
 
 from src.priority_slot_allocation import (
     allocate_fcfs,
@@ -83,6 +84,7 @@ ROUNDS = 10_000
 N_BIDDERS = 4
 VALUE_LOW, VALUE_HIGH = 0.0, 10.0
 NOISE_SIGMAS = (0.0, 0.1, 0.25, 0.5, 1.0)
+COLORS = ["#2563EB", "#0F766E"]
 
 def write_csv(path, rows):
     rows = list(rows)
@@ -90,6 +92,22 @@ def write_csv(path, rows):
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
+
+def display_table(rows, columns):
+    header = "| " + " | ".join(label for _, label in columns) + " |"
+    divider = "|" + "|".join("---" for _ in columns) + "|"
+    body = [
+        "| " + " | ".join(str(row[key]) for key, _ in columns) + " |"
+        for row in rows
+    ]
+    display(Markdown("\\n".join([header, divider, *body])))
+
+def save_figure(fig, stem):
+    png_path = FIGURE_DIR / f"{stem}.png"
+    for extension in ("png", "svg"):
+        fig.savefig(FIGURE_DIR / f"{stem}.{extension}", dpi=180, bbox_inches="tight")
+    display(Image(filename=str(png_path)))
+    plt.close(fig)
 
 print(f"Repository ready: {REPO_NAME}")
 print(f"Tables: {TABLE_DIR.relative_to(ROOT)}")
@@ -237,12 +255,6 @@ print(f"Saved {stress_path.relative_to(ROOT)}")
     code(
         """
 plt.style.use("seaborn-v0_8-whitegrid")
-COLORS = ["#4C78A8", "#F58518"]
-
-def save_figure(fig, stem):
-    for extension in ("png", "svg"):
-        fig.savefig(FIGURE_DIR / f"{stem}.{extension}", dpi=180, bbox_inches="tight")
-    plt.close(fig)
 
 # 1. Mean allocative efficiency
 fig, ax = plt.subplots(figsize=(6.4, 4.2))
@@ -326,6 +338,274 @@ print(f"Saved {metadata_path.relative_to(ROOT)}")
 """
     ),
 ]
+
+
+def find_cell(prefix: str) -> int:
+    """Find a generated cell by a stable source prefix."""
+    return next(
+        index for index, cell in enumerate(cells) if cell.source.lstrip().startswith(prefix)
+    )
+
+
+def insert_after(prefix: str, *new_cells) -> None:
+    index = find_cell(prefix)
+    cells[index + 1 : index + 1] = list(new_cells)
+
+
+# Presentation layer: quantitative displays are built from the live mechanism
+# outputs above rather than from independently typed result arrays.
+cells[0] = md(
+    r"""
+# Priority Access After Congestion
+
+## FCFS vs second-price auction · Week 5 downstream application
+
+> **Boundary — This notebook is a downstream scarcity-allocation application after congestion is identified. It is not the core disclosure mechanism.**
+
+### Mechanism map
+
+**Congested corridor**
+
+↓
+
+**Residual demand exceeds capacity**
+
+↓
+
+**One priority slot ($K=1$)**
+
+↓
+
+**FCFS or second-price allocation**
+
+↓
+
+**Compare allocated value, efficiency, and revenue**
+
+↓
+
+**Bounded-rationality stress test**
+
+This notebook uses normalized private values and a deliberately narrow independent-private-values (IPV) benchmark. It is not an empirical model of mission urgency or willingness to pay.
+"""
+)
+
+cells[find_cell("## PS2 Week 5 mechanism checklist")] = md(
+    r"""
+## Week 5 mechanism checklist
+
+| Required element | Operational definition |
+|---|---|
+| **Scarce resource** | One priority-access slot for a congested low-altitude corridor during a fixed short window; $K=1$. |
+| **Participants** | Eligible non-emergency commercial drone operators. |
+| **Values/signals** | Private normalized value $v_i$: avoided delay cost plus service value of earlier passage. |
+| **Information** | Each operator knows its own value; the benchmark assumes independent private values. |
+| **Bids/reports** | FCFS receives valid requests; the auction receives sealed bids $b_i$. |
+| **Allocation rule** | FCFS selects the earliest eligible request; second price selects the highest eligible bid. |
+| **Payment rule** | FCFS payment is zero; the auction winner pays the second-highest eligible bid. |
+| **Stopping rule** | FCFS stops when capacity is filled; auction bidding closes at a fixed deadline. |
+| **Rational benchmark** | Truthful bidding is weakly dominant in the standard second-price IPV benchmark. |
+| **Boundary** | Emergency/public-safety flights are outside the commercial payment mechanism. |
+"""
+)
+
+insert_after(
+    "benchmark_values =",
+    code(
+        r"""
+fcfs_row, auction_row = benchmark_rows
+fig, ax = plt.subplots(figsize=(10.0, 5.2))
+ax.axis("off")
+ax.set_title("Illustrative allocation: same operators, different signals", fontweight="bold", pad=16)
+
+arrival_x = np.linspace(0.10, 0.90, len(arrival_order))
+for index, (x_pos, operator) in enumerate(zip(arrival_x, arrival_order)):
+    ax.text(
+        x_pos,
+        0.78,
+        f"{operator}\nvalue {benchmark_values[operator]:g}",
+        ha="center",
+        va="center",
+        bbox=dict(boxstyle="round,pad=0.5", fc="#DBEAFE", ec="#2563EB", lw=1.8),
+    )
+    if index < len(arrival_order) - 1:
+        ax.annotate("", xy=(arrival_x[index + 1] - 0.06, 0.78), xytext=(x_pos + 0.06, 0.78), arrowprops=dict(arrowstyle="->", color="#64748B", lw=1.8))
+ax.text(0.5, 0.92, "FCFS arrival order", ha="center", color="#475569", fontweight="bold")
+
+fcfs_text = (
+    "FCFS\n"
+    f"{fcfs_row['winner']} wins first\n"
+    f"Allocated value  {fcfs_row['allocated_value']:.0f}\n"
+    f"Efficiency  {fcfs_row['allocative_efficiency']:.3f}"
+)
+auction_text = (
+    "SECOND PRICE\n"
+    f"{auction_row['winner']} has highest value\n"
+    f"{fcfs_row['winner']} sets price  {auction_row['payment']:.0f}\n"
+    f"Winner utility  {auction_row['winner_utility']:.0f}\n"
+    f"Efficiency  {auction_row['allocative_efficiency']:.1f}"
+)
+ax.text(0.27, 0.35, fcfs_text, ha="center", va="center", fontsize=12, bbox=dict(boxstyle="round,pad=0.8", fc="#EFF6FF", ec="#2563EB", lw=2))
+ax.text(0.73, 0.35, auction_text, ha="center", va="center", fontsize=12, bbox=dict(boxstyle="round,pad=0.8", fc="#ECFDF5", ec="#0F766E", lw=2))
+save_figure(fig, "auction_illustrative_mechanism_map")
+"""
+    ),
+    md(
+        r"""
+### Mechanism comparison
+
+| Feature | FCFS | Second price |
+|---|---|---|
+| Signal used | Arrival order | Bid/value |
+| Winner | Earliest eligible request | Highest eligible bid |
+| Payment | 0 | Second-highest bid |
+| Benchmark strategy | Valid request | Truthful bidding is weakly dominant under IPV |
+| Strength | Operational simplicity | Allocative efficiency under the benchmark |
+| Limitation | Ignores value | Ability-to-pay concerns and IPV assumptions |
+
+> **Interpretation —** Second price is more efficient in this benchmark, but that narrow ranking does not make it universally superior.
+"""
+    ),
+)
+
+insert_after(
+    "simulation = simulate_truthful_comparison(",
+    code(
+        r"""
+display(Markdown("### Monte Carlo result"))
+design_rows = [{
+    "Rounds": f"{ROUNDS:,}",
+    "Bidders": N_BIDDERS,
+    "Values": f"iid Uniform[{VALUE_LOW:g},{VALUE_HIGH:g}]",
+    "Seed": SEED,
+}]
+display_table(design_rows, [("Rounds", "Rounds"), ("Bidders", "Bidders"), ("Values", "Values"), ("Seed", "Seed")])
+
+simulation_display = [
+    {
+        "Mechanism": row["mechanism"].replace(" (truthful IPV benchmark)", ""),
+        "Mean efficiency": f"{row['mean_allocative_efficiency']:.10f}",
+        "Transfer-neutral welfare": f"{row['mean_social_welfare_transfer_neutral']:.6f}",
+        "Mean revenue": f"{row['mean_payment_revenue']:.6f}",
+        "Median revenue": f"{row['payment_revenue_median']:.6f}",
+        "95th percentile revenue": f"{row['payment_revenue_q95']:.6f}",
+    }
+    for row in summary_rows
+]
+display_table(
+    simulation_display,
+    [
+        ("Mechanism", "Mechanism"),
+        ("Mean efficiency", "Mean efficiency"),
+        ("Transfer-neutral welfare", "Transfer-neutral welfare"),
+        ("Mean revenue", "Mean revenue"),
+        ("Median revenue", "Median revenue"),
+        ("95th percentile revenue", "95th percentile revenue"),
+    ],
+)
+display(Markdown(
+    "> **Welfare convention —** Payments are transfers: they reduce winner utility and raise auctioneer revenue by the same amount. Transfer-neutral social welfare therefore equals allocated value."
+))
+"""
+    ),
+)
+
+insert_after(
+    "stress_rows = simulate_bid_noise_stress(",
+    code(
+        r"""
+stress_display = [
+    {
+        "Noise sigma": f"{row['noise_sigma']:g}",
+        "Mean allocative efficiency": f"{row['mean_allocative_efficiency']:.6f}",
+    }
+    for row in stress_rows
+]
+display(Markdown("### Non-equilibrium stress-test results"))
+display_table(stress_display, [("Noise sigma", "Bid-noise sigma"), ("Mean allocative efficiency", "Mean allocative efficiency")])
+display(Markdown(
+    "> **Interpretation —** Positive noise levels are controlled deviations from truthful bidding, not predicted equilibrium behavior."
+))
+"""
+    ),
+)
+
+cells[find_cell("## Figures (all generated from the simulation arrays above)")] = md(
+    r"""
+## Visual comparison
+
+The following figures use the live simulation arrays created above. Efficiency and revenue are reported separately because revenue is a transfer under the benchmark welfare convention.
+"""
+)
+
+figure_cell = cells[find_cell('plt.style.use("seaborn-v0_8-whitegrid")')]
+figure_cell.source = figure_cell.source.replace(
+    'ax.set_title("FCFS vs second-price allocation")',
+    'ax.set_title("Mean allocative efficiency: FCFS vs second price", fontweight="bold")',
+).replace(
+    'ax.text(index, value + 0.02, f"{value:.3f}", ha="center")',
+    'ax.text(index, value + 0.02, f"{value:.4f}", ha="center", fontweight="bold")',
+).replace(
+    'ax.set_title("Truthful benchmark vs noisy-bidding stress test")',
+    'ax.set_title("Non-equilibrium stress test: efficiency under bid noise", fontweight="bold")',
+)
+
+cells[find_cell("## Interpretation and access/distributional limitations")] = md(
+    r"""
+## Interpretation and policy limitations
+
+Second price can improve allocative efficiency under the IPV assumptions used here, but the benchmark does not resolve:
+
+- ability-to-pay and unequal-access concerns;
+- whether bids measure social urgency;
+- common or interdependent mission values;
+- mission criticality and noncommercial public value;
+- the legitimacy of monetizing access.
+
+> **Safety boundary — Emergency and public-safety flights remain outside the commercial auction.**
+
+### Connection to the disclosure project
+
+Better disclosure can improve congestion prediction and scheduling, yet residual scarcity may remain. The allocation layer begins only after that scarcity is identified. Disclosure, congestion, and allocation are not collapsed into one mathematical model.
+"""
+)
+
+insert_after(
+    'package_names = ["numpy", "matplotlib", "nbformat", "nbclient", "ipykernel"]',
+    code(
+        r"""
+display(Markdown("## Final result card"))
+display_table(
+    [
+        {
+            "Comparison": "Illustrative example",
+            "FCFS": f"{100 * fcfs_benchmark.allocative_efficiency:.1f}%",
+            "Second price": f"{100 * auction_benchmark.allocative_efficiency:.0f}%",
+        },
+        {
+            "Comparison": "Monte Carlo mean",
+            "FCFS": f"{100 * summary_rows[0]['mean_allocative_efficiency']:.1f}%",
+            "Second price": f"{100 * summary_rows[1]['mean_allocative_efficiency']:.0f}%",
+        },
+    ],
+    [("Comparison", "Comparison"), ("FCFS", "FCFS"), ("Second price", "Second price")],
+)
+display(Markdown(
+    "**Noise stress:** second-price allocative efficiency falls as bids become noisier.  \n"
+    "**Boundary:** downstream commercial allocation only; not the core disclosure mechanism."
+))
+"""
+    ),
+    md(
+        r"""
+### Continue exploring
+
+- [GitHub repository](https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao)
+- [Run this notebook in Colab](https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb)
+- [Behavioral Decision Lab](https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure)
+"""
+    ),
+)
 
 notebook = nbf.v4.new_notebook(
     cells=cells,

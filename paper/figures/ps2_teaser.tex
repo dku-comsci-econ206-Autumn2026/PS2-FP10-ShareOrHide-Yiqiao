@@ -1,0 +1,17 @@
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=2.2mm,
+  box/.style={draw=CourseBlue,rounded corners=2pt,fill=CourseBlue!5,minimum height=8mm,text width=2.45cm,align=center,font=\sffamily\scriptsize},
+  gate/.style={box,draw=CourseTeal,fill=CourseTeal!7},
+  arr/.style={-{Stealth[length=2mm]},very thick,CourseInk}
+]
+\node[box] (q) {Integrated question\\economics + computation + behavior};
+\node[box,right=of q] (m) {Bayesian disclosure game\\private confidentiality type};
+\node[box,right=of m] (c) {BNE + first best\\Medium gap: $0.946$};
+\node[box,right=of c] (r) {CCAR robustness\\Medium gap: $0.050$};
+\node[box,right=of r] (b) {Decision Lab\\Solo + Peer Play};
+\node[box,right=of b] (a) {Downstream auction\\FCFS vs Vickrey};
+\node[gate,right=of a] (g) {Practical implication\\test, audit, revise};
+\draw[arr] (q)--(m); \draw[arr] (m)--(c); \draw[arr] (c)--(r);
+\draw[arr] (r)--(b); \draw[arr] (b)--(a); \draw[arr] (a)--(g);
+\end{tikzpicture}}

@@ -7,6 +7,14 @@ This paper is derived strictly from the validated PS2 repository state. No model
 - Computational baseline: `791e12224576e5963fd5672f8f90acdcea5556a0`
 - Behavioral artifact: `ea7ce241de34b8d21b036d39157ca974c019bb31`
 - Static deployed artifact: `a9c51af0b685003f770cce47d810607823847353`
+- Notebook portability: `ffa4836208a3f647181771646c5639286c0726e6`
+
+## Final validation status
+
+- Current final test count: **65 passed, 0 failed** (27 computational, 6 notebook-portability, 17 Gradio behavioral, and 15 static/export checks).
+- Both notebooks include a Colab bootstrap that automatically shallow-clones the public repository when needed and reuses it within the session.
+- Local and isolated Colab-like portability tests passed.
+- The student manually confirmed that both hosted Colab notebooks complete **Run all** successfully; this was manual confirmation, not automated hosted-Colab testing.
 
 ## Core computational sources
 
@@ -42,16 +50,25 @@ This paper is derived strictly from the validated PS2 repository state. No model
 
 - `paper/scripts/build_paper_assets.py` reads tracked CSVs and model functions to generate `paper/figures/main_results.pdf`, `paper/figures/main_results.png`, and `paper/tables/bne_verification.tex`.
 - `paper/tables/literature_comparison.tex` records verified overlap dimensions.
-- `paper/references.bib` contains six verified primary references.
+- `paper/references.bib` contains seven verified primary references, including Harsanyi (1967) for the Bayesian-game foundation.
 - `paper/acmart.cls` and `paper/ACM-Reference-Format.bst` are copied unchanged from the instructor-provided PS2 Overleaf template.
+- `paper/sections/proposal.tex`, `paper/appendices/supporting.tex`, and `paper/figures/ps2_teaser.tex` implement the official five-section, Author Notes, and Appendix A–F organization.
+- `paper/template_compliance_audit.md` records each official requirement as PASS, PENDING, FAIL, or NOT APPLICABLE.
 
 ## External literature verification
 
 Bibliographic metadata and claim fit were checked against publisher pages, DOI records, arXiv, and institutional repositories. The contribution statement is a distinction, not an absolute novelty claim.
 
-## Known unresolved course artifacts
+## Public reproducibility links
 
-- No GitHub remote has been configured, so no GitHub repository URL or public notebook URL is invented.
-- The symposium session has not been assigned.
-- The A0 poster is outside this requested paper package and has not been supplied.
-- No peer review specific to the current low-altitude disclosure project was found; unrelated earlier feedback is not relabeled.
+- Repository: <https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao>
+- Colab 01: <https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/01_strategic_disclosure_game.ipynb>
+- Colab 02: <https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb>
+
+## Course metadata and unresolved review status
+
+- University email: `yl1081@duke.edu` (verified current-project metadata).
+- Symposium session: `Session B`, supported by the peer-review sheet identifying `FP10 | Session B | Yiqiao Liu`.
+- The validated A0 poster is `poster/PS2-FP10-Yiqiao-A0-Poster.pptx`.
+- One authentic review by Feiyu Li (FP3 member 1), dated 2026-09-28, concerns the superseded AI memory-portability version. It is documented in Appendix D and is not relabeled as review of the final low-altitude drone-disclosure model.
+- No topic-specific peer review of the final drone-disclosure version was available before final submission. The superseded-version review is used solely in the methodological-development record.
