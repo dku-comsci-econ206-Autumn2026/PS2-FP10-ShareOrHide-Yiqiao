@@ -99,7 +99,7 @@ Limitations include two operators, two independent private types, pure strategie
 
 The next discriminating test compares baseline disclosure and CCAR under trusted-partner and competitive framing, then classifies deviations by privacy salience, reciprocity/fairness, or strategic misunderstanding.
 
-**Reviewer question:** At what congestion and confidentiality conditions should enhanced information access become conditional without creating excessive disclosure or unequal access?
+**Open design question:** At what congestion and confidentiality conditions should enhanced access become conditional without creating excessive disclosure or unequal access?
 
 **Peer-review status: PARTIAL.** The authentic review concerns a superseded project version; no topic-specific review of the final drone-disclosure project was available before final submission.
 
@@ -120,7 +120,7 @@ Research question, model choices, interpretation, and final responsibility are t
 ## Open materials
 
 - GitHub: <https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao>
-- Validated pre-poster checkpoint: `ffa4836208a3f647181771646c5639286c0726e6`
+- Validated computational checkpoint: `ffa4836208a3f647181771646c5639286c0726e6`
 - Hugging Face Decision Lab: <https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure>
 - Colab 01: <https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/01_strategic_disclosure_game.ipynb>
 - Colab 02: <https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb>
