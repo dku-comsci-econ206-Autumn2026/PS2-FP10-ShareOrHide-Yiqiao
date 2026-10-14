@@ -1,3 +1,9 @@
+[![Current FP10 A0 Poster Preview](docs/assets/poster/ps2_fp10_poster_preview.png)](poster/PS2-FP10-Yiqiao-A0-Poster.pdf)
+
+**[View / Download the Current A0 Poster (PDF)](poster/PS2-FP10-Yiqiao-A0-Poster.pdf)**
+
+**Interactive Demo — Hugging Face Space:** <https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure>
+
 <div align="center">
 
 # Share or Hide?
@@ -51,6 +57,8 @@ The project begins with a Bayesian disclosure game, evaluates the social-choice 
 | Solution concept | Pure-strategy Bayesian Nash equilibrium (BNE) |
 | Welfare benchmark | Full-information first best |
 | Candidate mechanism | Congestion-Contingent Access Rule (CCAR) |
+
+### Disclosure actions
 
 | Action | Operational meaning in the model |
 |---|---|
