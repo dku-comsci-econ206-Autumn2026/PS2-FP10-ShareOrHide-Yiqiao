@@ -77,18 +77,57 @@ def main() -> int:
     source_zip = required[1]
     with zipfile.ZipFile(source_zip) as archive:
         names = set(archive.namelist())
+        packed_merits = archive.read("figures/intellectual_merits.pdf")
     source_required = {"main.tex", "references.bib", "acmart.cls", "ACM-Reference-Format.bst", "sections/proposal.tex", "appendices/supporting.tex"}
     check("Overleaf source contents", source_required <= names, f"{len(names)} files; required sources present")
+    canonical_merits_pdf = ROOT / "figures/final/intellectual_merits.pdf"
+    merits_pdf_hash = sha256(canonical_merits_pdf)
+    packed_merits_hash = hashlib.sha256(packed_merits).hexdigest()
+    check(
+        "Overleaf Intellectual Merits figure",
+        merits_pdf_hash == packed_merits_hash,
+        f"canonical={merits_pdf_hash}; packed={packed_merits_hash}",
+    )
 
     poster_pptx = required[2]
     with zipfile.ZipFile(poster_pptx) as archive:
         presentation_xml = archive.read("ppt/presentation.xml").decode("utf-8")
         slide_names = [name for name in archive.namelist() if re.fullmatch(r"ppt/slides/slide\d+\.xml", name)]
         poster_xml = "".join(archive.read(name).decode("utf-8") for name in slide_names)
+        media_hashes = {
+            hashlib.sha256(archive.read(name)).hexdigest()
+            for name in archive.namelist()
+            if name.startswith("ppt/media/")
+        }
     size = re.search(r"<p:sldSz cx=\"(\d+)\" cy=\"(\d+)\"", presentation_xml)
     geometry_ok = bool(size and size.groups() == ("42804000", "30276000") and len(slide_names) == 1)
     check("poster geometry", geometry_ok, f"slides={len(slide_names)}, EMU={size.groups() if size else None}, nominal 1189×841 mm")
     check("poster acknowledgment and contribution", all(term in poster_xml for term in ("Full acknowledgments", "Yiqiao Liu", "Han Zhang", "Xinrong Sun")), "Required named text found in editable slide XML")
+    merits_png_hash = sha256(ROOT / "figures/final/intellectual_merits.png")
+    check(
+        "poster Intellectual Merits image",
+        merits_png_hash in media_hashes,
+        f"canonical PNG {merits_png_hash} embedded in editable PPTX",
+    )
+
+    geometry_report = json.loads(
+        (ROOT / "outputs/final/intellectual_merits_geometry.json").read_text(encoding="utf-8")
+    )
+    check(
+        "Intellectual Merits geometry",
+        geometry_report["status"] == "PASS" and not geometry_report["failures"],
+        f"cards={geometry_report['cardCount']}, connectors={geometry_report['connectorCount']}, failures={geometry_report['failures']}",
+    )
+
+    diff_report = json.loads(
+        (ROOT / "outputs/final/intellectual_merits_poster_diff.json").read_text(encoding="utf-8")
+    )
+    check(
+        "poster change containment",
+        diff_report["changedOutsidePixels"] == 0
+        and diff_report["maximumOutsideChannelDelta"] == 0,
+        f"changed outside target={diff_report['changedOutsidePixels']} px; maximum outside channel delta={diff_report['maximumOutsideChannelDelta']}",
+    )
 
     poster_pdf_info = pdf_info(required[3])
     check("poster PDF", poster_pdf_info["Pages"].strip() == "1", f"pages={poster_pdf_info['Pages'].strip()}, size={poster_pdf_info['Page size'].strip()}")

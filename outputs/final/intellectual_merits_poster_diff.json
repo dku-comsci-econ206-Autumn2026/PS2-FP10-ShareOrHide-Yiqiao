@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "before": ".codex-review/intellectual-merits-fix/poster-before.png",
+  "after": "poster/final-poster.png",
+  "dimensions": {
+    "width": 3371,
+    "height": 2384,
+    "channels": 3
+  },
+  "sectionCrop": {
+    "left": 1035,
+    "top": 735,
+    "width": 1325,
+    "height": 690
+  },
+  "intendedChangeRegion": {
+    "left": 1055,
+    "top": 870,
+    "width": 1290,
+    "height": 410
+  },
+  "threshold": 8,
+  "changedInsidePixels": 316172,
+  "changedInsideRatio": 0.5977916430327094,
+  "changedOutsidePixels": 0,
+  "changedOutsideRatio": 0,
+  "maximumOutsideChannelDelta": 0,
+  "meanOutsideAbsoluteChannelDelta": 0,
+  "interpretation": "The intended region covers only the Intellectual Merits image. Nonzero outside-region deltas may reflect LibreOffice anti-aliasing and metadata-driven rerendering; inspect the diff image before accepting."
+}

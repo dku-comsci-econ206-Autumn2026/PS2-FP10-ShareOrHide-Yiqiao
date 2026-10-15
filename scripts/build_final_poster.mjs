@@ -73,7 +73,7 @@ async function buildPoster() {
   put(deck, "sh/8zqx4vq9", "", 20);
 
   const intellectual = await bytes(`${root}/figures/final/intellectual_merits.png`);
-  slide.images.add({ blob: intellectual, contentType: "image/png", alt: "Intellectual Merits evidence chain", fit: "contain", position: { left: 1415, top: 1180, width: 1664, height: 470 } });
+  slide.images.add({ blob: intellectual, contentType: "image/png", alt: "Intellectual Merits evidence chain", fit: "contain", position: { left: 1415, top: 1170, width: 1664, height: 490 } });
 
   slide.charts.add("column", {
     position: { left: 1450, top: 1885, width: 1590, height: 590 },
@@ -132,6 +132,9 @@ async function finalizePoster() {
   const runtimePython = "/Users/mickeyxiaoliuliu/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3";
   const candidatePath = `${outDir}/final-poster-draft.pptx`;
   const finalPath = `${root}/poster/final-poster.pptx`;
+  const buildId = Date.now();
+  const validatedPath = `${root}/.codex-review/poster-finalized/final-poster-validated-${buildId}.pptx`;
+  await fs.mkdir(path.dirname(validatedPath), { recursive: true });
   const referenceSha256 = crypto.createHash("sha256").update(await fs.readFile(template)).digest("hex");
   const { finalizePresentation } = await import(pathToFileURL(path.join(skillDir, "container_tools/artifact_tool_utils.mjs")).href);
   const result = await finalizePresentation({
@@ -146,16 +149,17 @@ async function finalizePoster() {
     requirePhotographicBackground: false,
     workspaceDir: root,
     candidatePath,
-    finalPath,
+    finalPath: validatedPath,
     pythonExecutable: runtimePython,
     integrityValidatorPath: path.join(skillDir, "container_tools/inspect_presentation_package_integrity.py"),
     layoutValidatorPath: path.join(skillDir, "container_tools/inspect_presentation_layout_geometry.py"),
     layoutArgs: ["--expected-slide-size-emu", "42804000,30276000", "--validate-bullet-geometry", "--validate-heading-fit"],
     fontPolicy: { basis: "reference", families: ["Calibri"], referencePath: template, referenceSha256 },
     verifyArtifactToolImport: true,
-    receiptPath: `${outDir}/final-poster.validation.json`,
+    receiptPath: `${outDir}/final-poster-${buildId}.validation.json`,
   });
-  console.log(JSON.stringify(result, null, 2));
+  await fs.copyFile(validatedPath, finalPath);
+  console.log(JSON.stringify({ ...result, deliveredPath: finalPath }, null, 2));
 }
 
 if (process.argv.includes("--inspect-template")) {
