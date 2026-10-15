@@ -1,0 +1,40 @@
+{
+  "figures": [
+    {
+      "path": "figures/final/welfare_comparison.svg",
+      "sha256": "4f357590e466880b0e989e4c598051a3c4db3829988f8762a6b2339a06c7daf9",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    },
+    {
+      "path": "figures/final/welfare_comparison.pdf",
+      "sha256": "a13b64f65a1bd39c385e66112eae8bb4f89f61f44610824a309910b7b3b24414",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    },
+    {
+      "path": "figures/final/welfare_comparison.png",
+      "sha256": "d0337c938310051206698096641a1158c2b44c0a1483e8ce72963ef45ce310eb",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    },
+    {
+      "path": "figures/final/ccar_robustness.svg",
+      "sha256": "4ffc1e1a62c53f2b626a4f9565512305b58378b195237c0ef9ceb93946b9b6db",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    },
+    {
+      "path": "figures/final/ccar_robustness.pdf",
+      "sha256": "a3edb2e28ac0b5c23483d06ce735d6b4eae22f31aeea3218db11d1483229b04b",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    },
+    {
+      "path": "figures/final/ccar_robustness.png",
+      "sha256": "7e5a271135ee19300c0321eb95de96b45c7be62ac0e9554867445c4d7185b771",
+      "source": "scripts/build_final_evidence.py",
+      "evidence_status": "computed stylized simulation"
+    }
+  ]
+}

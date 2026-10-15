@@ -1,0 +1,34 @@
+Team code and project title:
+FP10 — Share or Hide? Strategic Disclosure in Congested Low-Altitude Drone Traffic
+
+Authors in order:
+Yiqiao Liu
+
+GitHub repository:
+https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao
+
+Tested commit or release:
+83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29
+
+Root README with embedded poster:
+https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/README.md
+
+Poster preview and PDF in repository:
+https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/poster/final-poster.png
+https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/poster/final-poster.pdf
+
+Runnable notebook or equivalent baseline:
+https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/notebooks/01_strategic_disclosure_game.ipynb
+https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/notebooks/02_priority_slot_allocation.ipynb
+
+Working Hugging Face repository or Space:
+https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure
+
+Feedback response and final-week evidence:
+Appendix G and docs/final/feedback_response.md; docs/final/final_week_evidence.md
+
+Final version and date:
+FP10 final release candidate, 2026-10-15
+
+Team confirmation:
+Pending author verification until explicitly confirmed

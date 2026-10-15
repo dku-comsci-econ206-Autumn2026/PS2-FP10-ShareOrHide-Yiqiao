@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Intellectual merits and verified research gap</title>
+  <desc id="desc">Three closest papers connect to the FP10 disclosure model, equilibrium, welfare benchmark, CCAR mechanism, verification, and limitations.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#0f172a}.h1{font-size:38px;font-weight:700}.h2{font-size:24px;font-weight:700}.b{font-size:18px}.s{font-size:15px}.small{font-size:13px}.box{rx:16;ry:16;stroke-width:2}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="70" y="62" class="t h1">Intellectual merits: inherited foundations, verified gap, and bounded contribution</text>
+  <text x="70" y="92" class="t b" fill="#475569">Closest-work comparison and evidence chain for FP10</text>
+
+  <rect x="70" y="125" width="450" height="185" class="box" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="95" y="160" class="t h2">Los et al. (2020)  INHERITED</text>
+  <text x="95" y="191" class="t b">Platform-based collaborative vehicle routing</text>
+  <text x="95" y="220" class="t s">Varies position, route-plan, and marginal-cost sharing</text>
+  <text x="95" y="246" class="t s">Auction-based multi-agent simulation; system performance</text>
+  <text x="95" y="272" class="t s">Gap left: disclosure is a policy setting, not a Bayesian</text>
+  <text x="95" y="295" class="t s">choice with privately known confidentiality cost.</text>
+
+  <rect x="575" y="125" width="450" height="185" class="box" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="600" y="160" class="t h2">Liu and Chow (2022)  INHERITED</text>
+  <text x="600" y="191" class="t b">Data sharing in a public-transit oligopoly</text>
+  <text x="600" y="220" class="t s">Bayesian operations game plus coalition formation</text>
+  <text x="600" y="246" class="t s">Shows that more data need not help every stakeholder</text>
+  <text x="600" y="272" class="t s">Gap left: different institution, action structure, and</text>
+  <text x="600" y="295" class="t s">no congestion-contingent access-factor comparison.</text>
+
+  <rect x="1080" y="125" width="450" height="185" class="box" fill="#e2e8f0" stroke="#64748b"/>
+  <text x="1105" y="160" class="t h2">Maheshwari et al. (2025)  INHERITED</text>
+  <text x="1105" y="191" class="t b">Privacy-preserving AAM airspace allocation</text>
+  <text x="1105" y="220" class="t s">Air-credit market; private valuations; path allocation</text>
+  <text x="1105" y="246" class="t s">Competitive-equilibrium and distributed algorithm focus</text>
+  <text x="1105" y="272" class="t s">Gap left: allocates routes without modeling voluntary</text>
+  <text x="1105" y="295" class="t s">Minimum / Partial / Full intent disclosure.</text>
+
+  <path d="M295 310 L295 355 L800 355 L800 390" class="arrow"/>
+  <path d="M800 310 L800 390" class="arrow"/>
+  <path d="M1305 310 L1305 355 L800 355" class="arrow"/>
+
+  <rect x="430" y="390" width="740" height="92" class="box" fill="#fff7ed" stroke="#c2410c" stroke-dasharray="10 6"/>
+  <text x="460" y="424" class="t h2">UNRESOLVED GAP  VERIFIED FROM CLOSEST-WORK COMPARISON</text>
+  <text x="460" y="454" class="t b">No selected paper jointly studies endogenous disclosure granularity, private</text>
+  <text x="460" y="477" class="t b">confidentiality cost, public congestion, welfare loss, and a CCAR comparison.</text>
+
+  <path d="M800 482 L800 515" class="arrow"/>
+  <rect x="70" y="515" width="270" height="105" class="box" fill="#dbeafe" stroke="#1d4ed8"/>
+  <text x="95" y="550" class="t h2">FP10 model  ADAPTED</text>
+  <text x="95" y="578" class="t s">2 operators; private L/H costs</text>
+  <text x="95" y="602" class="t s">M / P / F; public Low / Med / High</text>
+
+  <path d="M340 568 L390 568" class="arrow"/>
+  <rect x="390" y="515" width="270" height="105" class="box" fill="#dcfce7" stroke="#15803d"/>
+  <text x="415" y="550" class="t h2">Pure BNE  VERIFIED</text>
+  <text x="415" y="578" class="t s">All 81 strategy profiles enumerated</text>
+  <text x="415" y="602" class="t s">No symmetry restriction</text>
+
+  <path d="M660 568 L710 568" class="arrow"/>
+  <rect x="710" y="515" width="270" height="105" class="box" fill="#dcfce7" stroke="#15803d"/>
+  <text x="735" y="550" class="t h2">Welfare  VERIFIED</text>
+  <text x="735" y="578" class="t s">Full-information first best reference</text>
+  <text x="735" y="602" class="t s">Largest benchmark gap: Medium 0.946</text>
+
+  <path d="M980 568 L1030 568" class="arrow"/>
+  <rect x="1030" y="515" width="270" height="105" class="box" fill="#ede9fe" stroke="#7c3aed"/>
+  <text x="1055" y="550" class="t h2">CCAR  PROPOSED</text>
+  <text x="1055" y="578" class="t s">Enhanced non-safety access factor</text>
+  <text x="1055" y="602" class="t s">Not strategy-proof or universally better</text>
+
+  <path d="M1300 568 L1350 568" class="arrow"/>
+  <rect x="1350" y="515" width="180" height="105" class="box" fill="#dcfce7" stroke="#15803d"/>
+  <text x="1370" y="550" class="t h2">COMPUTED</text>
+  <text x="1370" y="578" class="t s">760 cells</text>
+  <text x="1370" y="602" class="t s">failures retained</text>
+
+  <path d="M800 620 L800 662" class="arrow"/>
+  <rect x="190" y="662" width="1220" height="105" class="box" fill="#fee2e2" stroke="#b91c1c" stroke-dasharray="10 6"/>
+  <text x="220" y="698" class="t h2">LIMITATIONS AND NEXT TEST  NOT YET VALIDATED</text>
+  <text x="220" y="728" class="t b">Dynamic traffic, strategic misreporting, implementation cost, unequal burden, endogenous information quality,</text>
+  <text x="220" y="754" class="t b">and human comprehension require separate theory, simulation, and behavioral or field evidence.</text>
+
+  <rect x="70" y="805" width="1460" height="55" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="92" y="830" class="t small">Contribution claim: a reproducible comparative computational result for a stylized disclosure game, not a new general theorem or empirical aviation finding.</text>
+  <text x="92" y="851" class="t small">DOIs: Los 10.1016/j.tre.2020.102011; Liu &amp; Chow 10.1016/j.trb.2022.06.013; Maheshwari et al. 10.1145/3732290.</text>
+</svg>

@@ -1,0 +1,168 @@
+{
+  "project_title": "Share or Hide? Strategic Disclosure in Congested Low-Altitude Drone Traffic",
+  "team": "FP10",
+  "author": "Yiqiao Liu",
+  "course": "COMSCI/ECON 206 - Computational Microeconomics",
+  "term": "Autumn 2026, Session 1",
+  "model_version": "fp10-disclosure-v1-preserved",
+  "source_commit_at_generation": "6baa4107e508bcf2b1219fefb7827bdfc587714b",
+  "tested_commit": "83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29",
+  "git_branch": "final/fp10-2026-release",
+  "verification_date": "2026-10-15",
+  "parameters": {
+    "actions": [
+      "M",
+      "P",
+      "F"
+    ],
+    "types": [
+      "L",
+      "H"
+    ],
+    "disclosure_levels": {
+      "M": 0.0,
+      "P": 1.0,
+      "F": 2.0
+    },
+    "privacy_costs": {
+      "M": 0.0,
+      "P": 1.0,
+      "F": 2.5
+    },
+    "confidentiality_costs": {
+      "L": 1.0,
+      "H": 1.6
+    },
+    "type_probabilities": {
+      "L": 0.5,
+      "H": 0.5
+    },
+    "congestion": {
+      "Low": 0.3,
+      "Medium": 0.6,
+      "High": 1.0
+    },
+    "benefit_scale": 7.5,
+    "decay_lambda": 0.5,
+    "ccar_alpha_M": 0.7,
+    "equilibrium_tolerance": 1e-10
+  },
+  "benchmark_rows": [
+    {
+      "Congestion": "Low",
+      "d": 0.3,
+      "Mechanism": "Baseline",
+      "alpha_M": 1.0,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('M', 'M')|B('M', 'M')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 0.0,
+      "Operator utility sum": 0.0,
+      "Full-information first-best welfare": 0.6390946521519896,
+      "Welfare gap": 0.6390946521519896,
+      "Expected disclosure": 0.0
+    },
+    {
+      "Congestion": "Low",
+      "d": 0.3,
+      "Mechanism": "CCAR",
+      "alpha_M": 0.7,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('M', 'M')|B('M', 'M')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 0.0,
+      "Operator utility sum": 0.0,
+      "Full-information first-best welfare": 0.6390946521519896,
+      "Welfare gap": 0.6390946521519896,
+      "Expected disclosure": 0.0
+    },
+    {
+      "Congestion": "Medium",
+      "d": 0.6,
+      "Mechanism": "Baseline",
+      "alpha_M": 1.0,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('P', 'M')|B('P', 'M')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 2.1928832886574043,
+      "Operator utility sum": 2.1928832886574043,
+      "Full-information first-best welfare": 3.1390850294570187,
+      "Welfare gap": 0.9462017407996144,
+      "Expected disclosure": 1.0
+    },
+    {
+      "Congestion": "Medium",
+      "d": 0.6,
+      "Mechanism": "CCAR",
+      "alpha_M": 0.7,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('P', 'P')|B('P', 'P')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 3.089085029457019,
+      "Operator utility sum": 3.089085029457019,
+      "Full-information first-best welfare": 3.1390850294570187,
+      "Welfare gap": 0.04999999999999982,
+      "Expected disclosure": 2.0
+    },
+    {
+      "Congestion": "High",
+      "d": 1.0,
+      "Mechanism": "Baseline",
+      "alpha_M": 1.0,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('P', 'P')|B('P', 'P')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 6.881808382428366,
+      "Operator utility sum": 6.881808382428366,
+      "Full-information first-best welfare": 7.3852377939372555,
+      "Welfare gap": 0.5034294115088898,
+      "Expected disclosure": 2.0
+    },
+    {
+      "Congestion": "High",
+      "d": 1.0,
+      "Mechanism": "CCAR",
+      "alpha_M": 0.7,
+      "Equilibrium index": 1,
+      "Pure BNE": "A('P', 'P')|B('P', 'P')",
+      "Pure BNE count": 1,
+      "Profiles checked": 81,
+      "Underlying welfare": 6.881808382428366,
+      "Operator utility sum": 6.881808382428366,
+      "Full-information first-best welfare": 7.3852377939372555,
+      "Welfare gap": 0.5034294115088898,
+      "Expected disclosure": 2.0
+    }
+  ],
+  "robustness_counts": {
+    "No effect on equilibrium set": 401,
+    "Robust welfare improvement": 334,
+    "Excessive disclosure by stated diagnostic": 18,
+    "Any CCAR gap exceeds worst baseline gap": 3,
+    "Multiple CCAR pure BNE": 66,
+    "No CCAR pure BNE": 0
+  },
+  "robustness_categories_overlap": true,
+  "notebooks": [
+    "notebooks/01_strategic_disclosure_game.ipynb",
+    "notebooks/02_priority_slot_allocation.ipynb"
+  ],
+  "hugging_face_url": "https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure",
+  "paper_path": "submission/final/Final-FP10-ShareOrHide.pdf",
+  "poster_paths": [
+    "poster/final-poster.pptx",
+    "poster/final-poster.pdf",
+    "poster/final-poster.png"
+  ],
+  "evidence_status": "stylized computational benchmark; no empirical aviation or behavioral finding",
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  }
+}

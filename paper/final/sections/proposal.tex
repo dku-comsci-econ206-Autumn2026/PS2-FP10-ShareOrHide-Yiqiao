@@ -1,0 +1,37 @@
+\section{Background}
+Two commercial operators share a congested low-altitude coordination environment. Each knows its private confidentiality-cost type but not the rival's. They choose Minimum, Partial, or Full voluntary commercial disclosure; Minimum still includes the model's assumed safety-information floor. Information sharing can improve routing coordination \cite{los2020value}, while competing operators and airspace institutions create strategic and privacy constraints \cite{liu2022efficient,maheshwari2025privacy}.
+
+\section{Motivation}
+The institutional problem is not “maximize disclosure.” Operators internalize confidentiality cost but jointly create congestion-dependent coordination benefits. A privately rational equilibrium can therefore miss total-welfare opportunities, while an access incentive can also induce excessive disclosure. The project asks where a candidate rule helps and where it fails, rather than treating one favorable calibration as a theorem.
+
+\section{Application Scenario}
+Operator A and B coordinate commercial flight intent in a capacity-constrained urban setting. Partial may encode a coarse next sector/ETA; Full is richer route/timing detail. Mandatory safety information, emergency missions, enforcement, inaccurate reports, and real traffic control lie outside the action space. Stakeholders include operators, a coordinator, customers, and affected publics. The model is a normalized computational benchmark, not an empirical aviation forecast.
+
+\section{Research Question}
+\textbf{Shared:} How do private confidentiality costs and public congestion shape voluntary disclosure, welfare, and the performance of a congestion-contingent access rule? \textbf{Economics} defines incentives and welfare; \textbf{computer science} exhaustively enumerates equilibria and falsifying parameter regions; \textbf{behavioral science} motivates future tests of comprehension, privacy salience, and fairness---no behavioral population result is claimed.
+
+\section{Method}
+Nature independently draws $c_i\in\{1,1.6\}$ with probability $1/2$; public congestion is $d\in\{0.3,0.6,1\}$. Simultaneous actions are $a_i\in\{M,P,F\}$ with $x=(0,1,2)$ and $k=(0,1,2.5)$. Utility is
+\[u_i=d(7.5)[1-e^{-0.5(x_i+x_j)}]-c_i k(a_i).\]
+A complete pure strategy maps both own types to actions. The solver checks all $9\times9=81$ strategy pairs for interim best responses; symmetry is not imposed. Welfare is $W=u_A+u_B$. The full-information first best observes realized types and is a reference, not necessarily feasible. CCAR scales only a Minimum discloser's access to enhanced, non-safety coordination benefit by $\alpha_M=0.7$ at Medium/High congestion. It does not withhold mandatory safety information or establish truthful reporting. The downstream allocation appendix separately compares FCFS with a one-slot second-price auction; it does not turn the disclosure game into an auction.
+
+\textbf{Artifacts:} \PublicRepo; \ColabOne; \ColabTwo; \SpaceRepo. Final tested commit is recorded in the release manifest after the final verification commit.
+
+\balance
+\section{Results}
+All benchmark states have one pure BNE. Low: $(M,M)$, $W=0.000$, first best $0.639$, gap $0.639$. Medium: $(P,M)$ by type, $W=2.193$, first best $3.139$, gap $0.946$. High: $(P,P)$, $W=6.882$, first best $7.385$, gap $0.503$. Thus the largest benchmark gap is Medium. There, CCAR changes the BNE to $(P,P)$ and underlying welfare to $3.089$, leaving gap $0.050$. These are code-recomputed normalized expectations. Across 760 deterministic grid cells, diagnostics overlap: 401 no equilibrium-set effect, 334 robust welfare improvements, 18 excessive-disclosure flags, 3 larger-gap cases, 66 multiple-CCAR-BNE cases, and 0 without a pure CCAR BNE. The cells are neither subjects nor probabilities.
+
+\section{Intellectual Merits}
+Los et al. quantify operational sharing value in collaborative vehicle routing \cite{los2020value}; Liu and Chow study efficient/stable transit-operator data sharing \cite{liu2022efficient}; Maheshwari et al. design privacy-preserving AAM coordination \cite{maheshwari2025privacy}. FP10's bounded difference is the exact link among private binary confidentiality types, three disclosure levels, public congestion, complete Bayesian strategies, a realized-type first-best benchmark, and CCAR failure regions. This is a reproducible application/model combination and comparative numerical result---not a general theorem, proof of optimality, or empirical novelty claim. Appendix G expands Figure~\ref{fig:teaser}.
+
+\section{Practical Impacts}
+Potential relevance is limited to UN SDG targets 9.1 (sustainable/resilient infrastructure) and 11.2 (safe, accessible, sustainable transport). The demonstrated evidence is only stylized welfare/disclosure computation. Proposed indicators are coordination delay, confidential-data exposure, access disparity, and override/safety incidents relative to an unrestricted-access baseline. Risks include high-cost-operator disadvantage, gaming, and over-disclosure; safeguards are a safety-information floor, auditable eligibility, appeal, privacy review, and suspension on adverse diagnostics. Academia requires reproducibility; industry additionally requires reliability/security; public institutions require legitimacy, equitable access, contestability, and correction. No emissions or real-world safety benefit is claimed.
+
+\subsection*{Future Research Roadmap}
+Economics: add reporting/participation and implementation cost, with welfare and individual-rationality criteria. Computer science: simulate dynamic heterogeneous multi-agent traffic and privacy-preserving coordination, with scalability and failure-rate criteria. Behavioral science: preregister comprehension/framing choices before any operator inference, subject to ethics review. Han Zhang's suggested independent-coordinator role is a proposed three-party extension, not a completed model. The sequence is current benchmark $\rightarrow$ incentives $\rightarrow$ dynamic computation $\rightarrow$ behavioral/institutional validation $\rightarrow$ possible field evaluation.
+
+\subsection*{Evolving 2056 Contribution Statement}
+By 2056, the aspiration is accountable incentive-aware coordination in shared autonomous systems. The current contribution is only the verified stylized comparison above. The 2025 Economics Prize's innovation-growth framing and the 2026 prize for microeconomic foundations of macroeconomic stabilisation motivate long-horizon mechanism-building grounded in agent behavior; neither prize validates FP10. Progress requires general theory, independent replication, behavioral evidence, and safe field evaluation.
+
+\subsection*{Open Science and SDG Statements}
+Shortest local reproduction runs the repository's central evidence builder; model data, grids, figures, tests, and manifests are public alongside it. Local notebook execution is recorded; hosted Colab and final deployment parity remain separately labeled. SDG connections are prospective until stakeholder-defined field indicators and a governance process exist.

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "verification_date": "2026-10-15",
+  "checks": [
+    {
+      "name": "required artifacts",
+      "status": "PASS",
+      "evidence": "submission/final/Final-FP10-ShareOrHide.pdf; submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip; submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx; submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf; poster/final-poster.png"
+    },
+    {
+      "name": "paper PDF opens",
+      "status": "PASS",
+      "evidence": "7 pages; 595.276 x 841.89 pts (A4)"
+    },
+    {
+      "name": "two-page main paper",
+      "status": "PASS",
+      "evidence": "All eight named parts plus roadmap on pages 1\u20132; Author Notes begins page 3"
+    },
+    {
+      "name": "Overleaf source contents",
+      "status": "PASS",
+      "evidence": "15 files; required sources present"
+    },
+    {
+      "name": "poster geometry",
+      "status": "PASS",
+      "evidence": "slides=1, EMU=('42804000', '30276000'), nominal 1189\u00d7841 mm"
+    },
+    {
+      "name": "poster acknowledgment and contribution",
+      "status": "PASS",
+      "evidence": "Required named text found in editable slide XML"
+    },
+    {
+      "name": "poster PDF",
+      "status": "PASS",
+      "evidence": "pages=1, size=3370.39 x 2383.94 pts (A0)"
+    },
+    {
+      "name": "README poster embed",
+      "status": "PASS",
+      "evidence": "Exact required embed present"
+    },
+    {
+      "name": "README poster PDF link",
+      "status": "PASS",
+      "evidence": "Exact required link present"
+    },
+    {
+      "name": "valid notebook 01_strategic_disclosure_game.ipynb",
+      "status": "PASS",
+      "evidence": "notebooks/01_strategic_disclosure_game.ipynb"
+    },
+    {
+      "name": "valid notebook 02_priority_slot_allocation.ipynb",
+      "status": "PASS",
+      "evidence": "notebooks/02_priority_slot_allocation.ipynb"
+    },
+    {
+      "name": "model metadata",
+      "status": "PASS",
+      "evidence": "Manifest action space and diagnostic counts verified"
+    },
+    {
+      "name": "tested commit recorded",
+      "status": "PASS",
+      "evidence": "83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29"
+    },
+    {
+      "name": "Appendices A\u2013G",
+      "status": "PASS",
+      "evidence": "Seven required appendix section titles found"
+    },
+    {
+      "name": "AI disclosure",
+      "status": "PASS",
+      "evidence": "Appendix A.1 present"
+    },
+    {
+      "name": "full acknowledgments",
+      "status": "PASS",
+      "evidence": "Paper acknowledgment section present"
+    },
+    {
+      "name": "visual and scientific quality",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Automated structure checks cannot establish scientific quality or visual legibility"
+    },
+    {
+      "name": "PowerPoint native rendering",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Open PPTX in Microsoft PowerPoint; test QR codes, links, fonts, and print preview"
+    },
+    {
+      "name": "author and Canvas confirmation",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Yiqiao Liu must review and upload the four required files"
+    }
+  ],
+  "hashes": {
+    "submission/final/Final-FP10-ShareOrHide.pdf": "e29152ebabeb4b9d24fbe1ae47a51dd282a952f74d3049975ff75c17b03de088",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "69663bad2ac4cb4ffb3ffbd56a329a7e8218cef88c7263bf5be188166cbd3e7a",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "3912fae01dadcb5ee34b7312734b1cf699afc710352bd3c04c946eefd489a771",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "83e94d4c079e681d31b8ae682cc0fc0db50ad47a9b76a3bbb7babfbd839c7449",
+    "poster/final-poster.png": "6311e6674e6bdb0aac49bba31cd39be4778376a117e6de3fdf2f99cbb356346f"
+  },
+  "automated_passed": 16,
+  "automated_failed": 0,
+  "manual_required": 3
+}

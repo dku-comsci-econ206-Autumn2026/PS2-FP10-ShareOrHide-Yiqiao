@@ -7,3 +7,14 @@ __pycache__/
 .coverage
 coverage.xml
 htmlcov/
+.codex-review/
+paper/final/build/
+paper/final/annotations/
+paper/final/annotated.tex
+paper/final/annotated_preview.pdf
+paper/final/preview.pdf
+paper/final/README.md
+paper/final/acmart.dtx
+paper/final/acmart.ins
+paper/final/figures/ps2_teaser.tex
+paper/final/figures/ccar_robustness.pdf
