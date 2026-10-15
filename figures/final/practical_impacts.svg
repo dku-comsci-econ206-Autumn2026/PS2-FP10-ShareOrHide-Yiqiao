@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Practical impacts, evidence status, risks, and safeguards</title>
+  <desc id="desc">Potential connections to SDG targets 9.1 and 11.2 with official icons, stakeholders, indicators, evidence status, risks, and safeguards.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#334155"/></marker>
+    <style>.t{font-family:Arial,Helvetica,sans-serif;fill:#0f172a}.h1{font-size:38px;font-weight:700}.h2{font-size:24px;font-weight:700}.b{font-size:18px}.s{font-size:15px}.small{font-size:13px}.box{rx:16;ry:16;stroke-width:2}.a{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="70" y="62" class="t h1">Practical impacts: bounded mechanism, measurable indicators, and safeguards</text>
+  <text x="70" y="92" class="t b">Potential SDG connections. Current evidence remains a stylized computational benchmark.</text>
+
+  <rect x="70" y="125" width="330" height="205" class="box" fill="#e0f2fe" stroke="#0369a1"/>
+  <text x="95" y="160" class="t h2">RESEARCH MECHANISM</text>
+  <text x="95" y="194" class="t b">CCAR conditions access to</text>
+  <text x="95" y="221" class="t b">enhanced non-safety coordination</text>
+  <text x="95" y="248" class="t b">information on voluntary M/P/F</text>
+  <text x="95" y="285" class="t s">Mandatory safety information remains</text>
+  <text x="95" y="308" class="t s">unconditional in every modeled state.</text>
+
+  <path d="M400 228 L465 228" class="a"/>
+  <rect x="465" y="125" width="365" height="205" class="box" fill="#ffffff" stroke="#64748b"/>
+  <text x="490" y="160" class="t h2">AFFECTED STAKEHOLDERS</text>
+  <text x="490" y="194" class="t b">Commercial operators</text>
+  <text x="490" y="222" class="t b">Traffic-management authority</text>
+  <text x="490" y="250" class="t b">Customers and nearby communities</text>
+  <text x="490" y="278" class="t b">Emergency and public-safety users</text>
+  <text x="490" y="307" class="t s">Payment-based commercial priority does not</text>
+  <text x="490" y="327" class="t s">govern emergency/public-safety missions.</text>
+
+  <path d="M830 228 L895 228" class="a"/>
+  <rect x="895" y="125" width="635" height="205" class="box" fill="#fff7ed" stroke="#c2410c"/>
+  <text x="920" y="160" class="t h2">INDICATOR AND BASELINE</text>
+  <text x="920" y="194" class="t b">Proposed pilot indicator: mean coordination delay and</text>
+  <text x="920" y="221" class="t b">type-specific enhanced-access rate under CCAR versus baseline.</text>
+  <text x="920" y="258" class="t b">Current modeled comparator: underlying welfare gap</text>
+  <text x="920" y="285" class="t b">at Medium congestion, 0.946 baseline versus 0.050 CCAR.</text>
+  <text x="920" y="315" class="t s">No field delay, safety, throughput, emissions, or equity outcome has been measured.</text>
+
+  <rect x="70" y="375" width="700" height="245" class="box" fill="#ffffff" stroke="#f59e0b"/>
+  <image x="95" y="405" width="145" height="145" href="sdg_official/E_WEB_09.png" xlink:href="sdg_official/E_WEB_09.png"/>
+  <text x="270" y="415" class="t h2">SDG TARGET 9.1  POTENTIAL</text>
+  <text x="270" y="448" class="t b">Quality, reliable, sustainable and resilient infrastructure,</text>
+  <text x="270" y="475" class="t b">with affordable and equitable access.</text>
+  <text x="270" y="512" class="t s">Connection: auditable coordination rules for shared infrastructure.</text>
+  <text x="270" y="538" class="t s">Missing evidence: reliability, affordability, and access outcomes.</text>
+  <text x="270" y="564" class="t s">Risk: high-cost operators receive systematically less enhanced access.</text>
+  <text x="270" y="590" class="t s">Safeguard: type-blind safety floor, access audit, appeal, and suspension rule.</text>
+
+  <rect x="830" y="375" width="700" height="245" class="box" fill="#ffffff" stroke="#f59e0b"/>
+  <image x="855" y="405" width="145" height="145" href="sdg_official/E_WEB_11.png" xlink:href="sdg_official/E_WEB_11.png"/>
+  <text x="1030" y="415" class="t h2">SDG TARGET 11.2  POTENTIAL</text>
+  <text x="1030" y="448" class="t b">Safe, affordable, accessible and sustainable transport</text>
+  <text x="1030" y="475" class="t b">systems for all.</text>
+  <text x="1030" y="512" class="t s">Connection: possible future support for urban logistics coordination.</text>
+  <text x="1030" y="538" class="t s">Missing evidence: public access, safety, and sustainability effects.</text>
+  <text x="1030" y="564" class="t s">Risk: commercial efficiency crowds out vulnerable or public missions.</text>
+  <text x="1030" y="590" class="t s">Safeguard: protected public-safety priority and public accountability.</text>
+
+  <rect x="70" y="665" width="450" height="120" class="box" fill="#dcfce7" stroke="#15803d"/>
+  <text x="95" y="700" class="t h2">ACADEMIC STANDARD</text>
+  <text x="95" y="732" class="t b">Reproducible equilibrium and robustness</text>
+  <text x="95" y="759" class="t b">Claims bounded to modeled outcomes</text>
+
+  <rect x="575" y="665" width="450" height="120" class="box" fill="#ede9fe" stroke="#7c3aed" stroke-dasharray="10 6"/>
+  <text x="600" y="700" class="t h2">INDUSTRY STANDARD  UNVERIFIED</text>
+  <text x="600" y="732" class="t b">Latency, reliability, security, accuracy</text>
+  <text x="600" y="759" class="t b">Pilot calibration and implementation cost</text>
+
+  <rect x="1080" y="665" width="450" height="120" class="box" fill="#fee2e2" stroke="#b91c1c" stroke-dasharray="10 6"/>
+  <text x="1105" y="700" class="t h2">PUBLIC STANDARD  UNVERIFIED</text>
+  <text x="1105" y="732" class="t b">Safety, equitable access, transparency</text>
+  <text x="1105" y="759" class="t b">Independent oversight and correction</text>
+
+  <text x="70" y="828" class="t small">Official targets: https://sdgs.un.org/goals/goal9 and /goal11. Official icons: UN communications materials, English web set.</text>
+  <text x="70" y="852" class="t small">UN disclaimer: The content of this publication has not been approved by the United Nations and does not reflect the views of the United Nations or its officials or Member States.</text>
+</svg>

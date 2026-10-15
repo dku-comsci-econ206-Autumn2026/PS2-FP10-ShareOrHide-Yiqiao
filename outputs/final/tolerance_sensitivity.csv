@@ -1,0 +1,25 @@
+Tolerance,Congestion,Mechanism,Pure BNE count,Pure BNE set,Profiles checked
+1e-12,Low,Baseline,1,"A('M', 'M')|B('M', 'M')",81
+1e-12,Low,CCAR,1,"A('M', 'M')|B('M', 'M')",81
+1e-12,Medium,Baseline,1,"A('P', 'M')|B('P', 'M')",81
+1e-12,Medium,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-12,High,Baseline,1,"A('P', 'P')|B('P', 'P')",81
+1e-12,High,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-10,Low,Baseline,1,"A('M', 'M')|B('M', 'M')",81
+1e-10,Low,CCAR,1,"A('M', 'M')|B('M', 'M')",81
+1e-10,Medium,Baseline,1,"A('P', 'M')|B('P', 'M')",81
+1e-10,Medium,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-10,High,Baseline,1,"A('P', 'P')|B('P', 'P')",81
+1e-10,High,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-08,Low,Baseline,1,"A('M', 'M')|B('M', 'M')",81
+1e-08,Low,CCAR,1,"A('M', 'M')|B('M', 'M')",81
+1e-08,Medium,Baseline,1,"A('P', 'M')|B('P', 'M')",81
+1e-08,Medium,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-08,High,Baseline,1,"A('P', 'P')|B('P', 'P')",81
+1e-08,High,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-06,Low,Baseline,1,"A('M', 'M')|B('M', 'M')",81
+1e-06,Low,CCAR,1,"A('M', 'M')|B('M', 'M')",81
+1e-06,Medium,Baseline,1,"A('P', 'M')|B('P', 'M')",81
+1e-06,Medium,CCAR,1,"A('P', 'P')|B('P', 'P')",81
+1e-06,High,Baseline,1,"A('P', 'P')|B('P', 'P')",81
+1e-06,High,CCAR,1,"A('P', 'P')|B('P', 'P')",81
