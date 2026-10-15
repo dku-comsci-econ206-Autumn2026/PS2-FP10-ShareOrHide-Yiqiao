@@ -6,7 +6,7 @@
   "term": "Autumn 2026, Session 1",
   "model_version": "fp10-disclosure-v1-preserved",
   "source_commit_at_generation": "6baa4107e508bcf2b1219fefb7827bdfc587714b",
-  "tested_commit": "PENDING_FINAL_VERIFICATION_COMMIT",
+  "tested_commit": "83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29",
   "git_branch": "final/fp10-2026-release",
   "verification_date": "2026-10-15",
   "parameters": {

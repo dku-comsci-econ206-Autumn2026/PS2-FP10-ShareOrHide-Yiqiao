@@ -18,7 +18,6 @@ Audit date: 2026-10-15. Canonical sources: `src/disclosure_model.py`, `src/prior
 | Evidence label | stylized computation; no aviation/behavior empirical finding | Match | Match | Match | Visible in live static Space | PASS |
 | Allocation boundary | downstream FCFS vs one-slot second price; emergency/public safety excluded | Appendix F | Match | Match | Notebook/HF tests match | PASS |
 | Acknowledgments / contributions | solo; named roles bounded; historical records pending | Match | Match | Linked docs | N/A | PASS with human confirmation |
-| Version / tested commit | final commit inserted after last verification | Pending until final commit | Pending label | Release manifest link | HF deployment SHA separately recorded | PARTIAL |
+| Version / tested commit | content checkpoint `83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29` | Recorded in release metadata | Recorded in Canvas text | Release manifest link | HF deployment SHA separately recorded | PASS |
 
 Open discrepancy: the live Hugging Face Space is deployed from its own commit `84d736708a1ff2226cea3bf16bb11daa730764a1`; four core static files and the validated model data are byte-identical to the repository copy on 2026-10-15. The final Git branch contains new paper/poster/release files that are not part of the Space and need no deployment. Hosted Colab execution was not rechecked.
-

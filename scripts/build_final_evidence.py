@@ -10,6 +10,7 @@ import csv
 import hashlib
 import importlib.metadata
 import json
+import os
 import platform
 import subprocess
 import sys
@@ -428,7 +429,9 @@ def main() -> None:
         "term": "Autumn 2026, Session 1",
         "model_version": "fp10-disclosure-v1-preserved",
         "source_commit_at_generation": git_value("rev-parse", "HEAD"),
-        "tested_commit": "PENDING_FINAL_VERIFICATION_COMMIT",
+        "tested_commit": os.environ.get(
+            "FP10_TESTED_COMMIT", "PENDING_FINAL_VERIFICATION_COMMIT"
+        ),
         "git_branch": git_value("branch", "--show-current"),
         "verification_date": VERIFICATION_DATE,
         "parameters": {
