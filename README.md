@@ -1,6 +1,10 @@
-[![Current FP10 A0 Poster Preview](docs/assets/poster/ps2_fp10_poster_preview.png)](poster/PS2-FP10-Yiqiao-A0-Poster.pdf)
+![Final presentation poster](poster/final-poster.png)
 
-**[View / Download the Current A0 Poster (PDF)](poster/PS2-FP10-Yiqiao-A0-Poster.pdf)**
+[Download the final poster PDF](poster/final-poster.pdf)
+
+**Final paper:** [Final-FP10-ShareOrHide.pdf](submission/final/Final-FP10-ShareOrHide.pdf) · **Editable Overleaf source:** [ZIP](submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip) · **Editable A0 poster:** [PPTX](poster/final-poster.pptx)
+
+**Auditable final evidence:** [release manifest](outputs/final/release_manifest.json) · [three closest papers](docs/final/closest_papers.md) · [feedback register](docs/final/feedback_response.md) · [release readiness](docs/final/release_readiness.md)
 
 **Interactive Demo — Hugging Face Space:** <https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure>
 
@@ -17,18 +21,18 @@ Duke Kunshan University · Autumn 2026
 *Under the stylized benchmark, disclosure rises with congestion, but the largest welfare gap appears at intermediate congestion.*
 
 <p>
-  <a href="paper/compiled/PS2-FP10-Yiqiao.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/PAPER-PDF-0B3D91?style=for-the-badge&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
-  <a href="poster/PS2-FP10-Yiqiao-A0-Poster.pdf"><img alt="A0 Poster PDF" src="https://img.shields.io/badge/A0_POSTER-PDF-0F766E?style=for-the-badge&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
+  <a href="submission/final/Final-FP10-ShareOrHide.pdf"><img alt="Paper PDF" src="https://img.shields.io/badge/FINAL_PAPER-PDF-0B3D91?style=for-the-badge&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
+  <a href="poster/final-poster.pdf"><img alt="A0 Poster PDF" src="https://img.shields.io/badge/FINAL_A0_POSTER-PDF-0F766E?style=for-the-badge&amp;logo=adobeacrobatreader&amp;logoColor=white"></a>
   <a href="https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/01_strategic_disclosure_game.ipynb"><img alt="Open disclosure notebook in Colab" src="https://img.shields.io/badge/COLAB_01-DISCLOSURE-B45309?style=for-the-badge&amp;logo=googlecolab&amp;logoColor=white"></a>
   <a href="https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb"><img alt="Open allocation notebook in Colab" src="https://img.shields.io/badge/COLAB_02-ALLOCATION-B45309?style=for-the-badge&amp;logo=googlecolab&amp;logoColor=white"></a>
 </p>
 <p>
   <a href="https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure"><img alt="Open Behavioral Lab" src="https://img.shields.io/badge/BEHAVIORAL_LAB-HUGGING_FACE-7C5C00?style=for-the-badge&amp;logo=huggingface&amp;logoColor=white"></a>
   <a href="#reproduce-in-five-minutes"><img alt="Source and reproduction instructions" src="https://img.shields.io/badge/SOURCE-REPRODUCE-475569?style=for-the-badge&amp;logo=github&amp;logoColor=white"></a>
-  <img alt="Verified snapshot: 65 tests passed" src="https://img.shields.io/badge/VERIFIED_SNAPSHOT-65_TESTS_PASSED-15803D?style=for-the-badge">
+  <img alt="Final verification recorded in release readiness" src="https://img.shields.io/badge/FINAL_CHECK-SEE_RELEASE_READINESS-15803D?style=for-the-badge">
 </p>
 
-<sub>The test badge records the validated submission snapshot; it is not a live CI badge.</sub>
+<sub>The verification badge points to a dated local release audit; it is not a live CI badge.</sub>
 
 </div>
 
@@ -147,15 +151,16 @@ The [public Behavioral Decision Lab](https://huggingface.co/spaces/dku-comsci-ec
 
 | Test group | Passed | Failed |
 |---|---:|---:|
-| Computational model | 27 | 0 |
+| Computational model and final evidence | 32 | 0 |
 | Notebook portability | 6 | 0 |
 | Gradio behavioral artifact | 17 | 0 |
 | Static Python artifact | 10 | 0 |
 | Static JavaScript artifact | 5 | 0 |
-| **Total** | **65** | **0** |
+| **Total** | **70** | **0** |
 
-- **Hosted Colab:** both notebooks confirmed with **Run all**.
-- **Public Hugging Face artifact:** validated static Space.
+- **Local notebook execution:** both notebooks completed from top to bottom in isolated output copies on 2026-10-15; output hashes are recorded in the final audit.
+- **Hosted Colab:** not re-run during this release audit; live execution remains a manual check.
+- **Hugging Face source:** repository static and Gradio counterparts pass 32 automated checks; live deployed-source parity is reported separately.
 - **GitHub:** course-organization source repository.
 
 Python 3.13 is recommended. From a fresh clone:
@@ -172,10 +177,12 @@ python -m unittest discover -s hf_static/tests -v
 node --test hf_static/tests/test_logic.mjs
 ```
 
-The first Python command reports 33 tests: 27 computational plus 6 notebook-portability checks. To rebuild these README visuals deterministically from tracked outputs:
+The first Python command reports 38 tests: 32 computational/final-evidence checks plus 6 notebook-portability checks. To rebuild the final evidence and README visuals deterministically from tracked outputs:
 
 ```bash
+python scripts/build_final_evidence.py
 python scripts/build_readme_assets.py
+python scripts/final_release_check.py
 ```
 
 The notebooks remain the shortest end-to-end path: [01 · Strategic disclosure](https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/01_strategic_disclosure_game.ipynb) and [02 · Priority allocation](https://colab.research.google.com/github/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/main/notebooks/02_priority_slot_allocation.ipynb).
