@@ -142,6 +142,10 @@ Game theory identifies strategic disclosure under incomplete information; social
 
 The [public Behavioral Decision Lab](https://huggingface.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure) lets participants make choices before seeing benchmark recommendations, compare a second decision under CCAR, reflect on incentives, use same-device peer play, and try the bounded priority-slot exercise. It stores no accounts or durable behavioral dataset.
 
+If the live Space is unavailable during presentation, use the tracked [current demo fallback screenshot](docs/assets/demo/behavioral-decision-lab-fallback.png), generated from the repository's validated static app with `node scripts/capture_demo_fallback.mjs`.
+
+![Behavioral Decision Lab fallback screenshot](docs/assets/demo/behavioral-decision-lab-fallback.png)
+
 > [!NOTE]
 > This is an exploratory classroom decision artifact, not representative evidence about real drone operators. The static browser app uses finite lookups exported from the validated Python model; it does not rerun the Bayesian solver.
 
@@ -221,7 +225,7 @@ scripts/                 deterministic builders and validation utilities
 - Raith, M. (1996). “A General Model of Information Sharing in Oligopoly.” *Journal of Economic Theory*. [DOI](https://doi.org/10.1006/jeth.1996.0117)
 - Vickrey, W. (1961). “Counterspeculation, Auctions, and Competitive Sealed Tenders.” *Journal of Finance*. [DOI](https://doi.org/10.1111/j.1540-6261.1961.tb02789.x)
 - Chin, C. (2023). “Traffic Management Protocols for Advanced Air Mobility.” *Frontiers in Aerospace Engineering*. [DOI](https://doi.org/10.3389/fpace.2023.1176969)
-- Maheshwari et al. (2025). “Privacy-Preserving Mechanisms for Coordinating Airspace Usage in Advanced Air Mobility.” *Proceedings of the ACM on Measurement and Analysis of Computing Systems*. [DOI](https://doi.org/10.1145/3732290)
+- Maheshwari et al. (2025). “Privacy-Preserving Mechanisms for Coordinating Airspace Usage in Advanced Air Mobility.” *ACM Journal on Autonomous Transportation Systems* 2(4), Article 19. [DOI](https://doi.org/10.1145/3732290)
 
 | Course | Team | Author | Instructor | Term |
 |---|---|---|---|---|

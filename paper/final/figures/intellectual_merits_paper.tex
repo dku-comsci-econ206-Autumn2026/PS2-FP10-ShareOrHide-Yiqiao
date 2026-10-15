@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  every node/.style={font=\sffamily\scriptsize,text=CourseInk,align=left},
+  source/.style={draw=CourseInk!55,rounded corners=2pt,fill=CourseInk!7,text width=4.75cm,minimum height=1.15cm,inner sep=5pt},
+  gap/.style={draw=orange!85!black,dashed,rounded corners=2pt,fill=orange!5,text width=16.1cm,minimum height=.72cm,inner sep=5pt},
+  verified/.style={draw=CourseTeal,rounded corners=2pt,fill=CourseTeal!8,text width=4.75cm,minimum height=1.03cm,inner sep=5pt},
+  proposed/.style={draw=CourseBlue,rounded corners=2pt,fill=CourseBlue!7,text width=7.45cm,minimum height=1.03cm,inner sep=5pt},
+  limit/.style={draw=red!70!black,dashed,rounded corners=2pt,fill=red!5,text width=16.1cm,minimum height=.82cm,inner sep=5pt},
+  flow/.style={-{Stealth[length=2.4mm,width=1.8mm]},line width=.9pt,CourseInk}
+]
+\node[source] (los) at (2.65,5.75) {\textbf{Los et al. (2020) -- inherited}\\Information can improve shared routing; no private-cost disclosure choice.};
+\node[source] (liu) at (8.75,5.75) {\textbf{Liu and Chow (2022) -- inherited}\\Strategic transit data sharing; no congestion-linked access comparison.};
+\node[source] (mah) at (14.85,5.75) {\textbf{Maheshwari et al. (2025) -- inherited}\\Private-value AAM allocation; no M/P/F disclosure game.};
+\node[gap] (gap) at (8.75,4.35) {\textbf{Verified selected-work gap.} The three papers do not jointly model disclosure granularity, private costs, public congestion, welfare loss, and CCAR.};
+\draw[flow] (los.south)--(los.south|-gap.north);
+\draw[flow] (liu.south)--(liu.south|-gap.north);
+\draw[flow] (mah.south)--(mah.south|-gap.north);
+\node[proposed,text width=4.75cm] (model) at (2.65,2.95) {\textbf{1 -- FP10 model adapted}\\Two operators, L/H private costs, M/P/F actions, public Low/Medium/High congestion.};
+\node[verified] (bne) at (8.75,2.95) {\textbf{2 -- Pure BNE verified}\\All 81 type-contingent strategy profiles enumerated; no symmetry restriction.};
+\node[verified] (welfare) at (14.85,2.95) {\textbf{3 -- Welfare verified}\\Type-observing first best; largest benchmark gap is Medium $=0.946202$.};
+\draw[flow] (gap.south)--(bne.north);
+\draw[flow] (model.east)--(bne.west);
+\draw[flow] (bne.east)--(welfare.west);
+\node[proposed] (ccar) at (4.57,1.58) {\textbf{4 -- CCAR proposed}\\Enhanced non-safety coordination access factor; no strategy-proofness or universal gain claimed.};
+\node[verified,text width=7.45cm] (compute) at (12.93,1.58) {\textbf{5 -- Computational evaluation verified}\\760 parameter cells retain no-effect, excessive-disclosure, larger-gap, and multiplicity diagnostics.};
+\draw[flow] (welfare.south)--++(0,-.32)-|(ccar.north);
+\draw[flow] (ccar.east)--(compute.west);
+\node[limit] (limit) at (8.75,.25) {\textbf{Limitations not yet validated.} Dynamic traffic, strategic misreporting, implementation costs, unequal burdens, endogenous information quality, human comprehension, and field outcomes require further evidence.};
+\draw[flow] (compute.south)--(compute.south|-limit.north);
+\end{tikzpicture}

@@ -10,7 +10,7 @@
     {
       "name": "paper PDF opens",
       "status": "PASS",
-      "evidence": "7 pages; 595.276 x 841.89 pts (A4)"
+      "evidence": "6 pages; 595.276 x 841.89 pts (A4)"
     },
     {
       "name": "two-page main paper",
@@ -20,12 +20,12 @@
     {
       "name": "Overleaf source contents",
       "status": "PASS",
-      "evidence": "12 files; required sources present"
+      "evidence": "14 files; required sources present"
     },
     {
-      "name": "Overleaf Intellectual Merits figure",
+      "name": "Overleaf paper-specific figure sources",
       "status": "PASS",
-      "evidence": "canonical=07d073ad1ed4282cd3f5739b207d707e59abf99612a4f4b01416808825e353f9; packed=07d073ad1ed4282cd3f5739b207d707e59abf99612a4f4b01416808825e353f9"
+      "evidence": "canonical={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': 'f1e9e6d73b27fe419c11a70a8d6504f9372d404cbb0d6eb314b01016c16ba228', 'figures/research_roadmap_paper.tex': '2dc20bda0872f3360853c427c4902af1cb773b23f7f66faf62228ea88d35380f'}; packed={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': 'f1e9e6d73b27fe419c11a70a8d6504f9372d404cbb0d6eb314b01016c16ba228', 'figures/research_roadmap_paper.tex': '2dc20bda0872f3360853c427c4902af1cb773b23f7f66faf62228ea88d35380f'}"
     },
     {
       "name": "poster geometry",
@@ -83,6 +83,11 @@
       "evidence": "Exact required link present"
     },
     {
+      "name": "demo outage fallback",
+      "status": "PASS",
+      "evidence": "docs/assets/demo/behavioral-decision-lab-fallback.png; sha256=333d0b1dedc2f5ef8849078440e775521a054cb114c467f42baa16a83b5cba16"
+    },
+    {
       "name": "valid notebook 01_strategic_disclosure_game.ipynb",
       "status": "PASS",
       "evidence": "notebooks/01_strategic_disclosure_game.ipynb"
@@ -100,7 +105,22 @@
     {
       "name": "tested commit recorded",
       "status": "PASS",
-      "evidence": "83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29"
+      "evidence": "96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38"
+    },
+    {
+      "name": "poster version label",
+      "status": "PASS",
+      "evidence": "Validated source commit is present; stale pending label absent"
+    },
+    {
+      "name": "Canvas text uses main links",
+      "status": "PASS",
+      "evidence": "README, poster, and notebook URLs target main"
+    },
+    {
+      "name": "Canvas text version",
+      "status": "PASS",
+      "evidence": "Validated source commit and audited-final wording present"
     },
     {
       "name": "Appendices A\u2013G",
@@ -133,14 +153,16 @@
       "evidence": "Yiqiao Liu must review and upload the four required files"
     }
   ],
-  "hashes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": "29242a9e545a698ae4b0c32b9463827740def71fca2cc09a974ba3400082d52f",
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "fb66185c25cf22c5ab49f9a37fc062223027fdea6d5a26438731a3faf82e6025",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "c49d251712d39ab470f05e8754a21965e8428d58886d1a17a68dd26380c4f696",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "734ecb8b1ec988205876def027a72b1083d41cf2cb1e8dfba849024f7ded3039",
-    "poster/final-poster.png": "cae735965e38f7db14d503a7c9dd8f61d9ab058c29cdc5e1e7b3bdc705a984ff"
+  "canvas_hashes": {
+    "submission/final/Final-FP10-ShareOrHide.pdf": "4009b7eeea35395cc8eae2626e6c3df640d0d81bd8db30cade1fe47ac08666a1",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "4a2f8933ab392f25ad0d73fba88516a375010deeb2224ca4b960c213604bca39",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "a74674943ef589690d93f8a3136add833db0d68024ccd92d840a61b3d1a20372",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "289fabc9c55c4947bf843745bd9ae59a8d5a28b8feadfedd1c33fde6815e5b02"
   },
-  "automated_passed": 23,
+  "auxiliary_hashes": {
+    "poster/final-poster.png": "314cfa2453eeceb9b7a9edbaaaacd8fa6c8b9b27dcddc8e24dcf97a8bd58e3ef"
+  },
+  "automated_passed": 27,
   "automated_failed": 0,
   "manual_required": 3
 }

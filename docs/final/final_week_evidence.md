@@ -2,6 +2,14 @@
 
 This register deliberately separates required historical activities from evidence actually present in the repository. No missing post, email, discussion, handwritten note, or collaboration is reconstructed.
 
+## Recovered historical feedback
+
+| Date | Record | Evidence found | Research use | Status |
+|---|---|---|---|---|
+| 2026-09-28 | Feiyu Li (FP3 member 1) review of the superseded “Stay or Switch?” AI memory-portability version | Tracked final-project source records identify the reviewer, date, Session B, recognized checks, multiplicity concern, behavioral question, participant-data suggestion, and **Revise** decision | Retained only as a methodological-development record: explicit multiplicity reporting, behavioral-evidence boundaries, and reproducibility | **RECOVERED AND BOUNDED** — not direct review or validation of the current drone-disclosure model |
+
+No separate 28 September symposium record for the current drone-disclosure topic was recovered.
+
 | Date | Required activity | Evidence found | Research use | Status / exact record needed |
 |---|---|---|---|---|
 | 2026-10-12 | Beginning Ed post and current poster | No primary record | Appendix G placeholder only | **HUMAN CONFIRMATION REQUIRED** — post URL/export and poster version |
@@ -13,9 +21,8 @@ This register deliberately separates required historical activities from evidenc
 | 2026-10-14 | Assigned replies and roundtable | No primary record | None claimed | **HUMAN CONFIRMATION REQUIRED** — URLs/exports, names, dates |
 | 2026-10-14 | Three research challenges | Known Han Zhang and Xinrong Sun summaries supplied without primary record | Feedback register and roadmap | **PARTIAL** — provide original record |
 | 2026-10-14 | Ken Rogerson exchange | No direct FP10 exchange found | No direct feedback claim made | **HUMAN CONFIRMATION REQUIRED** — email or note if it exists |
-| 2026-10-14 | Nobel comparison | Official prize pages checked during final build | Bounded 2056 framing | **PASS for external facts; HUMAN CONFIRMATION REQUIRED for classroom use** |
+| 2026-10-14 | Nobel comparison | Official NobelPrize.org 2025 press release and Royal Swedish Academy 2026 announcement checked during final build | Bounded 2056 framing | **PASS for external facts; HUMAN CONFIRMATION REQUIRED for classroom use** |
 
 ## Verified Nobel comparison
 
 The official 2025 Economics Prize recognized Joel Mokyr, Philippe Aghion, and Peter Howitt for explaining innovation-driven economic growth. The official 2026 prize was awarded jointly to Robert E. Hall and Michael Woodford “for microeconomic foundations of macroeconomic stabilisation.” These foundations motivate, but do not validate, FP10's aspiration: build accountable, incentive-aware coordination for shared autonomous systems by linking micro-level behavior to institutional outcomes. FP10 makes no prize-worthiness claim.
-

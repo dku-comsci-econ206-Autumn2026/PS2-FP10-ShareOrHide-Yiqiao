@@ -56,18 +56,21 @@ def check(name: str, passed: bool, evidence: str, manual: bool = False) -> None:
 
 
 def main() -> int:
-    required = [
+    canvas_files = [
         ROOT / "submission/final/Final-FP10-ShareOrHide.pdf",
         ROOT / "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip",
         ROOT / "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx",
         ROOT / "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf",
+    ]
+    required = [
+        *canvas_files,
         ROOT / "poster/final-poster.png",
     ]
     check("required artifacts", all(path.is_file() for path in required), "; ".join(str(p.relative_to(ROOT)) for p in required))
 
     paper = required[0]
     pinfo = pdf_info(paper)
-    check("paper PDF opens", int(pinfo["Pages"].strip()) >= 3, f"{pinfo['Pages'].strip()} pages; {pinfo['Page size'].strip()}")
+    check("paper PDF opens", int(pinfo["Pages"].strip()) == 6, f"{pinfo['Pages'].strip()} pages; {pinfo['Page size'].strip()}")
     first_two = pdf_text(paper, 1, 2)
     third = pdf_text(paper, 3, 3)
     required_parts = ["Background", "Motivation", "Application Scenario", "Research Question", "Method", "Results", "Intellectual Merits", "Practical Impacts", "Future Research Roadmap"]
@@ -77,16 +80,34 @@ def main() -> int:
     source_zip = required[1]
     with zipfile.ZipFile(source_zip) as archive:
         names = set(archive.namelist())
-        packed_merits = archive.read("figures/intellectual_merits.pdf")
-    source_required = {"main.tex", "references.bib", "acmart.cls", "ACM-Reference-Format.bst", "sections/proposal.tex", "appendices/supporting.tex"}
+        packed_paper_figures = {
+            name: hashlib.sha256(archive.read(name)).hexdigest()
+            for name in (
+                "figures/ps2_teaser.tex",
+                "figures/intellectual_merits_paper.tex",
+                "figures/practical_impacts_paper.tex",
+                "figures/research_roadmap_paper.tex",
+            )
+        }
+    source_required = {
+        "main.tex", "references.bib", "acmart.cls", "ACM-Reference-Format.bst",
+        "sections/proposal.tex", "appendices/supporting.tex",
+        "figures/welfare_comparison.pdf", "figures/ps2_teaser.tex",
+        "figures/intellectual_merits_paper.tex", "figures/practical_impacts_paper.tex",
+        "figures/research_roadmap_paper.tex",
+    }
     check("Overleaf source contents", source_required <= names, f"{len(names)} files; required sources present")
-    canonical_merits_pdf = ROOT / "figures/final/intellectual_merits.pdf"
-    merits_pdf_hash = sha256(canonical_merits_pdf)
-    packed_merits_hash = hashlib.sha256(packed_merits).hexdigest()
+    canonical_paper_figures = {
+        f"figures/{name}": sha256(ROOT / "paper/final/figures" / name)
+        for name in (
+            "ps2_teaser.tex", "intellectual_merits_paper.tex",
+            "practical_impacts_paper.tex", "research_roadmap_paper.tex",
+        )
+    }
     check(
-        "Overleaf Intellectual Merits figure",
-        merits_pdf_hash == packed_merits_hash,
-        f"canonical={merits_pdf_hash}; packed={packed_merits_hash}",
+        "Overleaf paper-specific figure sources",
+        canonical_paper_figures == packed_paper_figures,
+        f"canonical={canonical_paper_figures}; packed={packed_paper_figures}",
     )
 
     poster_pptx = required[2]
@@ -102,7 +123,7 @@ def main() -> int:
     size = re.search(r"<p:sldSz cx=\"(\d+)\" cy=\"(\d+)\"", presentation_xml)
     geometry_ok = bool(size and size.groups() == ("42804000", "30276000") and len(slide_names) == 1)
     check("poster geometry", geometry_ok, f"slides={len(slide_names)}, EMU={size.groups() if size else None}, nominal 1189×841 mm")
-    check("poster acknowledgment and contribution", all(term in poster_xml for term in ("Full acknowledgments", "Yiqiao Liu", "Han Zhang", "Xinrong Sun")), "Required named text found in editable slide XML")
+    check("poster acknowledgment and contribution", all(term in poster_xml for term in ("Full acknowledgments", "Yiqiao Liu", "Han Zhang", "Xinrong Sun", "Feiyu Li")), "Required named text found in editable slide XML")
     merits_png_hash = sha256(ROOT / "figures/final/intellectual_merits.png")
     check(
         "poster Intellectual Merits image",
@@ -162,6 +183,8 @@ def main() -> int:
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     check("README poster embed", "![Final presentation poster](poster/final-poster.png)" in readme, "Exact required embed present")
     check("README poster PDF link", "[Download the final poster PDF](poster/final-poster.pdf)" in readme, "Exact required link present")
+    fallback = ROOT / "docs/assets/demo/behavioral-decision-lab-fallback.png"
+    check("demo outage fallback", fallback.is_file() and "behavioral-decision-lab-fallback.png" in readme, f"{fallback.relative_to(ROOT)}; sha256={sha256(fallback) if fallback.is_file() else 'missing'}")
 
     for notebook in (ROOT / "notebooks/01_strategic_disclosure_game.ipynb", ROOT / "notebooks/02_priority_slot_allocation.ipynb"):
         try:
@@ -173,7 +196,13 @@ def main() -> int:
 
     manifest = json.loads((ROOT / "outputs/final/release_manifest.json").read_text())
     check("model metadata", manifest["parameters"]["actions"] == ["M", "P", "F"] and manifest["robustness_counts"]["No effect on equilibrium set"] == 401, "Manifest action space and diagnostic counts verified")
-    check("tested commit recorded", manifest["tested_commit"] != "PENDING_FINAL_VERIFICATION_COMMIT", manifest["tested_commit"])
+    tested_commit = manifest["tested_commit"]
+    check("tested commit recorded", bool(re.fullmatch(r"[0-9a-f]{40}", tested_commit)), tested_commit)
+    check("poster version label", tested_commit in poster_xml and "pending final verification commit" not in poster_xml.lower(), "Validated source commit is present; stale pending label absent")
+
+    canvas_text = (ROOT / "submission/final/canvas_text_entry.txt").read_text(encoding="utf-8")
+    check("Canvas text uses main links", "/blob/main/" in canvas_text and "final/fp10-2026-release" not in canvas_text, "README, poster, and notebook URLs target main")
+    check("Canvas text version", tested_commit in canvas_text and "Final release candidate" not in canvas_text, "Validated source commit and audited-final wording present")
 
     source = (ROOT / "paper/final/appendices/supporting.tex").read_text(encoding="utf-8")
     appendices_ok = all(f"\\section{{{name}" in source for name in (
@@ -197,7 +226,8 @@ def main() -> int:
         "schema_version": 1,
         "verification_date": "2026-10-15",
         "checks": checks,
-        "hashes": {str(path.relative_to(ROOT)): sha256(path) for path in required},
+        "canvas_hashes": {str(path.relative_to(ROOT)): sha256(path) for path in canvas_files},
+        "auxiliary_hashes": {str(required[-1].relative_to(ROOT)): sha256(required[-1])},
         "automated_passed": sum(c["status"] == "PASS" for c in checks),
         "automated_failed": sum(c["status"] == "FAIL" for c in checks),
         "manual_required": sum(c["status"] == "MANUAL VERIFICATION REQUIRED" for c in checks),
