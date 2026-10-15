@@ -20,8 +20,8 @@
     "height": 1400
   },
   "threshold": 8,
-  "changedInsidePixels": 1543129,
-  "changedInsideRatio": 0.3477082018927445,
+  "changedInsidePixels": 1641428,
+  "changedInsideRatio": 0.36985759351059033,
   "changedOutsidePixels": 0,
   "changedOutsideRatio": 0,
   "maximumOutsideChannelDelta": 0,
@@ -64,9 +64,9 @@
     },
     "section02FigureAfter": {
       "width": 1870,
-      "height": 565
+      "height": 675
     },
-    "section02FigureAreaIncreaseRatio": 0.2958079866562009
+    "section02FigureAreaIncreaseRatio": 0.5480891875981162
   },
   "status": "PASS"
 }

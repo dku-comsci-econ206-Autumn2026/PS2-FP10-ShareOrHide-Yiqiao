@@ -103,8 +103,8 @@ const report = {
     beforeColumnShares: [0.289, 0.422, 0.289],
     afterColumnShares: [0.266, 0.469, 0.265],
     section02FigureBefore: { width: 1664, height: 490 },
-    section02FigureAfter: { width: 1870, height: 565 },
-    section02FigureAreaIncreaseRatio: (1870 * 565) / (1664 * 490) - 1,
+    section02FigureAfter: { width: 1870, height: 675 },
+    section02FigureAreaIncreaseRatio: (1870 * 675) / (1664 * 490) - 1,
   },
   status: changedOutside === 0 && maximumOutsideChannelDelta === 0 && Object.values(protectedEvidence).every((entry) => entry.identical) ? "PASS" : "REVIEW",
 };

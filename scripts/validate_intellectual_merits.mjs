@@ -27,7 +27,7 @@ function intersects(a, b, padding = 0) {
 }
 
 try {
-  const page = await browser.newPage({ viewport: { width: 1800, height: 544 } });
+  const page = await browser.newPage({ viewport: { width: 1800, height: 650 } });
   await page.setContent(`<style>html,body{margin:0}</style>${svg}`, { waitUntil: "networkidle" });
   const geometry = await page.evaluate(() => {
     const svgNode = document.querySelector("svg");
@@ -76,6 +76,32 @@ try {
       }
     }
   }
+
+  const cardById = new Map(geometry.cards.map((card) => [card.id, card.rect]));
+  const horizontalGap = (leftId, rightId) => {
+    const left = cardById.get(leftId);
+    const right = cardById.get(rightId);
+    return right.x - (left.x + left.width);
+  };
+  const verticalGap = (upperId, lowerId) => {
+    const upper = cardById.get(upperId);
+    const lower = cardById.get(lowerId);
+    return lower.y - (upper.y + upper.height);
+  };
+  const spacingMetrics = [
+    { id: "literature-los-to-liu", axis: "horizontal", actual: horizontalGap("literature-los", "literature-liu-chow"), minimum: 50 },
+    { id: "literature-liu-to-maheshwari", axis: "horizontal", actual: horizontalGap("literature-liu-chow", "literature-maheshwari"), minimum: 50 },
+    { id: "literature-to-gap", axis: "vertical", actual: verticalGap("literature-los", "bounded-gap"), minimum: 30 },
+    { id: "gap-to-step-row", axis: "vertical", actual: verticalGap("bounded-gap", "step-1-model"), minimum: 30 },
+    { id: "step-1-to-step-2", axis: "horizontal", actual: horizontalGap("step-1-model", "step-2-bne"), minimum: 40 },
+    { id: "step-2-to-step-3", axis: "horizontal", actual: horizontalGap("step-2-bne", "step-3-welfare"), minimum: 40 },
+    { id: "step-row-to-ccar-row", axis: "vertical", actual: verticalGap("step-1-model", "step-4-ccar"), minimum: 40 },
+    { id: "step-4-to-step-5", axis: "horizontal", actual: horizontalGap("step-4-ccar", "step-5-computation"), minimum: 50 },
+    { id: "step-5-to-limitations", axis: "vertical", actual: verticalGap("step-5-computation", "limitations"), minimum: 35 },
+  ];
+  for (const metric of spacingMetrics) {
+    if (metric.actual < metric.minimum) failures.push(`Insufficient ${metric.axis} whitespace at ${metric.id}: ${metric.actual}px < ${metric.minimum}px`);
+  }
   for (let i = 0; i < geometry.cards.length; i += 1) {
     for (let j = i + 1; j < geometry.cards.length; j += 1) {
       if (intersects(geometry.cards[i].rect, geometry.cards[j].rect, 0)) {
@@ -97,7 +123,7 @@ try {
     }
   }
 
-  const posterEmbedding = { left: 1315, top: 1180, width: 1870, height: 565 };
+  const posterEmbedding = { left: 1315, top: 1180, width: 1870, height: 675 };
   const sourceToPosterScale = Math.min(posterEmbedding.width / geometry.viewBox.width, posterEmbedding.height / geometry.viewBox.height);
   const posterMillimetresPerUnit = 1189 / 4493.858267716536;
   const fontMetrics = allTexts.map((text) => ({
@@ -114,6 +140,7 @@ try {
     cardCount: geometry.cards.length,
     connectorCount: geometry.connectors.length,
     cards: geometry.cards,
+    spacingMetrics,
     fontMetrics,
     failures,
     status: failures.length === 0 ? "PASS" : "FAIL",

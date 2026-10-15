@@ -20,12 +20,12 @@
     {
       "name": "Overleaf source contents",
       "status": "PASS",
-      "evidence": "15 files; required sources present"
+      "evidence": "12 files; required sources present"
     },
     {
       "name": "Overleaf Intellectual Merits figure",
       "status": "PASS",
-      "evidence": "canonical=2237a274b3c1357f74cfd098f848778a5851301dae2fcc7a8590095de629f05e; packed=2237a274b3c1357f74cfd098f848778a5851301dae2fcc7a8590095de629f05e"
+      "evidence": "canonical=07d073ad1ed4282cd3f5739b207d707e59abf99612a4f4b01416808825e353f9; packed=07d073ad1ed4282cd3f5739b207d707e59abf99612a4f4b01416808825e353f9"
     },
     {
       "name": "poster geometry",
@@ -40,12 +40,22 @@
     {
       "name": "poster Intellectual Merits image",
       "status": "PASS",
-      "evidence": "canonical PNG 2f98f3b39d16bd506f1fd8e85bfd54e9bd27d3a951ed446e6e8672144d824a24 embedded in editable PPTX"
+      "evidence": "canonical PNG 5427f97d5a574117347cc0a29bf7e7773390866dfae08a73345f7de8d58a3439 embedded in editable PPTX"
     },
     {
       "name": "Intellectual Merits geometry",
       "status": "PASS",
       "evidence": "cards=11, connectors=9, failures=[]"
+    },
+    {
+      "name": "Intellectual Merits connector whitespace",
+      "status": "PASS",
+      "evidence": "literature-los-to-liu=55px (min 50px); literature-liu-to-maheshwari=55px (min 50px); literature-to-gap=32px (min 30px); gap-to-step-row=34px (min 30px); step-1-to-step-2=55px (min 40px); step-2-to-step-3=55px (min 40px); step-row-to-ccar-row=45px (min 40px); step-4-to-step-5=60px (min 50px); step-5-to-limitations=40px (min 35px)"
+    },
+    {
+      "name": "Section 02 arrow-clarity containment",
+      "status": "PASS",
+      "evidence": "changed inside=618248 px; outside=0 px; protected regions={'headerAndMessage': {'beforeSha256': '842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62', 'afterSha256': '842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62', 'identical': True}, 'section01': {'beforeSha256': '123ec283316dd5cb5022bdba934ab318f9ed6ab53d770e89ca8e63b0d5091426', 'afterSha256': '123ec283316dd5cb5022bdba934ab318f9ed6ab53d770e89ca8e63b0d5091426', 'identical': True}, 'section03': {'beforeSha256': 'a58ae91ed6e029fe499c92dd69751a9d768c33575ecbe8469b5761403d777308', 'afterSha256': 'a58ae91ed6e029fe499c92dd69751a9d768c33575ecbe8469b5761403d777308', 'identical': True}, 'footer': {'beforeSha256': '2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45', 'afterSha256': '2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45', 'identical': True}}"
     },
     {
       "name": "poster global rebalance containment",
@@ -55,7 +65,7 @@
     {
       "name": "poster evidence-area rebalance",
       "status": "PASS",
-      "evidence": "columns=[1080, 1900, 1074]; Section 02 figure area increase=29.6%"
+      "evidence": "columns=[1080, 1900, 1074]; Section 02 figure area increase=54.8%"
     },
     {
       "name": "poster PDF",
@@ -124,13 +134,13 @@
     }
   ],
   "hashes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": "aae33cbf4842aa548d947f82d75d3b46ed9e4ea14cef2eccd2e24c47dd331b51",
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "8909f06edde94f14e6ab6c6c65a4ac17faa11a95a4367ee1b58fb71640994696",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "c823612e832e6ca81600fe63b7dde8bd91ce9254ea1c2aa8691a9241296eac24",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "e032c88bb484a83d8aae235294c7482c97e36277f8182de0541e54ecb78eebc6",
-    "poster/final-poster.png": "751eca03dd3069734c45afa0b38999b8c2767262b3258ab12cf8b56299230818"
+    "submission/final/Final-FP10-ShareOrHide.pdf": "29242a9e545a698ae4b0c32b9463827740def71fca2cc09a974ba3400082d52f",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "fb66185c25cf22c5ab49f9a37fc062223027fdea6d5a26438731a3faf82e6025",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "c49d251712d39ab470f05e8754a21965e8428d58886d1a17a68dd26380c4f696",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "734ecb8b1ec988205876def027a72b1083d41cf2cb1e8dfba849024f7ded3039",
+    "poster/final-poster.png": "cae735965e38f7db14d503a7c9dd8f61d9ab058c29cdc5e1e7b3bdc705a984ff"
   },
-  "automated_passed": 21,
+  "automated_passed": 23,
   "automated_failed": 0,
   "manual_required": 3
 }

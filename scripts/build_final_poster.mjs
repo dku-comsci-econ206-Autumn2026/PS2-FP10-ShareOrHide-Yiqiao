@@ -102,14 +102,14 @@ async function buildPoster() {
 
   place(deck, "sh/0bmd476t", { left: center, width: centerWidth });
   place(deck, "sh/zadcv2p8", { left: center, width: centerWidth });
-  place(deck, "sh/e94v2hon", { left: center, top: 1170, width: centerWidth, height: 575 });
+  place(deck, "sh/e94v2hon", { left: center, top: 1170, width: centerWidth, height: 695 });
   place(deck, "sh/90ve1w7q", { left: center + 65, top: 1370, width: centerWidth - 130 });
   place(deck, "sh/ozmd8r65", { left: center + 95, top: 1480, width: centerWidth - 190 });
-  place(deck, "sh/nydczmpk", { left: center, top: 1760, width: centerWidth, height: 65 });
-  place(deck, "sh/mx4v6hoz", { left: center, top: 1850, width: 1260, height: 710 });
-  place(deck, "sh/p4bu5s76", { left: 2590, top: 1850, width: 610, height: 85 });
-  place(deck, "sh/432dwn6l", { left: 2590, top: 1945, width: 610, height: 885 });
-  place(deck, "sh/uxgjq907", { left: center, top: 2580, width: 1260, height: 250 });
+  place(deck, "sh/nydczmpk", { left: center, top: 1880, width: centerWidth, height: 60 });
+  place(deck, "sh/mx4v6hoz", { left: center, top: 1960, width: 1260, height: 650 });
+  place(deck, "sh/p4bu5s76", { left: 2590, top: 1960, width: 610, height: 85 });
+  place(deck, "sh/432dwn6l", { left: 2590, top: 2055, width: 610, height: 775 });
+  place(deck, "sh/uxgjq907", { left: center, top: 2630, width: 1260, height: 200 });
 
   place(deck, "sh/vyp0je1s", { left: right, width: rightWidth });
   place(deck, "sh/wzy1szid", { left: right, width: rightWidth });
@@ -122,10 +122,10 @@ async function buildPoster() {
   place(deck, "sh/z650ba1k", { left: right, top: 2700, width: rightWidth, height: 130 });
 
   const intellectual = await bytes(`${root}/figures/final/intellectual_merits.png`);
-  slide.images.add({ blob: intellectual, contentType: "image/png", alt: "Intellectual Merits evidence chain", fit: "contain", position: { left: 1315, top: 1180, width: 1870, height: 565 } });
+  slide.images.add({ blob: intellectual, contentType: "image/png", alt: "Intellectual Merits evidence chain", fit: "contain", position: { left: 1315, top: 1180, width: 1870, height: 675 } });
 
   slide.charts.add("column", {
-    position: { left: 1325, top: 1875, width: 1210, height: 660 },
+    position: { left: 1325, top: 1985, width: 1210, height: 600 },
     categories: ["Low", "Medium", "High"],
     series: [
       { name: "BNE", values: [0, 2.192883, 6.881808], fill: "#214E78" },
@@ -139,7 +139,7 @@ async function buildPoster() {
     yAxis: { title: "Expected normalized welfare", minimumScale: 0, maximumScale: 8 },
   });
   const welfare = await bytes(`${root}/figures/final/welfare_comparison.png`);
-  slide.images.add({ blob: welfare, contentType: "image/png", alt: "Code-recomputed welfare comparison for Low, Medium, and High congestion", fit: "contain", position: { left: 1325, top: 1875, width: 1210, height: 660 } });
+  slide.images.add({ blob: welfare, contentType: "image/png", alt: "Code-recomputed welfare comparison for Low, Medium, and High congestion", fit: "contain", position: { left: 1325, top: 1985, width: 1210, height: 600 } });
 
   const practical = await bytes(`${root}/figures/final/practical_impacts.png`);
   slide.images.add({ blob: practical, contentType: "image/png", alt: "Practical impacts with UN SDG targets 9.1 and 11.2", fit: "contain", position: { left: 3285, top: 1245, width: 1064, height: 450 } });
