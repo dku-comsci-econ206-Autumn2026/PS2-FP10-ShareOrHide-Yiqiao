@@ -8,12 +8,12 @@
     "height": 544
   },
   "posterEmbedding": {
-    "left": 1415,
-    "top": 1170,
-    "width": 1664,
-    "height": 490
+    "left": 1315,
+    "top": 1180,
+    "width": 1870,
+    "height": 565
   },
-  "sourceToPosterScale": 0.9007352941176471,
+  "sourceToPosterScale": 1.0386029411764706,
   "cardCount": 11,
   "connectorCount": 9,
   "cards": [
@@ -484,157 +484,157 @@
     {
       "text": "Los et al. (2020)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 17.69767860888927
+      "posterPt": 20.252757352941178
     },
     {
       "text": "Foundation: information improves shared routing.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "Gap: no private-cost Bayesian disclosure choice.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "Liu and Chow (2022)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 17.69767860888927
+      "posterPt": 20.252757352941178
     },
     {
       "text": "Foundation: strategic transit data sharing.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "Gap: no congestion-linked access comparison.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "Maheshwari et al. (2025)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 17.69767860888927
+      "posterPt": 20.252757352941178
     },
     {
       "text": "Foundation: private-value AAM allocation.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "Gap: allocation, not an M/P/F disclosure choice.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "VERIFIED CLOSEST-WORK GAP",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "Selected works do not jointly model disclosure granularity, private costs, public congestion, welfare loss, and CCAR.",
       "sourcePx": 22,
-      "posterPt": 14.974958822906308
+      "posterPt": 17.13694852941176
     },
     {
       "text": "1   FP10 MODEL   ADAPTED",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "Two operators with private L/H costs.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "M/P/F actions, public Low/Med/High congestion.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "2   PURE BNE   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "All 81 type-contingent strategy profiles enumerated.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "No symmetry restriction.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "3   WELFARE   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "Full-information first-best reference.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "Largest benchmark gap: Medium = 0.946202.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "4   CCAR   PROPOSED",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "Enhanced non-safety coordination access factor.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "Not strategy-proof or universally welfare improving.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "5   COMPUTATIONAL EVALUATION   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 16.33631871589779
+      "posterPt": 18.694852941176467
     },
     {
       "text": "760 parameter cells with failure cases retained.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "Diagnostics overlap. Not human observations.",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "LIMITATIONS   NOT YET VALIDATED",
       "sourcePx": 20,
-      "posterPt": 13.613598929914826
+      "posterPt": 15.579044117647058
     },
     {
       "text": "Dynamic traffic, strategic misreporting, implementation costs, unequal burdens, and endogenous information quality",
       "sourcePx": 18,
-      "posterPt": 12.252239036923342
+      "posterPt": 14.021139705882351
     },
     {
       "text": "require further theory, computation, behavioral study, or field validation, including human comprehension.",
       "sourcePx": 18,
-      "posterPt": 12.252239036923342
+      "posterPt": 14.021139705882351
     },
     {
       "text": "Boundary: reproducible comparative computation for a stylized disclosure game. No general theorem or empirically validated aviation outcome.",
       "sourcePx": 16,
-      "posterPt": 10.89087914393186
+      "posterPt": 12.463235294117645
     },
     {
       "text": "References: Los et al. (2020), Liu and Chow (2022), Maheshwari et al. (2025). Complete titles and DOIs appear in the paper.",
       "sourcePx": 16,
-      "posterPt": 10.89087914393186
+      "posterPt": 12.463235294117645
     }
   ],
   "failures": [],

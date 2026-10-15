@@ -97,8 +97,9 @@ try {
     }
   }
 
-  const sourceToPosterScale = Math.min(1664 / geometry.viewBox.width, 490 / geometry.viewBox.height);
-  const posterMillimetresPerUnit = 1189 / 4460;
+  const posterEmbedding = { left: 1315, top: 1180, width: 1870, height: 565 };
+  const sourceToPosterScale = Math.min(posterEmbedding.width / geometry.viewBox.width, posterEmbedding.height / geometry.viewBox.height);
+  const posterMillimetresPerUnit = 1189 / 4493.858267716536;
   const fontMetrics = allTexts.map((text) => ({
     text: text.text,
     sourcePx: text.fontSize,
@@ -108,7 +109,7 @@ try {
     schemaVersion: 1,
     source: path.relative(root, svgPath),
     viewBox: geometry.viewBox,
-    posterEmbedding: { left: 1415, top: 1170, width: 1664, height: 490 },
+    posterEmbedding,
     sourceToPosterScale,
     cardCount: geometry.cards.length,
     connectorCount: geometry.connectors.length,
