@@ -12,7 +12,12 @@ const { chromium } = require("playwright");
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, "..");
 const figureDir = path.join(root, "figures", "final");
-const stems = ["intellectual_merits", "practical_impacts", "research_roadmap"];
+const supportedStems = ["intellectual_merits", "practical_impacts", "research_roadmap"];
+const requestedStems = process.argv.slice(2);
+const stems = requestedStems.length ? requestedStems : supportedStems;
+for (const stem of stems) {
+  if (!supportedStems.includes(stem)) throw new Error(`Unknown diagram stem: ${stem}`);
+}
 
 const browser = await chromium.launch({
   headless: true,
@@ -29,15 +34,24 @@ try {
       const dataUri = `data:image/png;base64,${(await fs.readFile(assetPath)).toString("base64")}`;
       svg = svg.replaceAll(`sdg_official/${asset}`, dataUri);
     }
+    const viewBox = svg.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
+    if (!viewBox) throw new Error(`Missing numeric viewBox in ${svgPath}`);
+    const sourceWidth = Number(viewBox[1]);
+    const sourceHeight = Number(viewBox[2]);
+    const outputWidth = 2400;
+    const outputHeight = Math.round(outputWidth * sourceHeight / sourceWidth);
     const svgBytes = Buffer.from(svg, "utf8");
-    await sharp(svgBytes, { density: 180 }).resize(2400, 1350).png().toFile(pngPath);
+    await sharp(svgBytes, { density: 180 })
+      .resize({ width: outputWidth, height: outputHeight, fit: "fill" })
+      .png()
+      .toFile(pngPath);
 
-    const page = await browser.newPage({ viewport: { width: 1600, height: 900 } });
-    await page.setContent(`<style>html,body{margin:0;width:1600px;height:900px}</style>${svg}`, { waitUntil: "networkidle" });
+    const page = await browser.newPage({ viewport: { width: Math.ceil(sourceWidth), height: Math.ceil(sourceHeight) } });
+    await page.setContent(`<style>html,body{margin:0;width:${sourceWidth}px;height:${sourceHeight}px}</style>${svg}`, { waitUntil: "networkidle" });
     await page.pdf({
       path: pdfPath,
-      width: "1600px",
-      height: "900px",
+      width: `${sourceWidth}px`,
+      height: `${sourceHeight}px`,
       printBackground: true,
       margin: { top: "0", right: "0", bottom: "0", left: "0" },
       preferCSSPageSize: false,

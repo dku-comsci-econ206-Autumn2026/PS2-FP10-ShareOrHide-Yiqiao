@@ -23,6 +23,11 @@
       "evidence": "15 files; required sources present"
     },
     {
+      "name": "Overleaf Intellectual Merits figure",
+      "status": "PASS",
+      "evidence": "canonical=2237a274b3c1357f74cfd098f848778a5851301dae2fcc7a8590095de629f05e; packed=2237a274b3c1357f74cfd098f848778a5851301dae2fcc7a8590095de629f05e"
+    },
+    {
       "name": "poster geometry",
       "status": "PASS",
       "evidence": "slides=1, EMU=('42804000', '30276000'), nominal 1189\u00d7841 mm"
@@ -31,6 +36,21 @@
       "name": "poster acknowledgment and contribution",
       "status": "PASS",
       "evidence": "Required named text found in editable slide XML"
+    },
+    {
+      "name": "poster Intellectual Merits image",
+      "status": "PASS",
+      "evidence": "canonical PNG 2f98f3b39d16bd506f1fd8e85bfd54e9bd27d3a951ed446e6e8672144d824a24 embedded in editable PPTX"
+    },
+    {
+      "name": "Intellectual Merits geometry",
+      "status": "PASS",
+      "evidence": "cards=11, connectors=9, failures=[]"
+    },
+    {
+      "name": "poster change containment",
+      "status": "PASS",
+      "evidence": "changed outside target=0 px; maximum outside channel delta=0"
     },
     {
       "name": "poster PDF",
@@ -99,13 +119,13 @@
     }
   ],
   "hashes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": "e29152ebabeb4b9d24fbe1ae47a51dd282a952f74d3049975ff75c17b03de088",
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "69663bad2ac4cb4ffb3ffbd56a329a7e8218cef88c7263bf5be188166cbd3e7a",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "3912fae01dadcb5ee34b7312734b1cf699afc710352bd3c04c946eefd489a771",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "83e94d4c079e681d31b8ae682cc0fc0db50ad47a9b76a3bbb7babfbd839c7449",
-    "poster/final-poster.png": "6311e6674e6bdb0aac49bba31cd39be4778376a117e6de3fdf2f99cbb356346f"
+    "submission/final/Final-FP10-ShareOrHide.pdf": "aae33cbf4842aa548d947f82d75d3b46ed9e4ea14cef2eccd2e24c47dd331b51",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "8909f06edde94f14e6ab6c6c65a4ac17faa11a95a4367ee1b58fb71640994696",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "1f6b3c818eeda367307064114d62e40581bfd54fea459313e37a26b3f1ad6998",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "b516a2dcdc71b625b5532516af10f990876291a57b8791d5e97666437027ab38",
+    "poster/final-poster.png": "5a8923f37b04bc14dc2518d71c7f8f7adac2c4e22da8b85c73e337993f38827b"
   },
-  "automated_passed": 16,
+  "automated_passed": 20,
   "automated_failed": 0,
   "manual_required": 3
 }
