@@ -27,6 +27,6 @@ Audit date: 2026-10-15, Asia/Shanghai. This file is updated after the final test
 ## External release state
 
 - Dedicated branch: `final/fp10-2026-release`.
-- Git push / pull request: recorded after the final commit attempt.
-- Course `main` remains unchanged unless a human merges the branch.
-
+- **PASS** — The dedicated branch is pushed to both the course repository (`origin`) and the author fork (`fork`); the verified release tag is `fp10-final-2026-10-15-verified`.
+- **BLOCKED BY EXTERNAL CREDENTIALS** — Pull-request creation requires an authenticated GitHub web or CLI session. The prepared PR URL is <https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/pull/new/final/fp10-2026-release>.
+- **NOT YET PUBLISHED ON DEFAULT BRANCH** — Course `main` remains at `6baa4107e508bcf2b1219fefb7827bdfc587714b`. It shows the earlier `docs/assets/poster/ps2_fp10_poster_preview.png`, not the final `poster/final-poster.png`. A human merge is required.

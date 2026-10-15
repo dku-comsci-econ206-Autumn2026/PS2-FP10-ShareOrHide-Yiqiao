@@ -11,7 +11,7 @@ Tested commit or release:
 83717dc1cb5cebf0ebc6f1cc8ee1e15d0cb9bc29
 
 Root README with embedded poster:
-https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao#readme
+https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/README.md
 
 Poster preview and PDF in repository:
 https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/blob/final/fp10-2026-release/poster/final-poster.png
