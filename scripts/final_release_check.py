@@ -118,6 +118,25 @@ def main() -> int:
         geometry_report["status"] == "PASS" and not geometry_report["failures"],
         f"cards={geometry_report['cardCount']}, connectors={geometry_report['connectorCount']}, failures={geometry_report['failures']}",
     )
+    check(
+        "Intellectual Merits connector whitespace",
+        geometry_report["status"] == "PASS"
+        and all(item["actual"] >= item["minimum"] for item in geometry_report["spacingMetrics"]),
+        "; ".join(f"{item['id']}={item['actual']}px (min {item['minimum']}px)" for item in geometry_report["spacingMetrics"]),
+    )
+
+    arrow_report = json.loads(
+        (ROOT / "outputs/final/section02_arrow_clarity.json").read_text(encoding="utf-8")
+    )
+    check(
+        "Section 02 arrow-clarity containment",
+        arrow_report["status"] == "PASS"
+        and arrow_report["changedInsidePixels"] > 0
+        and arrow_report["changedOutsidePixels"] == 0
+        and arrow_report["maximumOutsideChannelDelta"] == 0
+        and all(item["identical"] for item in arrow_report["protectedEvidence"].values()),
+        f"changed inside={arrow_report['changedInsidePixels']} px; outside={arrow_report['changedOutsidePixels']} px; protected regions={arrow_report['protectedEvidence']}",
+    )
 
     diff_report = json.loads(
         (ROOT / "outputs/final/poster_layout_rebalance.json").read_text(encoding="utf-8")

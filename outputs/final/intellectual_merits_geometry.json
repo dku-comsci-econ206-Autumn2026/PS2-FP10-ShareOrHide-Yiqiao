@@ -5,15 +5,15 @@
     "x": 0,
     "y": 0,
     "width": 1800,
-    "height": 544
+    "height": 650
   },
   "posterEmbedding": {
     "left": 1315,
     "top": 1180,
     "width": 1870,
-    "height": 565
+    "height": 675
   },
-  "sourceToPosterScale": 1.0386029411764706,
+  "sourceToPosterScale": 1.0384615384615385,
   "cardCount": 11,
   "connectorCount": 9,
   "cards": [
@@ -22,7 +22,7 @@
       "rect": {
         "x": 35,
         "y": 48,
-        "width": 560,
+        "width": 540,
         "height": 110
       },
       "texts": [
@@ -64,9 +64,9 @@
     {
       "id": "literature-liu-chow",
       "rect": {
-        "x": 620,
+        "x": 630,
         "y": 48,
-        "width": 560,
+        "width": 540,
         "height": 110
       },
       "texts": [
@@ -75,7 +75,7 @@
           "role": "heading",
           "fontSize": 26,
           "bounds": {
-            "x": 646,
+            "x": 656,
             "y": 54,
             "width": 400.15625,
             "height": 30
@@ -86,7 +86,7 @@
           "role": "body",
           "fontSize": 22,
           "bounds": {
-            "x": 646,
+            "x": 656,
             "y": 90,
             "width": 404.796875,
             "height": 25
@@ -97,7 +97,7 @@
           "role": "body",
           "fontSize": 22,
           "bounds": {
-            "x": 646,
+            "x": 656,
             "y": 118,
             "width": 456.140625,
             "height": 25
@@ -108,9 +108,9 @@
     {
       "id": "literature-maheshwari",
       "rect": {
-        "x": 1205,
+        "x": 1225,
         "y": 48,
-        "width": 560,
+        "width": 540,
         "height": 110
       },
       "texts": [
@@ -119,7 +119,7 @@
           "role": "heading",
           "fontSize": 26,
           "bounds": {
-            "x": 1231,
+            "x": 1251,
             "y": 54,
             "width": 445.03125,
             "height": 30
@@ -130,7 +130,7 @@
           "role": "body",
           "fontSize": 22,
           "bounds": {
-            "x": 1231,
+            "x": 1251,
             "y": 90,
             "width": 406.015625,
             "height": 25
@@ -141,7 +141,7 @@
           "role": "body",
           "fontSize": 22,
           "bounds": {
-            "x": 1231,
+            "x": 1251,
             "y": 118,
             "width": 465.90625,
             "height": 25
@@ -153,7 +153,7 @@
       "id": "bounded-gap",
       "rect": {
         "x": 260,
-        "y": 176,
+        "y": 190,
         "width": 1280,
         "height": 66
       },
@@ -164,7 +164,7 @@
           "fontSize": 24,
           "bounds": {
             "x": 285.98828125,
-            "y": 180,
+            "y": 194,
             "width": 372.04296875,
             "height": 27
           }
@@ -175,7 +175,7 @@
           "fontSize": 22,
           "bounds": {
             "x": 286,
-            "y": 209,
+            "y": 223,
             "width": 1127.03125,
             "height": 25
           }
@@ -186,8 +186,8 @@
       "id": "step-1-model",
       "rect": {
         "x": 35,
-        "y": 254,
-        "width": 560,
+        "y": 290,
+        "width": 540,
         "height": 85
       },
       "texts": [
@@ -197,7 +197,7 @@
           "fontSize": 24,
           "bounds": {
             "x": 61,
-            "y": 261,
+            "y": 297,
             "width": 292.0625,
             "height": 27
           }
@@ -208,7 +208,7 @@
           "fontSize": 20,
           "bounds": {
             "x": 61,
-            "y": 289,
+            "y": 325,
             "width": 327.921875,
             "height": 22
           }
@@ -219,7 +219,7 @@
           "fontSize": 20,
           "bounds": {
             "x": 61,
-            "y": 312,
+            "y": 348,
             "width": 426.875,
             "height": 22.208984375
           }
@@ -229,9 +229,9 @@
     {
       "id": "step-2-bne",
       "rect": {
-        "x": 620,
-        "y": 254,
-        "width": 560,
+        "x": 630,
+        "y": 290,
+        "width": 540,
         "height": 85
       },
       "texts": [
@@ -240,8 +240,8 @@
           "role": "heading",
           "fontSize": 24,
           "bounds": {
-            "x": 646,
-            "y": 261,
+            "x": 656,
+            "y": 297,
             "width": 261.390625,
             "height": 27
           }
@@ -251,8 +251,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 645.970703125,
-            "y": 289,
+            "x": 655.970703125,
+            "y": 325,
             "width": 456.966796875,
             "height": 22.208984375
           }
@@ -262,8 +262,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 646,
-            "y": 312,
+            "x": 656,
+            "y": 348,
             "width": 215.59375,
             "height": 22.208984375
           }
@@ -273,9 +273,9 @@
     {
       "id": "step-3-welfare",
       "rect": {
-        "x": 1205,
-        "y": 254,
-        "width": 560,
+        "x": 1225,
+        "y": 290,
+        "width": 540,
         "height": 85
       },
       "texts": [
@@ -284,8 +284,8 @@
           "role": "heading",
           "fontSize": 24,
           "bounds": {
-            "x": 1231,
-            "y": 261,
+            "x": 1251,
+            "y": 297,
             "width": 254.703125,
             "height": 27
           }
@@ -295,8 +295,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 1231,
-            "y": 289,
+            "x": 1251,
+            "y": 325,
             "width": 315.671875,
             "height": 22
           }
@@ -306,8 +306,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 1231,
-            "y": 312,
+            "x": 1251,
+            "y": 348,
             "width": 404.140625,
             "height": 22.208984375
           }
@@ -317,9 +317,9 @@
     {
       "id": "step-4-ccar",
       "rect": {
-        "x": 330,
-        "y": 350,
-        "width": 560,
+        "x": 300,
+        "y": 420,
+        "width": 570,
         "height": 85
       },
       "texts": [
@@ -328,8 +328,8 @@
           "role": "heading",
           "fontSize": 24,
           "bounds": {
-            "x": 356,
-            "y": 357,
+            "x": 326,
+            "y": 427,
             "width": 232.046875,
             "height": 27
           }
@@ -339,8 +339,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 356,
-            "y": 385,
+            "x": 326,
+            "y": 455,
             "width": 431.390625,
             "height": 22.208984375
           }
@@ -350,8 +350,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 356,
-            "y": 408,
+            "x": 326,
+            "y": 478,
             "width": 451.296875,
             "height": 22.208984375
           }
@@ -361,9 +361,9 @@
     {
       "id": "step-5-computation",
       "rect": {
-        "x": 915,
-        "y": 350,
-        "width": 560,
+        "x": 930,
+        "y": 420,
+        "width": 570,
         "height": 85
       },
       "texts": [
@@ -372,8 +372,8 @@
           "role": "heading",
           "fontSize": 24,
           "bounds": {
-            "x": 941,
-            "y": 357,
+            "x": 956,
+            "y": 427,
             "width": 503.125,
             "height": 27
           }
@@ -383,8 +383,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 941,
-            "y": 385,
+            "x": 956,
+            "y": 455,
             "width": 418,
             "height": 22
           }
@@ -394,8 +394,8 @@
           "role": "body",
           "fontSize": 20,
           "bounds": {
-            "x": 941,
-            "y": 408,
+            "x": 956,
+            "y": 478,
             "width": 408,
             "height": 22.208984375
           }
@@ -406,7 +406,7 @@
       "id": "limitations",
       "rect": {
         "x": 35,
-        "y": 444,
+        "y": 545,
         "width": 1730,
         "height": 50
       },
@@ -417,7 +417,7 @@
           "fontSize": 20,
           "bounds": {
             "x": 61,
-            "y": 448,
+            "y": 549,
             "width": 333.703125,
             "height": 22
           }
@@ -428,7 +428,7 @@
           "fontSize": 18,
           "bounds": {
             "x": 408,
-            "y": 450,
+            "y": 551,
             "width": 919.171875,
             "height": 20
           }
@@ -439,7 +439,7 @@
           "fontSize": 18,
           "bounds": {
             "x": 408,
-            "y": 471,
+            "y": 572,
             "width": 833.8125,
             "height": 20
           }
@@ -450,9 +450,9 @@
       "id": "contribution-boundary",
       "rect": {
         "x": 35,
-        "y": 498,
+        "y": 605,
         "width": 1730,
-        "height": 44
+        "height": 45
       },
       "texts": [
         {
@@ -461,7 +461,7 @@
           "fontSize": 16,
           "bounds": {
             "x": 55,
-            "y": 502,
+            "y": 608,
             "width": 1011.1875,
             "height": 17.3671875
           }
@@ -472,7 +472,7 @@
           "fontSize": 16,
           "bounds": {
             "x": 55,
-            "y": 521,
+            "y": 627,
             "width": 882.265625,
             "height": 17.3671875
           }
@@ -480,161 +480,217 @@
       ]
     }
   ],
+  "spacingMetrics": [
+    {
+      "id": "literature-los-to-liu",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 50
+    },
+    {
+      "id": "literature-liu-to-maheshwari",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 50
+    },
+    {
+      "id": "literature-to-gap",
+      "axis": "vertical",
+      "actual": 32,
+      "minimum": 30
+    },
+    {
+      "id": "gap-to-step-row",
+      "axis": "vertical",
+      "actual": 34,
+      "minimum": 30
+    },
+    {
+      "id": "step-1-to-step-2",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 40
+    },
+    {
+      "id": "step-2-to-step-3",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 40
+    },
+    {
+      "id": "step-row-to-ccar-row",
+      "axis": "vertical",
+      "actual": 45,
+      "minimum": 40
+    },
+    {
+      "id": "step-4-to-step-5",
+      "axis": "horizontal",
+      "actual": 60,
+      "minimum": 50
+    },
+    {
+      "id": "step-5-to-limitations",
+      "axis": "vertical",
+      "actual": 40,
+      "minimum": 35
+    }
+  ],
   "fontMetrics": [
     {
       "text": "Los et al. (2020)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 20.252757352941178
+      "posterPt": 20.250000000000004
     },
     {
       "text": "Foundation: information improves shared routing.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "Gap: no private-cost Bayesian disclosure choice.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "Liu and Chow (2022)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 20.252757352941178
+      "posterPt": 20.250000000000004
     },
     {
       "text": "Foundation: strategic transit data sharing.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "Gap: no congestion-linked access comparison.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "Maheshwari et al. (2025)   INHERITED",
       "sourcePx": 26,
-      "posterPt": 20.252757352941178
+      "posterPt": 20.250000000000004
     },
     {
       "text": "Foundation: private-value AAM allocation.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "Gap: allocation, not an M/P/F disclosure choice.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "VERIFIED CLOSEST-WORK GAP",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "Selected works do not jointly model disclosure granularity, private costs, public congestion, welfare loss, and CCAR.",
       "sourcePx": 22,
-      "posterPt": 17.13694852941176
+      "posterPt": 17.13461538461538
     },
     {
       "text": "1   FP10 MODEL   ADAPTED",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "Two operators with private L/H costs.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "M/P/F actions, public Low/Med/High congestion.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "2   PURE BNE   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "All 81 type-contingent strategy profiles enumerated.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "No symmetry restriction.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "3   WELFARE   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "Full-information first-best reference.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "Largest benchmark gap: Medium = 0.946202.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "4   CCAR   PROPOSED",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "Enhanced non-safety coordination access factor.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "Not strategy-proof or universally welfare improving.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "5   COMPUTATIONAL EVALUATION   VERIFIED",
       "sourcePx": 24,
-      "posterPt": 18.694852941176467
+      "posterPt": 18.692307692307693
     },
     {
       "text": "760 parameter cells with failure cases retained.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "Diagnostics overlap. Not human observations.",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "LIMITATIONS   NOT YET VALIDATED",
       "sourcePx": 20,
-      "posterPt": 15.579044117647058
+      "posterPt": 15.576923076923075
     },
     {
       "text": "Dynamic traffic, strategic misreporting, implementation costs, unequal burdens, and endogenous information quality",
       "sourcePx": 18,
-      "posterPt": 14.021139705882351
+      "posterPt": 14.019230769230768
     },
     {
       "text": "require further theory, computation, behavioral study, or field validation, including human comprehension.",
       "sourcePx": 18,
-      "posterPt": 14.021139705882351
+      "posterPt": 14.019230769230768
     },
     {
       "text": "Boundary: reproducible comparative computation for a stylized disclosure game. No general theorem or empirically validated aviation outcome.",
       "sourcePx": 16,
-      "posterPt": 12.463235294117645
+      "posterPt": 12.46153846153846
     },
     {
       "text": "References: Los et al. (2020), Liu and Chow (2022), Maheshwari et al. (2025). Complete titles and DOIs appear in the paper.",
       "sourcePx": 16,
-      "posterPt": 12.463235294117645
+      "posterPt": 12.46153846153846
     }
   ],
   "failures": [],

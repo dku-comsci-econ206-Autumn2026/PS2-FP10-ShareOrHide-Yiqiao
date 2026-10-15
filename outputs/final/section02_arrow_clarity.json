@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "before": ".codex-review/section02-arrow-clarity/full-before.png",
+  "after": "poster/final-poster.png",
+  "dimensions": {
+    "width": 3371,
+    "height": 2384,
+    "channels": 3
+  },
+  "section02Region": {
+    "left": 960,
+    "top": 850,
+    "width": 1460,
+    "height": 1290
+  },
+  "threshold": 8,
+  "changedInsidePixels": 618248,
+  "changedInsideRatio": 0.32826165445470956,
+  "changedOutsidePixels": 0,
+  "changedOutsideRatio": 0,
+  "maximumOutsideChannelDelta": 0,
+  "protectedEvidence": {
+    "headerAndMessage": {
+      "beforeSha256": "842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62",
+      "afterSha256": "842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62",
+      "identical": true
+    },
+    "section01": {
+      "beforeSha256": "123ec283316dd5cb5022bdba934ab318f9ed6ab53d770e89ca8e63b0d5091426",
+      "afterSha256": "123ec283316dd5cb5022bdba934ab318f9ed6ab53d770e89ca8e63b0d5091426",
+      "identical": true
+    },
+    "section03": {
+      "beforeSha256": "a58ae91ed6e029fe499c92dd69751a9d768c33575ecbe8469b5761403d777308",
+      "afterSha256": "a58ae91ed6e029fe499c92dd69751a9d768c33575ecbe8469b5761403d777308",
+      "identical": true
+    },
+    "footer": {
+      "beforeSha256": "2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45",
+      "afterSha256": "2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45",
+      "identical": true
+    }
+  },
+  "spacingMetrics": [
+    {
+      "id": "literature-los-to-liu",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 50
+    },
+    {
+      "id": "literature-liu-to-maheshwari",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 50
+    },
+    {
+      "id": "literature-to-gap",
+      "axis": "vertical",
+      "actual": 32,
+      "minimum": 30
+    },
+    {
+      "id": "gap-to-step-row",
+      "axis": "vertical",
+      "actual": 34,
+      "minimum": 30
+    },
+    {
+      "id": "step-1-to-step-2",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 40
+    },
+    {
+      "id": "step-2-to-step-3",
+      "axis": "horizontal",
+      "actual": 55,
+      "minimum": 40
+    },
+    {
+      "id": "step-row-to-ccar-row",
+      "axis": "vertical",
+      "actual": 45,
+      "minimum": 40
+    },
+    {
+      "id": "step-4-to-step-5",
+      "axis": "horizontal",
+      "actual": 60,
+      "minimum": 50
+    },
+    {
+      "id": "step-5-to-limitations",
+      "axis": "vertical",
+      "actual": 40,
+      "minimum": 35
+    }
+  ],
+  "geometryStatus": "PASS",
+  "status": "PASS"
+}

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="544" viewBox="0 0 1800 544" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="650" viewBox="0 0 1800 650" role="img" aria-labelledby="title desc">
   <title id="title">Intellectual merits and verified research gap</title>
   <desc id="desc">Three closest papers lead to a bounded research gap, then a numbered five-step FP10 evidence pipeline, limitations, and a contribution boundary.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
     </marker>
     <style>
@@ -18,91 +18,91 @@
       .limit-body{font-size:18px}
       .boundary{font-size:16px}
       .box{rx:14;ry:14;stroke-width:2}
-      .connector{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .connector{stroke:#334155;stroke-width:4;fill:none;marker-end:url(#arrow)}
     </style>
   </defs>
 
-  <rect id="background" width="1800" height="544" fill="#f8fafc"/>
+  <rect id="background" width="1800" height="650" fill="#f8fafc"/>
   <text x="35" y="34" class="t title">Intellectual merits: inherited foundations, verified gap, and bounded contribution</text>
 
   <g id="lit-los" data-card="literature-los">
-    <rect x="35" y="48" width="560" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
+    <rect x="35" y="48" width="540" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
     <text x="61" y="78" class="t card-head" data-role="heading">Los et al. (2020)   INHERITED</text>
     <text x="61" y="110" class="t card-body" data-role="body">Foundation: information improves shared routing.</text>
     <text x="61" y="138" class="t card-body" data-role="body">Gap: no private-cost Bayesian disclosure choice.</text>
   </g>
   <g id="lit-liu" data-card="literature-liu-chow">
-    <rect x="620" y="48" width="560" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
-    <text x="646" y="78" class="t card-head" data-role="heading">Liu and Chow (2022)   INHERITED</text>
-    <text x="646" y="110" class="t card-body" data-role="body">Foundation: strategic transit data sharing.</text>
-    <text x="646" y="138" class="t card-body" data-role="body">Gap: no congestion-linked access comparison.</text>
+    <rect x="630" y="48" width="540" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
+    <text x="656" y="78" class="t card-head" data-role="heading">Liu and Chow (2022)   INHERITED</text>
+    <text x="656" y="110" class="t card-body" data-role="body">Foundation: strategic transit data sharing.</text>
+    <text x="656" y="138" class="t card-body" data-role="body">Gap: no congestion-linked access comparison.</text>
   </g>
   <g id="lit-maheshwari" data-card="literature-maheshwari">
-    <rect x="1205" y="48" width="560" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
-    <text x="1231" y="78" class="t card-head" data-role="heading">Maheshwari et al. (2025)   INHERITED</text>
-    <text x="1231" y="110" class="t card-body" data-role="body">Foundation: private-value AAM allocation.</text>
-    <text x="1231" y="138" class="t card-body" data-role="body">Gap: allocation, not an M/P/F disclosure choice.</text>
+    <rect x="1225" y="48" width="540" height="110" class="box" fill="#e2e8f0" stroke="#64748b"/>
+    <text x="1251" y="78" class="t card-head" data-role="heading">Maheshwari et al. (2025)   INHERITED</text>
+    <text x="1251" y="110" class="t card-body" data-role="body">Foundation: private-value AAM allocation.</text>
+    <text x="1251" y="138" class="t card-body" data-role="body">Gap: allocation, not an M/P/F disclosure choice.</text>
   </g>
 
-  <path d="M315 158 L315 176" class="connector"/>
-  <path d="M900 158 L900 176" class="connector"/>
-  <path d="M1485 158 L1485 176" class="connector"/>
+  <path d="M305 158 L305 180" class="connector"/>
+  <path d="M900 158 L900 180" class="connector"/>
+  <path d="M1495 158 L1495 180" class="connector"/>
 
   <g id="gap" data-card="bounded-gap">
-    <rect x="260" y="176" width="1280" height="66" class="box" fill="#fff7ed" stroke="#c2410c" stroke-dasharray="10 6"/>
-    <text x="286" y="202" class="t gap-head" data-role="heading">VERIFIED CLOSEST-WORK GAP</text>
-    <text x="286" y="229" class="t gap-body" data-role="body">Selected works do not jointly model disclosure granularity, private costs, public congestion, welfare loss, and CCAR.</text>
+    <rect x="260" y="190" width="1280" height="66" class="box" fill="#fff7ed" stroke="#c2410c" stroke-dasharray="10 6"/>
+    <text x="286" y="216" class="t gap-head" data-role="heading">VERIFIED CLOSEST-WORK GAP</text>
+    <text x="286" y="243" class="t gap-body" data-role="body">Selected works do not jointly model disclosure granularity, private costs, public congestion, welfare loss, and CCAR.</text>
   </g>
-  <path d="M900 242 L900 254" class="connector"/>
+  <path d="M900 256 L900 280" class="connector"/>
 
   <g id="step-model" data-card="step-1-model">
-    <rect x="35" y="254" width="560" height="85" class="box" fill="#dbeafe" stroke="#1d4ed8"/>
-    <text x="61" y="283" class="t step-head" data-role="heading">1   FP10 MODEL   ADAPTED</text>
-    <text x="61" y="307" class="t step-body" data-role="body">Two operators with private L/H costs.</text>
-    <text x="61" y="330" class="t step-body" data-role="body">M/P/F actions, public Low/Med/High congestion.</text>
+    <rect x="35" y="290" width="540" height="85" class="box" fill="#dbeafe" stroke="#1d4ed8"/>
+    <text x="61" y="319" class="t step-head" data-role="heading">1   FP10 MODEL   ADAPTED</text>
+    <text x="61" y="343" class="t step-body" data-role="body">Two operators with private L/H costs.</text>
+    <text x="61" y="366" class="t step-body" data-role="body">M/P/F actions, public Low/Med/High congestion.</text>
   </g>
-  <path d="M595 296 L615 296" class="connector"/>
+  <path d="M575 332 L620 332" class="connector"/>
   <g id="step-bne" data-card="step-2-bne">
-    <rect x="620" y="254" width="560" height="85" class="box" fill="#dcfce7" stroke="#15803d"/>
-    <text x="646" y="283" class="t step-head" data-role="heading">2   PURE BNE   VERIFIED</text>
-    <text x="646" y="307" class="t step-body" data-role="body">All 81 type-contingent strategy profiles enumerated.</text>
-    <text x="646" y="330" class="t step-body" data-role="body">No symmetry restriction.</text>
+    <rect x="630" y="290" width="540" height="85" class="box" fill="#dcfce7" stroke="#15803d"/>
+    <text x="656" y="319" class="t step-head" data-role="heading">2   PURE BNE   VERIFIED</text>
+    <text x="656" y="343" class="t step-body" data-role="body">All 81 type-contingent strategy profiles enumerated.</text>
+    <text x="656" y="366" class="t step-body" data-role="body">No symmetry restriction.</text>
   </g>
-  <path d="M1180 296 L1200 296" class="connector"/>
+  <path d="M1170 332 L1215 332" class="connector"/>
   <g id="step-welfare" data-card="step-3-welfare">
-    <rect x="1205" y="254" width="560" height="85" class="box" fill="#dcfce7" stroke="#15803d"/>
-    <text x="1231" y="283" class="t step-head" data-role="heading">3   WELFARE   VERIFIED</text>
-    <text x="1231" y="307" class="t step-body" data-role="body">Full-information first-best reference.</text>
-    <text x="1231" y="330" class="t step-body" data-role="body">Largest benchmark gap: Medium = 0.946202.</text>
+    <rect x="1225" y="290" width="540" height="85" class="box" fill="#dcfce7" stroke="#15803d"/>
+    <text x="1251" y="319" class="t step-head" data-role="heading">3   WELFARE   VERIFIED</text>
+    <text x="1251" y="343" class="t step-body" data-role="body">Full-information first-best reference.</text>
+    <text x="1251" y="366" class="t step-body" data-role="body">Largest benchmark gap: Medium = 0.946202.</text>
   </g>
 
-  <path d="M1485 339 L1485 345 L610 345 L610 350" class="connector"/>
+  <path d="M1495 375 L1495 400 L585 400 L585 410" class="connector"/>
   <g id="step-ccar" data-card="step-4-ccar">
-    <rect x="330" y="350" width="560" height="85" class="box" fill="#ede9fe" stroke="#7c3aed"/>
-    <text x="356" y="379" class="t step-head" data-role="heading">4   CCAR   PROPOSED</text>
-    <text x="356" y="403" class="t step-body" data-role="body">Enhanced non-safety coordination access factor.</text>
-    <text x="356" y="426" class="t step-body" data-role="body">Not strategy-proof or universally welfare improving.</text>
+    <rect x="300" y="420" width="570" height="85" class="box" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="326" y="449" class="t step-head" data-role="heading">4   CCAR   PROPOSED</text>
+    <text x="326" y="473" class="t step-body" data-role="body">Enhanced non-safety coordination access factor.</text>
+    <text x="326" y="496" class="t step-body" data-role="body">Not strategy-proof or universally welfare improving.</text>
   </g>
-  <path d="M890 392 L910 392" class="connector"/>
+  <path d="M870 462 L920 462" class="connector"/>
   <g id="step-computation" data-card="step-5-computation">
-    <rect x="915" y="350" width="560" height="85" class="box" fill="#d1fae5" stroke="#15803d"/>
-    <text x="941" y="379" class="t step-head" data-role="heading">5   COMPUTATIONAL EVALUATION   VERIFIED</text>
-    <text x="941" y="403" class="t step-body" data-role="body">760 parameter cells with failure cases retained.</text>
-    <text x="941" y="426" class="t step-body" data-role="body">Diagnostics overlap. Not human observations.</text>
+    <rect x="930" y="420" width="570" height="85" class="box" fill="#d1fae5" stroke="#15803d"/>
+    <text x="956" y="449" class="t step-head" data-role="heading">5   COMPUTATIONAL EVALUATION   VERIFIED</text>
+    <text x="956" y="473" class="t step-body" data-role="body">760 parameter cells with failure cases retained.</text>
+    <text x="956" y="496" class="t step-body" data-role="body">Diagnostics overlap. Not human observations.</text>
   </g>
 
-  <path d="M1195 435 L1195 444" class="connector"/>
+  <path d="M1200 505 L1200 535" class="connector"/>
 
   <g id="limitations" data-card="limitations">
-    <rect x="35" y="444" width="1730" height="50" class="box" fill="#fee2e2" stroke="#b91c1c" stroke-dasharray="10 6"/>
-    <text x="61" y="466" class="t limit-head" data-role="heading">LIMITATIONS   NOT YET VALIDATED</text>
-    <text x="408" y="466" class="t limit-body" data-role="body">Dynamic traffic, strategic misreporting, implementation costs, unequal burdens, and endogenous information quality</text>
-    <text x="408" y="487" class="t limit-body" data-role="body">require further theory, computation, behavioral study, or field validation, including human comprehension.</text>
+    <rect x="35" y="545" width="1730" height="50" class="box" fill="#fee2e2" stroke="#b91c1c" stroke-dasharray="10 6"/>
+    <text x="61" y="567" class="t limit-head" data-role="heading">LIMITATIONS   NOT YET VALIDATED</text>
+    <text x="408" y="567" class="t limit-body" data-role="body">Dynamic traffic, strategic misreporting, implementation costs, unequal burdens, and endogenous information quality</text>
+    <text x="408" y="588" class="t limit-body" data-role="body">require further theory, computation, behavioral study, or field validation, including human comprehension.</text>
   </g>
 
   <g id="boundary" data-card="contribution-boundary">
-    <rect x="35" y="498" width="1730" height="44" rx="9" ry="9" fill="#ffffff" stroke="#cbd5e1"/>
-    <text x="55" y="516" class="t boundary" data-role="body">Boundary: reproducible comparative computation for a stylized disclosure game. No general theorem or empirically validated aviation outcome.</text>
-    <text x="55" y="535" class="t boundary" data-role="body">References: Los et al. (2020), Liu and Chow (2022), Maheshwari et al. (2025). Complete titles and DOIs appear in the paper.</text>
+    <rect x="35" y="605" width="1730" height="45" rx="9" ry="9" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="55" y="622" class="t boundary" data-role="body">Boundary: reproducible comparative computation for a stylized disclosure game. No general theorem or empirically validated aviation outcome.</text>
+    <text x="55" y="641" class="t boundary" data-role="body">References: Los et al. (2020), Liu and Chow (2022), Maheshwari et al. (2025). Complete titles and DOIs appear in the paper.</text>
   </g>
 </svg>

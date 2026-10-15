@@ -14,8 +14,9 @@ Audit date: 2026-10-15, Asia/Shanghai. This file is updated after the final test
 - **PASS** — Poster PDF is one A0 landscape page and its PNG preview was rendered from that PDF and visually inspected.
 - **PASS** — The Intellectual Merits correction passes DOM geometry validation (11 cards, 9 connectors, zero failures), and a full-poster pixel diff reports exactly zero changed pixels outside the intended diagram rectangle.
 - **PASS** — The paper figure, Overleaf figure, editable-poster embedded PNG, stable poster outputs, and four Canvas deliverables are synchronized to the corrected diagram. The clean extracted ZIP still compiles to seven A4 pages.
-- **PASS** — The final poster body is globally rebalanced to approximately 26.6% / 46.9% / 26.5% column shares. Section 02's evidence-chain display area increased by 29.6%; the welfare chart and verification evidence are now paired horizontally; Practical Impacts and the roadmap have more even visual weight.
+- **PASS** — The final poster body is globally rebalanced to approximately 26.6% / 46.9% / 26.5% column shares. Section 02's evidence-chain display area is 54.8% larger than the pre-rebalance baseline; the welfare chart and verification evidence remain paired horizontally; Practical Impacts and the roadmap retain even visual weight.
 - **PASS** — Global poster pixel QA reports zero changes outside the intentionally rebalanced main-body region, with byte-identical header/key-message and footer regions.
+- **PASS** — The Section 02 arrow-clarity audit gives every connector a dedicated whitespace lane (32–60 px across the nine measured separations), reports zero text/card collisions, and finds zero changed pixels outside Section 02; Sections 01 and 03 plus the header and footer are byte-identical to the pre-fix poster.
 - **PASS** — Live Hugging Face project page and static runtime returned HTTP 200. API reports public, enabled, RUNNING, SDK `static`, deployment SHA `84d736708a1ff2226cea3bf16bb11daa730764a1`.
 - **PASS** — Live Hugging Face `app.js`, `styles.css`, `js/logic.mjs`, and `data/validated_model_data.json` hashes match local `hf_static/` byte-for-byte. Live `index.html` matches after removing Hugging Face's runtime-injected `window.huggingface` metadata script.
 - **PASS** — Root README contains the exact required poster preview embed and repository PDF link.
@@ -31,6 +32,6 @@ Audit date: 2026-10-15, Asia/Shanghai. This file is updated after the final test
 ## External release state
 
 - The original FP10 final-release PR #4 is merged on course `main` at `a33234e`.
-- The global-rebalance branch `fix/fp10-poster-global-rebalance` is based on the verified Intellectual Merits correction at `4794daf` (`fp10-final-2026-10-15-verified-r3`). Historical release tags remain unchanged.
-- **BLOCKED BY EXTERNAL CREDENTIALS** — Pull-request creation requires an authenticated GitHub web or CLI session. The prepared course-repository PR URL is <https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/pull/new/fix/fp10-poster-global-rebalance>.
-- **REBALANCE NOT YET ON DEFAULT BRANCH** — Course `main` contains the earlier final release. Its README uses the correct poster path, but the globally rebalanced preview will not appear there until this branch is merged.
+- The arrow-clarity branch `fix/fp10-section02-arrow-clarity` continues from the global-rebalance commit `e4ebc6c`. Historical release tags remain unchanged.
+- **BLOCKED BY EXTERNAL CREDENTIALS** — Pull-request creation requires an authenticated GitHub web or CLI session. The prepared course-repository PR URL is <https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/pull/new/fix/fp10-section02-arrow-clarity>.
+- **ARROW-CLARITY RELEASE NOT YET ON DEFAULT BRANCH** — Course `main` contains the earlier final release. Its README uses the correct poster path, but this refined Section 02 preview will not appear there until this branch is merged.
