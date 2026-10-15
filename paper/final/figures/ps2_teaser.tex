@@ -1,0 +1,26 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  every node/.style={font=\sffamily\scriptsize,text=CourseInk,align=center},
+  source/.style={draw=CourseInk!55,rounded corners=1.5pt,fill=CourseInk!7,minimum width=2.42cm,minimum height=.72cm},
+  gap/.style={draw=orange!85!black,dashed,rounded corners=1.5pt,fill=orange!5,minimum width=8.12cm,minimum height=.58cm},
+  verified/.style={draw=CourseTeal,rounded corners=1.5pt,fill=CourseTeal!8,minimum width=2.38cm,minimum height=.78cm},
+  proposed/.style={draw=CourseBlue,rounded corners=1.5pt,fill=CourseBlue!7,minimum width=2.38cm,minimum height=.78cm},
+  limit/.style={draw=red!70!black,dashed,rounded corners=1.5pt,fill=red!5,minimum width=8.12cm,minimum height=.58cm},
+  flow/.style={-{Stealth[length=2mm,width=1.5mm]},line width=.75pt,CourseInk}
+]
+\node[source] (los) at (1.22,3.65) {Los et al. 2020\\routing value};
+\node[source] (liu) at (4.17,3.65) {Liu and Chow 2022\\strategic data sharing};
+\node[source] (mah) at (7.12,3.65) {Maheshwari et al. 2025\\private AAM allocation};
+\node[gap] (gap) at (4.17,2.75) {Selected-work gap: disclosure granularity + private cost + congestion};
+\draw[flow] (los.south)--(los.south|-gap.north);
+\draw[flow] (liu.south)--(liu.south|-gap.north);
+\draw[flow] (mah.south)--(mah.south|-gap.north);
+\node[proposed] (model) at (1.22,1.78) {FP10 model\\two private types};
+\node[verified] (bne) at (4.17,1.78) {Verified BNE + welfare\\81 profiles};
+\node[verified] (ccar) at (7.12,1.78) {CCAR stress tests\\760 cells};
+\draw[flow] (gap.south)--(bne.north);
+\draw[flow] (model.east)--(bne.west);
+\draw[flow] (bne.east)--(ccar.west);
+\node[limit] (limit) at (4.17,.72) {Boundary: stylized computation; no behavioral or aviation validation};
+\draw[flow] (ccar.south)--(ccar.south|-limit.north);
+\end{tikzpicture}

@@ -47,6 +47,8 @@ function place(deck, id, position) {
 async function buildPoster() {
   await fs.mkdir(outDir, { recursive: true });
   await fs.mkdir(`${root}/poster`, { recursive: true });
+  const manifest = JSON.parse(await fs.readFile(`${root}/outputs/final/release_manifest.json`, "utf8"));
+  const testedCommit = manifest.tested_commit;
   const deck = await PresentationFile.importPptx(await FileBlob.load(template));
   const slide = deck.resolve("sl/y90nupkv");
 
@@ -71,12 +73,12 @@ async function buildPoster() {
 
   put(deck, "sh/i1gje90j", "", 30);
   put(deck, "sh/43y1gji9", "", 30);
-  put(deck, "sh/y5wjip0z", "Economics defines incentives and welfare; computation exposes failure regions; those failures narrow the practical claim and motivate comprehension/fairness tests.\nYiqiao Liu: model boundary, code, experiments, interface, paper and poster; 65 baseline tests and fresh artifact verification.\nLimits: two operators/types, exogenous congestion, pure strategies, no calibration, report-quality or implementation-cost model.", 34);
-  put(deck, "sh/z650ba1k", "OCT 12 / OCT 14 historical activity records: author confirmation pending\nOCT 21  Final submission at 23:00 Shanghai", 28);
+  put(deck, "sh/y5wjip0z", "Economics defines incentives and welfare; computation exposes failure regions; those failures narrow the practical claim and motivate comprehension/fairness tests.\nYiqiao Liu: model boundary, code, experiments, interface, paper and poster; 70 automated tests and fresh artifact verification.\nLimits: two operators/types, exogenous congestion, pure strategies, no calibration, report-quality or implementation-cost model.", 34);
+  put(deck, "sh/z650ba1k", "SEP 28  Superseded-topic review recovered; no current-model validation claimed\nOCT 12 / OCT 14  Primary activity records not recovered", 28);
 
-  put(deck, "sh/14fyhgbe", "Prof. Luyao Zhang: course design and official templates. Prof. Kenneth S. (Ken) Rogerson: documented course-workshop context; no direct FP10 review claimed. Han Zhang: proposed three-party oversight extension. Xinrong Sun: novelty, domain, congestion-benefit and CCAR-externality challenges (author-supplied summaries; source records pending). Tencent Shanghai office; Shanghai Science and Technology Museum; COMSCI/ECON 206 classroom community. UN SDG assets; Python/NumPy/Matplotlib/nbclient/Gradio/Playwright/ACM template; OpenAI Codex assistance. Yiqiao Liu remains responsible.", 24);
+  put(deck, "sh/14fyhgbe", "Prof. Luyao Zhang: course design and official templates. Prof. Kenneth S. (Ken) Rogerson: documented course-workshop context; no direct FP10 review claimed. Feiyu Li: 28 Sept. review of a superseded topic; no current-model validation claimed. Han Zhang: proposed three-party oversight extension. Xinrong Sun: novelty, domain, congestion-benefit and CCAR-externality challenges (author-supplied summaries; source records pending). Tencent Shanghai office; Shanghai Science and Technology Museum; COMSCI/ECON 206 classroom community. UN SDG assets; Python/NumPy/Matplotlib/nbclient/Gradio/Playwright/ACM template; OpenAI Codex assistance. Yiqiao Liu remains responsible.", 24);
   put(deck, "sh/nqxgjqtk", "Los et al. (2020), Transp. Res. E 141, 102011. doi:10.1016/j.tre.2020.102011\nLiu & Chow (2022), Transp. Res. B 163, 64–87. doi:10.1016/j.trb.2022.06.013\nMaheshwari et al. (2025), ACM JATS 2(4), Art. 19. doi:10.1145/3732290\nUN SDG targets 9.1 and 11.2: sdgs.un.org/goals", 23);
-  put(deck, "sh/9sfylgbq", "Hugging Face: hf.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure\nGitHub: github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao\nFinal tested commit: pending final verification commit", 23);
+  put(deck, "sh/9sfylgbq", `Hugging Face: hf.co/spaces/dku-comsci-econ206-2026/ps2-share-or-hide-drone-disclosure\nGitHub: github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao\nValidated source commit: ${testedCommit}`, 23);
   put(deck, "sh/buh0nqtg", "", 20);
   put(deck, "sh/8zqx4vq9", "", 20);
 

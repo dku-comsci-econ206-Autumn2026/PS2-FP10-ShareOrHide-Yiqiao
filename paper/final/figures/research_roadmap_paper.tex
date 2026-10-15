@@ -1,0 +1,18 @@
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  every node/.style={font=\sffamily\scriptsize,text=CourseInk,align=left},
+  current/.style={draw=CourseInk!60,rounded corners=2pt,fill=CourseInk!7,text width=16.25cm,minimum height=.78cm,inner sep=6pt},
+  study/.style={draw=CourseBlue,dashed,rounded corners=2pt,fill=CourseBlue!5,text width=4.85cm,minimum height=2.3cm,inner sep=6pt},
+  field/.style={draw=violet,dashed,rounded corners=2pt,fill=violet!5,text width=16.25cm,minimum height=.8cm,inner sep=6pt},
+  flow/.style={-{Stealth[length=2.4mm,width=1.8mm]},line width=.9pt,CourseInk}
+]
+\node[current] (current) at (8.75,4.75) {\textbf{Current verified benchmark.} Two operators, exogenous congestion, independent binary confidentiality costs, M/P/F disclosure, pure BNE, no reporting error or implementation cost.};
+\node[study] (econ) at (2.7,2.75) {\textbf{Study 1 -- economics}\\Question: can truthful reporting and participation constraints be implemented?\\Method: Bayesian mechanism design.\\Milestone: feasible regions and counterexamples.};
+\node[study] (cs) at (8.75,2.75) {\textbf{Study 2 -- computer science}\\Question: does CCAR remain safe at scale?\\Method: dynamic multi-agent simulation and privacy-preserving messages.\\Milestone: latency, failure, and privacy metrics.};
+\node[study,draw=orange!85!black,fill=orange!6] (behavior) at (14.8,2.75) {\textbf{Study 3 -- behavioral science}\\Question: do people understand incentives, privacy salience, and fairness?\\Method: preregistered choices after ethics review.\\Milestone: comprehension and preference estimates.};
+\draw[flow] (current.south)--(cs.north);
+\draw[flow] (econ.east)--(cs.west);
+\draw[flow] (cs.east)--(behavior.west);
+\node[field] (field) at (8.75,.48) {\textbf{Conditional real-world evaluation.} Only after theory, computation, behavioral evidence, ethics approval, protected safety messaging, auditable rules, and predefined stop criteria.};
+\draw[flow] (cs.south)--(field.north);
+\end{tikzpicture}
