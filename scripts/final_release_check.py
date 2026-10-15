@@ -120,13 +120,21 @@ def main() -> int:
     )
 
     diff_report = json.loads(
-        (ROOT / "outputs/final/intellectual_merits_poster_diff.json").read_text(encoding="utf-8")
+        (ROOT / "outputs/final/poster_layout_rebalance.json").read_text(encoding="utf-8")
     )
     check(
-        "poster change containment",
-        diff_report["changedOutsidePixels"] == 0
-        and diff_report["maximumOutsideChannelDelta"] == 0,
-        f"changed outside target={diff_report['changedOutsidePixels']} px; maximum outside channel delta={diff_report['maximumOutsideChannelDelta']}",
+        "poster global rebalance containment",
+        diff_report["status"] == "PASS"
+        and diff_report["changedOutsidePixels"] == 0
+        and diff_report["maximumOutsideChannelDelta"] == 0
+        and all(item["identical"] for item in diff_report["protectedEvidence"].values()),
+        f"changed outside body={diff_report['changedOutsidePixels']} px; protected regions={diff_report['protectedEvidence']}",
+    )
+    check(
+        "poster evidence-area rebalance",
+        diff_report["layoutMetrics"]["afterColumnWidths"] == [1080, 1900, 1074]
+        and diff_report["layoutMetrics"]["section02FigureAreaIncreaseRatio"] >= 0.29,
+        f"columns={diff_report['layoutMetrics']['afterColumnWidths']}; Section 02 figure area increase={diff_report['layoutMetrics']['section02FigureAreaIncreaseRatio']:.1%}",
     )
 
     poster_pdf_info = pdf_info(required[3])

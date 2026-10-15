@@ -48,9 +48,14 @@
       "evidence": "cards=11, connectors=9, failures=[]"
     },
     {
-      "name": "poster change containment",
+      "name": "poster global rebalance containment",
       "status": "PASS",
-      "evidence": "changed outside target=0 px; maximum outside channel delta=0"
+      "evidence": "changed outside body=0 px; protected regions={'headerAndMessage': {'beforeSha256': '842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62', 'afterSha256': '842593ed24a9fc32c3c4115104839556005c6a22dc752ceacc30b41a6b118f62', 'identical': True}, 'footer': {'beforeSha256': '2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45', 'afterSha256': '2af81c85a7387eec1a4497c314f00557b391888804da4fa336e748dbf3aaad45', 'identical': True}}"
+    },
+    {
+      "name": "poster evidence-area rebalance",
+      "status": "PASS",
+      "evidence": "columns=[1080, 1900, 1074]; Section 02 figure area increase=29.6%"
     },
     {
       "name": "poster PDF",
@@ -121,11 +126,11 @@
   "hashes": {
     "submission/final/Final-FP10-ShareOrHide.pdf": "aae33cbf4842aa548d947f82d75d3b46ed9e4ea14cef2eccd2e24c47dd331b51",
     "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "8909f06edde94f14e6ab6c6c65a4ac17faa11a95a4367ee1b58fb71640994696",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "1f6b3c818eeda367307064114d62e40581bfd54fea459313e37a26b3f1ad6998",
-    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "b516a2dcdc71b625b5532516af10f990876291a57b8791d5e97666437027ab38",
-    "poster/final-poster.png": "5a8923f37b04bc14dc2518d71c7f8f7adac2c4e22da8b85c73e337993f38827b"
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "c823612e832e6ca81600fe63b7dde8bd91ce9254ea1c2aa8691a9241296eac24",
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "e032c88bb484a83d8aae235294c7482c97e36277f8182de0541e54ecb78eebc6",
+    "poster/final-poster.png": "751eca03dd3069734c45afa0b38999b8c2767262b3258ab12cf8b56299230818"
   },
-  "automated_passed": 20,
+  "automated_passed": 21,
   "automated_failed": 0,
   "manual_required": 3
 }
