@@ -205,7 +205,23 @@ def main() -> int:
 
     canvas_text = (ROOT / "submission/final/canvas_text_entry.txt").read_text(encoding="utf-8")
     check("Canvas text uses main links", "/blob/main/" in canvas_text and "final/fp10-2026-release" not in canvas_text, "README, poster, and notebook URLs target main")
-    check("Canvas text version", tested_commit in canvas_text and "Final release candidate" not in canvas_text, "Validated source commit and audited-final wording present")
+    check("Canvas text version", tested_commit in canvas_text and "Final release candidate" not in canvas_text, "Canvas text names the validated source commit and the current final correction")
+    check("Canvas commit roles", all(label in canvas_text for label in ("Validated source commit:", "Artifact packaging commit:", "Published merge commit:")), "Canvas text distinguishes source, package, and published merge provenance")
+    packaging_commit = manifest.get("artifact_packaging_commit", "")
+    check("artifact packaging commit", bool(re.fullmatch(r"[0-9a-f]{40}", packaging_commit)) and packaging_commit in canvas_text, "Exact packaging commit is recorded in the manifest and Canvas entry")
+    check("published merge status", manifest.get("published_merge_commit") is None and "Not yet merged" in canvas_text, "No merge commit is claimed before publication")
+
+    manifest_artifacts = manifest.get("canvas_artifacts", {})
+    artifacts_match = all(
+        manifest_artifacts.get(path.name, {}).get("sha256") == sha256(path)
+        and manifest_artifacts.get(path.name, {}).get("size_bytes") == path.stat().st_size
+        for path in canvas_files
+    )
+    check("manifest Canvas hashes and sizes", artifacts_match, "All four Canvas artifacts match the manifest SHA-256 and byte size")
+    verification_summary = manifest.get("verification_summary", {})
+    test_totals = verification_summary.get("automated_tests", {})
+    release_totals = verification_summary.get("final_release_validator", {})
+    check("manifest verification counts", test_totals.get("total") == 70 and test_totals.get("failures") == 0 and release_totals.get("passed") == 39 and release_totals.get("failed") == 0 and release_totals.get("manual_confirmation_required") == 4, "Manifest records 70 passing tests and 39 validator passes, plus four human-only checks")
 
     source = (ROOT / "paper/final/appendices/supporting.tex").read_text(encoding="utf-8")
     appendices_ok = all(f"\\section{{{name}" in source for name in (

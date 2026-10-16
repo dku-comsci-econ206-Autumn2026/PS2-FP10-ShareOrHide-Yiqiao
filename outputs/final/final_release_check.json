@@ -105,7 +105,7 @@
     {
       "name": "tested commit recorded",
       "status": "PASS",
-      "evidence": "b2542dfceb0ba019d1a2dadfe42690626456bb37"
+      "evidence": "722211568f1244013071c2d7f126486b4bd259bb"
     },
     {
       "name": "frozen poster provenance",
@@ -133,9 +133,24 @@
       "evidence": "Canvas text distinguishes source, package, and published merge provenance"
     },
     {
+      "name": "artifact packaging commit",
+      "status": "PASS",
+      "evidence": "Exact packaging commit is recorded in the manifest and Canvas entry"
+    },
+    {
+      "name": "published merge status",
+      "status": "PASS",
+      "evidence": "No merge commit is claimed before publication"
+    },
+    {
       "name": "manifest Canvas hashes and sizes",
       "status": "PASS",
       "evidence": "All four Canvas artifacts match the manifest SHA-256 and byte size"
+    },
+    {
+      "name": "manifest verification counts",
+      "status": "PASS",
+      "evidence": "Manifest records 70 passing tests and 39 validator passes, plus four human-only checks"
     },
     {
       "name": "Appendices A\u2013G",
@@ -204,21 +219,21 @@
     }
   ],
   "canvas_hashes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": "e3519d5022b4dc7fd2cb63f3e797f2418ee83e99655d2b5e4785354738f85fd1",
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "1a2b407680c5c84f1185a506a242f2f4e8554c37be8d11ce888049d770c233a7",
+    "submission/final/Final-FP10-ShareOrHide.pdf": "b4e650f82984bc4a2d45d93b5e594fbb4c8cc03a14a84de6226e51939fa98e61",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "f537aa1889f282cb325c59ad0c3bd2659b0178bdff47f456a21549eba4600cb0",
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "a74674943ef589690d93f8a3136add833db0d68024ccd92d840a61b3d1a20372",
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "289fabc9c55c4947bf843745bd9ae59a8d5a28b8feadfedd1c33fde6815e5b02"
   },
   "canvas_file_sizes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": 610349,
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": 168457,
+    "submission/final/Final-FP10-ShareOrHide.pdf": 610359,
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": 168461,
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": 1664002,
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": 1741611
   },
   "auxiliary_hashes": {
     "poster/final-poster.png": "314cfa2453eeceb9b7a9edbaaaacd8fa6c8b9b27dcddc8e24dcf97a8bd58e3ef"
   },
-  "automated_passed": 36,
+  "automated_passed": 39,
   "automated_failed": 0,
   "manual_required": 4
 }

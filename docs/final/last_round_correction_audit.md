@@ -35,4 +35,4 @@ The author must confirm final wording, credits, author order, and the four Canva
 
 ## Release identifiers
 
-Validated source commit, artifact-packaging commit, and published merge commit are recorded in `release_readiness.md` after the source and package commits exist. No commit hash is guessed or entered in advance.
+Validated source commit: `722211568f1244013071c2d7f126486b4bd259bb`; artifact-packaging commit: `3a0995d069236fe6ac3107f0c83438f530839c9c`; published merge commit: none because the branch is not merged. No commit hash is guessed.

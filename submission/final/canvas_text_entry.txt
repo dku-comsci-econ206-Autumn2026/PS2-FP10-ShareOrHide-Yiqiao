@@ -11,7 +11,7 @@ Validated source commit:
 722211568f1244013071c2d7f126486b4bd259bb
 
 Artifact packaging commit:
-Recorded after the final paper and source ZIP are committed.
+3a0995d069236fe6ac3107f0c83438f530839c9c
 
 Published merge commit:
 Not yet merged; no merge commit is claimed.

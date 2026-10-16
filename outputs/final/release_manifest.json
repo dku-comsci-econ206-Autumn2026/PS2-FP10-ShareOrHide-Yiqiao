@@ -9,7 +9,7 @@
   "validated_source_commit": "722211568f1244013071c2d7f126486b4bd259bb",
   "tested_commit": "722211568f1244013071c2d7f126486b4bd259bb",
   "poster_source_commit": "96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38",
-  "artifact_packaging_commit": null,
+  "artifact_packaging_commit": "3a0995d069236fe6ac3107f0c83438f530839c9c",
   "published_merge_commit": null,
   "git_branch": "fix/fp10-final-rubric-and-reproducibility",
   "verification_date": "2026-10-16",
