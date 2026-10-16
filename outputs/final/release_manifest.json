@@ -5,9 +5,9 @@
   "course": "COMSCI/ECON 206 - Computational Microeconomics",
   "term": "Autumn 2026, Session 1",
   "model_version": "fp10-disclosure-v1-preserved",
-  "source_commit_at_generation": "b2542dfceb0ba019d1a2dadfe42690626456bb37",
-  "validated_source_commit": "b2542dfceb0ba019d1a2dadfe42690626456bb37",
-  "tested_commit": "b2542dfceb0ba019d1a2dadfe42690626456bb37",
+  "source_commit_at_generation": "508267498d374cedec95e3e95a31026ee94c5ea8",
+  "validated_source_commit": "508267498d374cedec95e3e95a31026ee94c5ea8",
+  "tested_commit": "508267498d374cedec95e3e95a31026ee94c5ea8",
   "poster_source_commit": "96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38",
   "artifact_packaging_commit": null,
   "published_merge_commit": null,
@@ -206,12 +206,12 @@
   },
   "canvas_artifacts": {
     "Final-FP10-ShareOrHide.pdf": {
-      "sha256": "e3519d5022b4dc7fd2cb63f3e797f2418ee83e99655d2b5e4785354738f85fd1",
-      "size_bytes": 610349
+      "sha256": "2432a9a239ff203c8a18bf1218b2924f4af05993d3494f7cf1384ef830adbd97",
+      "size_bytes": 610336
     },
     "Final-FP10-ShareOrHide-Overleaf-Source.zip": {
-      "sha256": "1a2b407680c5c84f1185a506a242f2f4e8554c37be8d11ce888049d770c233a7",
-      "size_bytes": 168457
+      "sha256": "20bdcf581f82058bdd375c29687aab51d8169d7a8adb9ceb830d175c9fd011a8",
+      "size_bytes": 168456
     },
     "Final-FP10-ShareOrHide-A0-Poster.pptx": {
       "sha256": "a74674943ef589690d93f8a3136add833db0d68024ccd92d840a61b3d1a20372",
@@ -221,5 +221,26 @@
       "sha256": "289fabc9c55c4947bf843745bd9ae59a8d5a28b8feadfedd1c33fde6815e5b02",
       "size_bytes": 1741611
     }
+  },
+  "verification_summary": {
+    "automated_tests": {
+      "root_model_and_notebook": 38,
+      "huggingface_gradio": 17,
+      "static_python": 10,
+      "static_javascript": 5,
+      "total": 70,
+      "failures": 0
+    },
+    "final_release_validator": {
+      "passed": 39,
+      "failed": 0,
+      "manual_confirmation_required": 4
+    },
+    "hosted_colab_execution": "NOT_VERIFIED",
+    "live_huggingface_interaction": "NOT_VERIFIED",
+    "live_huggingface_http_status": 200,
+    "live_huggingface_deployment_sha": "84d736708a1ff2226cea3bf16bb11daa730764a1",
+    "native_powerpoint_rendering": "NOT_VERIFIED",
+    "canvas_upload": "NOT_PERFORMED"
   }
 }

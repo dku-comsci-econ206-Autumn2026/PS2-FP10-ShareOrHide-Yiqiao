@@ -8,10 +8,10 @@ GitHub repository:
 https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao
 
 Validated source commit:
-b2542dfceb0ba019d1a2dadfe42690626456bb37
+508267498d374cedec95e3e95a31026ee94c5ea8
 
 Artifact packaging commit:
-Recorded in docs/final/release_readiness.md after the final deliverables are committed.
+Recorded after the corrected final paper package is committed.
 
 Published merge commit:
 Not yet merged; no merge commit is claimed.
@@ -40,4 +40,4 @@ Final version and date:
 FP10 last-round paper and release correction, 2026-10-16
 
 Evidence and confirmation status:
-The validated source commit passed 70 automated tests. The final paper and Overleaf ZIP compile locally and from a clean extraction; the main text is two A4 pages. The A0 poster files were preserved unchanged from poster source commit 96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38. A genuine 28 September review by Feiyu Li was recovered, but it concerns a superseded AI memory-portability version and is not claimed as validation of this drone-disclosure model. October 12/14 primary activity records were not recovered. A prior sole-member confirmation exists only for older commit 133641f439268a8b2a640fe554b0ae9b230b336a and does not confirm these regenerated files. Yiqiao Liu must personally review the final four files, rerun the two notebooks in hosted Colab, check the PPTX in native PowerPoint, and complete the Canvas upload.
+The validated source commit passed 70 automated tests. The final paper and Overleaf ZIP compile locally and from a clean extraction; the main text is two A4 pages, with no remaining overfull lines in the final LaTeX log. The A0 poster files were preserved unchanged from poster source commit 96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38. A genuine 28 September review by Feiyu Li was recovered, but it concerns a superseded AI memory-portability version and is not claimed as validation of this drone-disclosure model. October 12/14 primary activity records were not recovered. A prior sole-member confirmation exists only for older commit 133641f439268a8b2a640fe554b0ae9b230b336a and does not confirm these regenerated files. Yiqiao Liu must personally review the final four files, rerun the two notebooks in hosted Colab, check the PPTX in native PowerPoint, and complete the Canvas upload.
