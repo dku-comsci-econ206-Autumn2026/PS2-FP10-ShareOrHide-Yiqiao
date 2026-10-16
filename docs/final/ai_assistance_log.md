@@ -4,7 +4,7 @@
 |---|---|
 | Tool | OpenAI Codex desktop agent |
 | Model | Exact underlying model identifier not independently verified from retained run records |
-| Date | 2026-10-15, Asia/Shanghai |
+| Date | 2026-10-15 to 2026-10-16, Asia/Shanghai |
 | Material prompt | Author-supplied final-project master instruction in the Codex attachment record |
 | Purpose | Repository and requirement audit; computational verification; bounded literature verification; figure, paper, poster, documentation, and release preparation |
 | Accepted work | Central evidence builder; regenerated results and figures; audit documents; narrowed claims; final artifact drafts; verification scripts and tests |
