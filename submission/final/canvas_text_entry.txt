@@ -8,10 +8,10 @@ GitHub repository:
 https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao
 
 Validated source commit:
-508267498d374cedec95e3e95a31026ee94c5ea8
+722211568f1244013071c2d7f126486b4bd259bb
 
 Artifact packaging commit:
-Recorded after the corrected final paper package is committed.
+Recorded after the final paper and source ZIP are committed.
 
 Published merge commit:
 Not yet merged; no merge commit is claimed.
