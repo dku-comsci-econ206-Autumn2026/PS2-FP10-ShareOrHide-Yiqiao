@@ -1,8 +1,32 @@
 # Final release readiness
 
-Audit date: 2026-10-15, Asia/Shanghai. This file is updated after the final test/commit cycle.
+## Latest acceptance run — 2026-10-16, Asia/Shanghai
 
-## Verified locally
+This section supersedes the 15 October snapshot below for the current paper, source ZIP, metadata, test, and hash status. Historical poster and audit-containment checks remain applicable because the poster was not changed.
+
+- **Validated source commit:** `722211568f1244013071c2d7f126486b4bd259bb` on `fix/fp10-final-rubric-and-reproducibility`.
+- **Artifact-packaging commit:** `3a0995d069236fe6ac3107f0c83438f530839c9c`; it contains the final paper PDF and independently compiled Overleaf ZIP.
+- **Git and PR status:** the correction branch was pushed to the course repository without force-push. GitHub CLI has no authenticated session, so a PR was not created and nothing was merged. Create the PR at [this course-repository URL](https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao/pull/new/fix/fp10-final-rubric-and-reproducibility). Published merge commit: none.
+- **Tests on the validated source:** 38 root/model/notebook, 17 Hugging Face/Gradio, 10 static Python, and 5 static JavaScript tests passed; total 70, zero failures. The release validator separately passes 39 automated checks with zero failures and reports 4 human-only checks.
+- **Paper:** 6 A4 pages total; required main text is pages 1–2; Author Notes starts page 3; References and Appendices A–G are present. Local compile and clean-extracted Overleaf ZIP compile both pass. Extracted text matches the local build; independent PDF bytes differ due build metadata.
+- **Paper visual QA:** all six pages rendered and inspected. Figure 1 contains baseline pure BNE and full-information first best only, with CCAR described separately. Official SDG 9/11 icons are present without distortion; target 11.2 is qualified as indirect/prospective. All three roadmap studies label Question, Method/data, Potential collaborator, Progress criterion, and Milestone.
+- **Scientific result preservation:** benchmark CSV SHA-256 `c48142c2b4a974ca872883df7b9158b8f99442788eac59f4fdaf9fe3ec4f3745`; robustness CSV `83d01ce0f1e9d2399b939e261ea9321f3ac2f09cdd84c45d5bf4be6ee49ac27d`; original notebook metadata hashes remain unchanged. The 81-profile, CCAR, and 760-cell results are unchanged.
+- **Poster:** still one editable 1189 × 841 mm landscape slide. PPTX and PDF SHA-256 remain `a74674943ef589690d93f8a3136add833db0d68024ccd92d840a61b3d1a20372` and `289fabc9c55c4947bf843745bd9ae59a8d5a28b8feadfedd1c33fde6815e5b02`; Section 02 was not edited. Native PowerPoint viewing remains unverified.
+- **Runtime checks:** live Space page/API currently return HTTP 200; API reports public, enabled, static, deployment SHA `84d736708a1ff2226cea3bf16bb11daa730764a1`. `app.js`, `styles.css`, `js/logic.mjs`, and model JSON match local sources byte-for-byte. Live `index.html` differs only by the runtime-injected `window.huggingface` metadata script. Both Colab URLs return HTTP 200, but neither notebook was run in hosted Colab.
+- **Current Canvas artifacts:** PDF 610,359 bytes, SHA-256 `b4e650f82984bc4a2d45d93b5e594fbb4c8cc03a14a84de6226e51939fa98e61`; Overleaf ZIP 168,461 bytes, SHA-256 `f537aa1889f282cb325c59ad0c3bd2659b0178bdff47f456a21549eba4600cb0`; poster PPTX 1,664,002 bytes, SHA-256 as above; poster PDF 1,741,611 bytes, SHA-256 as above. `outputs/final/final_release_check.json` is regenerated after packaging.
+- **Human actions remaining:** author approval of wording, acknowledgments and files; supply authentic missing October 12/14 feedback/activity records if available; run both notebooks in hosted Colab; manually exercise the live Space; inspect PPTX in PowerPoint; upload and verify the four Canvas files.
+
+**Readiness: CONDITIONALLY READY.** Local scientific, rubric, build, test, and artifact checks pass. Submission should wait for the human confirmations listed above.
+
+## Historical 2026-10-15 readiness snapshot
+
+The following section preserves the earlier independent-audit record; where its source commit or paper-package details differ, the newer 16 October status above controls.
+
+Audit date: 2026-10-15, Asia/Shanghai.
+
+### Historical 2026-10-15 checks (superseded where the section above gives newer status)
+
+## Verified locally at that snapshot
 
 - **PASS** — Original model preserved: two operators, two private cost types, three disclosure actions, three public congestion states.
 - **PASS** — Baseline and CCAR values recomputed from canonical code; robustness categories confirmed overlapping.
@@ -25,7 +49,7 @@ Audit date: 2026-10-15, Asia/Shanghai. This file is updated after the final test
 - **PASS** — Final poster pixel comparison against the merged-main poster found 55,904 changed pixels, all inside the intended lower-right status area or footer; zero changed pixels occurred outside those regions. Section 02 and the A0 scientific layout are unchanged.
 - **PASS** — Final release checker: 27 automated artifact/provenance checks passed, 0 failed, with 3 explicitly manual items.
 
-## Final four Canvas file hashes
+## Historical 2026-10-15 Canvas file hashes
 
 | File | SHA-256 |
 |---|---|

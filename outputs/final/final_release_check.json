@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verification_date": "2026-10-15",
+  "verification_date": "2026-10-16",
   "checks": [
     {
       "name": "required artifacts",
@@ -20,12 +20,12 @@
     {
       "name": "Overleaf source contents",
       "status": "PASS",
-      "evidence": "14 files; required sources present"
+      "evidence": "13 files; required sources present"
     },
     {
       "name": "Overleaf paper-specific figure sources",
       "status": "PASS",
-      "evidence": "canonical={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': 'f1e9e6d73b27fe419c11a70a8d6504f9372d404cbb0d6eb314b01016c16ba228', 'figures/research_roadmap_paper.tex': '2dc20bda0872f3360853c427c4902af1cb773b23f7f66faf62228ea88d35380f'}; packed={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': 'f1e9e6d73b27fe419c11a70a8d6504f9372d404cbb0d6eb314b01016c16ba228', 'figures/research_roadmap_paper.tex': '2dc20bda0872f3360853c427c4902af1cb773b23f7f66faf62228ea88d35380f'}"
+      "evidence": "canonical={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': '1187488e59949a4bce7eafcb59caff92ae7fa5f22c5bcaae24a4f834f1013419', 'figures/research_roadmap_paper.tex': '6ae1a7213b651e1b0c8983366c957944379c69e09adda87f724f2462ae8dde5a'}; packed={'figures/ps2_teaser.tex': 'a91c62e060936a22fad9175b4f813276c39eaa87fe9967e7d0374e728aa9a7bc', 'figures/intellectual_merits_paper.tex': 'eb5e69c9979704d28fb1d2fd4fcb8b7dd1b97a572a30350240bdff11b071c295', 'figures/practical_impacts_paper.tex': '1187488e59949a4bce7eafcb59caff92ae7fa5f22c5bcaae24a4f834f1013419', 'figures/research_roadmap_paper.tex': '6ae1a7213b651e1b0c8983366c957944379c69e09adda87f724f2462ae8dde5a'}"
     },
     {
       "name": "poster geometry",
@@ -105,12 +105,17 @@
     {
       "name": "tested commit recorded",
       "status": "PASS",
-      "evidence": "96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38"
+      "evidence": "722211568f1244013071c2d7f126486b4bd259bb"
     },
     {
-      "name": "poster version label",
+      "name": "frozen poster provenance",
       "status": "PASS",
-      "evidence": "Validated source commit is present; stale pending label absent"
+      "evidence": "Unmodified poster retains its own validated source commit"
+    },
+    {
+      "name": "release commit roles",
+      "status": "PASS",
+      "evidence": "Validated source and artifact-generation source are recorded separately"
     },
     {
       "name": "Canvas text uses main links",
@@ -120,7 +125,32 @@
     {
       "name": "Canvas text version",
       "status": "PASS",
-      "evidence": "Validated source commit and audited-final wording present"
+      "evidence": "Canvas text names the validated source commit and the current final correction"
+    },
+    {
+      "name": "Canvas commit roles",
+      "status": "PASS",
+      "evidence": "Canvas text distinguishes source, package, and published merge provenance"
+    },
+    {
+      "name": "artifact packaging commit",
+      "status": "PASS",
+      "evidence": "Exact packaging commit is recorded in the manifest and Canvas entry"
+    },
+    {
+      "name": "published merge status",
+      "status": "PASS",
+      "evidence": "No merge commit is claimed before publication"
+    },
+    {
+      "name": "manifest Canvas hashes and sizes",
+      "status": "PASS",
+      "evidence": "All four Canvas artifacts match the manifest SHA-256 and byte size"
+    },
+    {
+      "name": "manifest verification counts",
+      "status": "PASS",
+      "evidence": "Manifest records 70 passing tests and 39 validator passes, plus four human-only checks"
     },
     {
       "name": "Appendices A\u2013G",
@@ -138,6 +168,36 @@
       "evidence": "Paper acknowledgment section present"
     },
     {
+      "name": "official SDG icons in paper source",
+      "status": "PASS",
+      "evidence": "Official Goal 9 and Goal 11 assets packaged"
+    },
+    {
+      "name": "roadmap five fields",
+      "status": "PASS",
+      "evidence": "Each of the three Appendix G roadmap studies labels all five required fields"
+    },
+    {
+      "name": "SDG target claims",
+      "status": "PASS",
+      "evidence": "Paper diagram labels targets 9.1 and 11.2 and qualifies 11.2 as indirect/prospective"
+    },
+    {
+      "name": "Figure 1 evidence alignment",
+      "status": "PASS",
+      "evidence": "Caption describes two plotted welfare series and separates CCAR"
+    },
+    {
+      "name": "license wording",
+      "status": "PASS",
+      "evidence": "No nonexistent root project license is claimed"
+    },
+    {
+      "name": "AI model wording",
+      "status": "PASS",
+      "evidence": "Unverified model-family claim removed"
+    },
+    {
       "name": "visual and scientific quality",
       "status": "MANUAL VERIFICATION REQUIRED",
       "evidence": "Automated structure checks cannot establish scientific quality or visual legibility"
@@ -151,18 +211,29 @@
       "name": "author and Canvas confirmation",
       "status": "MANUAL VERIFICATION REQUIRED",
       "evidence": "Yiqiao Liu must review and upload the four required files"
+    },
+    {
+      "name": "hosted Colab and live Hugging Face interactions",
+      "status": "MANUAL VERIFICATION REQUIRED",
+      "evidence": "Local execution/source parity does not establish hosted notebook execution or human click-through"
     }
   ],
   "canvas_hashes": {
-    "submission/final/Final-FP10-ShareOrHide.pdf": "4009b7eeea35395cc8eae2626e6c3df640d0d81bd8db30cade1fe47ac08666a1",
-    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "4a2f8933ab392f25ad0d73fba88516a375010deeb2224ca4b960c213604bca39",
+    "submission/final/Final-FP10-ShareOrHide.pdf": "b4e650f82984bc4a2d45d93b5e594fbb4c8cc03a14a84de6226e51939fa98e61",
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": "f537aa1889f282cb325c59ad0c3bd2659b0178bdff47f456a21549eba4600cb0",
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": "a74674943ef589690d93f8a3136add833db0d68024ccd92d840a61b3d1a20372",
     "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": "289fabc9c55c4947bf843745bd9ae59a8d5a28b8feadfedd1c33fde6815e5b02"
+  },
+  "canvas_file_sizes": {
+    "submission/final/Final-FP10-ShareOrHide.pdf": 610359,
+    "submission/final/Final-FP10-ShareOrHide-Overleaf-Source.zip": 168461,
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pptx": 1664002,
+    "submission/final/Final-FP10-ShareOrHide-A0-Poster.pdf": 1741611
   },
   "auxiliary_hashes": {
     "poster/final-poster.png": "314cfa2453eeceb9b7a9edbaaaacd8fa6c8b9b27dcddc8e24dcf97a8bd58e3ef"
   },
-  "automated_passed": 27,
+  "automated_passed": 39,
   "automated_failed": 0,
-  "manual_required": 3
+  "manual_required": 4
 }

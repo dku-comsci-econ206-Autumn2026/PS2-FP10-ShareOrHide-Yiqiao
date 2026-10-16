@@ -2,7 +2,7 @@
   x=1cm,y=1cm,
   every node/.style={font=\sffamily\scriptsize,text=CourseInk,align=left},
   main/.style={draw=CourseBlue,rounded corners=2pt,fill=CourseBlue!5,text width=4.85cm,minimum height=1.32cm,inner sep=6pt},
-  target/.style={draw=orange!85!black,rounded corners=2pt,fill=orange!6,text width=7.75cm,minimum height=1.18cm,inner sep=6pt},
+  target/.style={draw=orange!85!black,rounded corners=2pt,fill=orange!6,text width=6.15cm,minimum height=1.35cm,inner sep=6pt},
   status/.style={draw=CourseTeal,rounded corners=2pt,fill=CourseTeal!7,text width=16.25cm,minimum height=.75cm,inner sep=6pt},
   flow/.style={-{Stealth[length=2.4mm,width=1.8mm]},line width=.9pt,CourseInk}
 ]
@@ -11,8 +11,10 @@
 \node[main] (indicator) at (14.8,4.25) {\textbf{Indicator and baseline}\\Mean coordination delay and access disparity under CCAR versus baseline; current evidence is welfare-gap computation only.};
 \draw[flow] (mechanism.east)--(stakeholders.west);
 \draw[flow] (stakeholders.east)--(indicator.west);
-\node[target] (sdg9) at (4.55,2.48) {\textbf{SDG target 9.1 -- potential}\\Reliable, sustainable, resilient and equitable infrastructure. Needed evidence: operational reliability, affordability, and access outcomes.};
-\node[target] (sdg11) at (12.95,2.48) {\textbf{SDG target 11.2 -- potential}\\Safe, affordable, accessible and sustainable transport. Needed evidence: public access, safety, and sustainability effects.};
+\node[inner sep=0] (icon9) at (1.05,2.48) {\includegraphics[width=1.28cm,height=1.28cm,keepaspectratio]{figures/E_WEB_09.png}};
+\node[target] (sdg9) at (4.78,2.48) {\textbf{SDG target 9.1 -- prospective}\\Possible infrastructure-coordination link. Needed evidence: operational reliability, affordability, and equitable-access outcomes.};
+\node[inner sep=0] (icon11) at (9.42,2.48) {\includegraphics[width=1.28cm,height=1.28cm,keepaspectratio]{figures/E_WEB_11.png}};
+\node[target] (sdg11) at (13.15,2.48) {\textbf{SDG target 11.2 -- indirect, prospective}\\Possible future urban-logistics link; no passenger/public-transport access or field-safety outcome is demonstrated.};
 \node[status] (status) at (8.75,.78) {\textbf{Evidence and safeguards.} Reproducible stylized computation supports academic scrutiny. Field use remains unverified and would require a safety floor, audit, appeal, privacy review, distributional checks, and suspension on adverse diagnostics.};
 \draw[flow] (sdg9.south)--(sdg9.south|-status.north);
 \draw[flow] (sdg11.south)--(sdg11.south|-status.north);

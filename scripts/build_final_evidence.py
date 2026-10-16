@@ -49,7 +49,7 @@ OUTPUT = ROOT / "outputs" / "final"
 FIGURES = ROOT / "figures" / "final"
 TOL = 1e-10
 BENCHMARK_ALPHA = 0.7
-VERIFICATION_DATE = "2026-10-15"
+VERIFICATION_DATE = "2026-10-16"
 
 
 def git_value(*args: str) -> str:
@@ -301,6 +301,8 @@ def make_figures(benchmark: list[dict[str, object]], robustness: list[dict[str, 
         fig.savefig(FIGURES / f"welfare_comparison.{suffix}", dpi=220 if suffix == "png" else None, bbox_inches="tight")
     plt.close(fig)
 
+    make_paper_welfare_figure(benchmark)
+
     diagnostics = [
         "No effect on equilibrium set",
         "Robust welfare improvement",
@@ -338,9 +340,68 @@ def make_figures(benchmark: list[dict[str, object]], robustness: list[dict[str, 
     plt.close(fig)
 
 
+def make_paper_welfare_figure(benchmark: list[dict[str, object]]) -> None:
+    """Write the half-page-width A4 welfare chart without touching poster assets."""
+    plt.rcParams.update({"font.family": "DejaVu Sans"})
+    baseline = [row for row in benchmark if row["Mechanism"] == "Baseline"]
+    labels = [str(row["Congestion"]) for row in baseline]
+    bne = [float(row["Underlying welfare"]) for row in baseline]
+    first_best = [float(row["Full-information first-best welfare"]) for row in baseline]
+    gaps = [float(row["Welfare gap"]) for row in baseline]
+    x = np.arange(len(labels))
+    width = 0.34
+    # The main figure is placed at roughly half-page width, so this version
+    # uses deliberately larger type and shorter labels.
+    fig, ax = plt.subplots(figsize=(6.4, 3.35))
+    left = ax.bar(x - width / 2, bne, width, label="Pure BNE", color="#1F4E79")
+    right = ax.bar(
+        x + width / 2,
+        first_best,
+        width,
+        label="First best",
+        color="#D97706",
+        hatch="//",
+    )
+    ax.bar_label(left, labels=[f"{v:.3f}" for v in bne], padding=3, fontsize=13)
+    ax.bar_label(right, labels=[f"{v:.3f}" for v in first_best], padding=3, fontsize=13)
+    for index, gap in enumerate(gaps):
+        ax.text(
+            index,
+            max(bne[index], first_best[index]) + 0.90,
+            f"gap {gap:.3f}",
+            ha="center",
+            fontsize=13,
+            weight="bold",
+        )
+    ax.set_xticks(x, labels, fontsize=14)
+    ax.tick_params(axis="y", labelsize=13)
+    ax.set_ylabel("Expected welfare", fontsize=14)
+    ax.set_ylim(0, max(first_best) + 1.5)
+    ax.set_title("Baseline BNE versus first best", fontsize=16, pad=10)
+    ax.legend(frameon=False, ncol=2, loc="upper left", fontsize=13)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    for suffix in ("png", "pdf", "svg"):
+        figure_path = FIGURES / f"welfare_comparison_paper.{suffix}"
+        fig.savefig(
+            figure_path,
+            dpi=220 if suffix == "png" else None,
+            bbox_inches="tight",
+        )
+        if suffix == "svg":
+            figure_path.write_text(
+                "\n".join(line.rstrip() for line in figure_path.read_text(encoding="utf-8").splitlines()) + "\n",
+                encoding="utf-8",
+            )
+    plt.close(fig)
+
+
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     FIGURES.mkdir(parents=True, exist_ok=True)
+    if "--paper-chart-only" in sys.argv:
+        make_paper_welfare_figure(benchmark_rows())
+        return
     benchmark = benchmark_rows()
     robustness = robustness_rows()
     belief = belief_sensitivity_rows()
@@ -408,7 +469,7 @@ def main() -> None:
     write_json(OUTPUT / "experiment_manifest.json", experiment_manifest)
 
     figures = []
-    for stem in ("welfare_comparison", "ccar_robustness"):
+    for stem in ("welfare_comparison", "welfare_comparison_paper", "ccar_robustness"):
         for suffix in ("svg", "pdf", "png"):
             path = FIGURES / f"{stem}.{suffix}"
             figures.append(
@@ -421,6 +482,8 @@ def main() -> None:
             )
     write_json(OUTPUT / "figure_metadata.json", {"figures": figures})
 
+    generation_commit = git_value("rev-parse", "HEAD")
+    validated_source_commit = os.environ.get("FP10_TESTED_COMMIT", generation_commit)
     release_manifest = {
         "project_title": "Share or Hide? Strategic Disclosure in Congested Low-Altitude Drone Traffic",
         "team": "FP10",
@@ -428,10 +491,13 @@ def main() -> None:
         "course": "COMSCI/ECON 206 - Computational Microeconomics",
         "term": "Autumn 2026, Session 1",
         "model_version": "fp10-disclosure-v1-preserved",
-        "source_commit_at_generation": git_value("rev-parse", "HEAD"),
-        "tested_commit": os.environ.get(
-            "FP10_TESTED_COMMIT", "PENDING_FINAL_VERIFICATION_COMMIT"
+        "source_commit_at_generation": generation_commit,
+        "validated_source_commit": validated_source_commit,
+        "tested_commit": validated_source_commit,
+        "poster_source_commit": os.environ.get(
+            "FP10_POSTER_SOURCE_COMMIT", "96a1c3a5276267ff6a039d9a11a3d9c4b2cfce38"
         ),
+        "published_merge_commit": None,
         "git_branch": git_value("branch", "--show-current"),
         "verification_date": VERIFICATION_DATE,
         "parameters": {
@@ -466,6 +532,35 @@ def main() -> None:
             "python": platform.python_version(),
             "numpy": importlib.metadata.version("numpy"),
             "matplotlib": importlib.metadata.version("matplotlib"),
+        },
+        "execution_contexts": {
+            "original_baseline_and_notebook_outputs": {
+                "source": "outputs/tables/disclosure_run_metadata.csv and auction_run_metadata.csv",
+                "python": "3.13.7",
+                "numpy": "2.3.5",
+                "matplotlib": "3.10.8",
+            },
+            "final_evidence_and_figure_generation": {
+                "source": "captured by scripts/build_final_evidence.py at generation time",
+                "python": platform.python_version(),
+                "numpy": importlib.metadata.version("numpy"),
+                "matplotlib": importlib.metadata.version("matplotlib"),
+            },
+            "prior_2026_10_03_test_freeze": {
+                "source": "submission/test_report.md",
+                "python": "3.13.5",
+                "node": "22.22.2",
+                "numpy": "NOT_RECORDED",
+                "matplotlib": "NOT_RECORDED",
+            },
+            "final_validation": {
+                "source": "docs/final/release_readiness.md",
+                "status": "RECORDED_AFTER_FINAL_TEST_RUN",
+            },
+            "paper_compilation": {
+                "source": "clean extracted Overleaf build log",
+                "status": "RECORDED_AFTER_FINAL_BUILD",
+            },
         },
     }
     write_json(OUTPUT / "release_manifest.json", release_manifest)
