@@ -167,7 +167,7 @@ If the live Space is unavailable during presentation, use the tracked [current d
 - **Hugging Face source:** repository static and Gradio counterparts pass 32 automated checks; live deployed-source parity is reported separately.
 - **GitHub:** course-organization source repository.
 
-Python 3.13 is recommended. From a fresh clone:
+Python 3.13 is recommended. The canonical baseline notebooks and final evidence figures record Python 3.13.7, NumPy 2.3.5, and Matplotlib 3.10.8. A separate 3 October test freeze used Python 3.13.5 and Node 22.22.2; it is not the figure-generation environment. Current validation and LaTeX compiler versions are reported in `docs/final/release_readiness.md`. From a fresh clone:
 
 ```bash
 git clone https://github.com/dku-comsci-econ206-Autumn2026/PS2-FP10-ShareOrHide-Yiqiao.git

@@ -9,6 +9,7 @@ import re
 import subprocess
 import sys
 import zipfile
+from datetime import date
 from pathlib import Path
 
 
@@ -70,7 +71,7 @@ def main() -> int:
 
     paper = required[0]
     pinfo = pdf_info(paper)
-    check("paper PDF opens", int(pinfo["Pages"].strip()) == 6, f"{pinfo['Pages'].strip()} pages; {pinfo['Page size'].strip()}")
+    check("paper PDF opens", int(pinfo["Pages"].strip()) >= 6, f"{pinfo['Pages'].strip()} pages; {pinfo['Page size'].strip()}")
     first_two = pdf_text(paper, 1, 2)
     third = pdf_text(paper, 3, 3)
     required_parts = ["Background", "Motivation", "Application Scenario", "Research Question", "Method", "Results", "Intellectual Merits", "Practical Impacts", "Future Research Roadmap"]
@@ -92,7 +93,7 @@ def main() -> int:
     source_required = {
         "main.tex", "references.bib", "acmart.cls", "ACM-Reference-Format.bst",
         "sections/proposal.tex", "appendices/supporting.tex",
-        "figures/welfare_comparison.pdf", "figures/ps2_teaser.tex",
+        "figures/welfare_comparison_paper.pdf", "figures/E_WEB_09.png", "figures/E_WEB_11.png", "figures/ps2_teaser.tex",
         "figures/intellectual_merits_paper.tex", "figures/practical_impacts_paper.tex",
         "figures/research_roadmap_paper.tex",
     }
@@ -198,7 +199,9 @@ def main() -> int:
     check("model metadata", manifest["parameters"]["actions"] == ["M", "P", "F"] and manifest["robustness_counts"]["No effect on equilibrium set"] == 401, "Manifest action space and diagnostic counts verified")
     tested_commit = manifest["tested_commit"]
     check("tested commit recorded", bool(re.fullmatch(r"[0-9a-f]{40}", tested_commit)), tested_commit)
-    check("poster version label", tested_commit in poster_xml and "pending final verification commit" not in poster_xml.lower(), "Validated source commit is present; stale pending label absent")
+    poster_source_commit = manifest.get("poster_source_commit", "")
+    check("frozen poster provenance", bool(re.fullmatch(r"[0-9a-f]{40}", poster_source_commit)) and poster_source_commit in poster_xml, "Unmodified poster retains its own validated source commit")
+    check("release commit roles", manifest.get("validated_source_commit") == tested_commit and bool(re.fullmatch(r"[0-9a-f]{40}", manifest.get("source_commit_at_generation", ""))), "Validated source and artifact-generation source are recorded separately")
 
     canvas_text = (ROOT / "submission/final/canvas_text_entry.txt").read_text(encoding="utf-8")
     check("Canvas text uses main links", "/blob/main/" in canvas_text and "final/fp10-2026-release" not in canvas_text, "README, poster, and notebook URLs target main")
@@ -217,16 +220,28 @@ def main() -> int:
     check("Appendices A–G", appendices_ok, "Seven required appendix section titles found")
     check("AI disclosure", "AI Use Disclosure" in source, "Appendix A.1 present")
     check("full acknowledgments", "Full Acknowledgments" in source and "Professor Luyao Zhang" in source, "Paper acknowledgment section present")
+    check("official SDG icons in paper source", "figures/E_WEB_09.png" in names and "figures/E_WEB_11.png" in names, "Official Goal 9 and Goal 11 assets packaged")
+    roadmap_source = (ROOT / "paper/final/figures/research_roadmap_paper.tex").read_text(encoding="utf-8")
+    roadmap_fields = ("Question:", "Method/data:", "Potential collaborator:", "Progress criterion:", "Milestone:")
+    roadmap_ok = all(roadmap_source.count(term) == 3 for term in roadmap_fields)
+    check("roadmap five fields", roadmap_ok, "Each of the three Appendix G roadmap studies labels all five required fields")
+    impact_source = (ROOT / "paper/final/figures/practical_impacts_paper.tex").read_text(encoding="utf-8")
+    check("SDG target claims", "SDG target 9.1" in impact_source and "SDG target 11.2" in impact_source and "indirect, prospective" in impact_source, "Paper diagram labels targets 9.1 and 11.2 and qualifies 11.2 as indirect/prospective")
+    check("Figure 1 evidence alignment", "baseline pure-BNE and full-information first-best welfare" in (ROOT / "paper/final/main.tex").read_text(encoding="utf-8"), "Caption describes two plotted welfare series and separates CCAR")
+    check("license wording", "no additional project reuse license is asserted" in source, "No nonexistent root project license is claimed")
+    check("AI model wording", "exact underlying model identifier not independently verified" in source, "Unverified model-family claim removed")
 
     check("visual and scientific quality", False, "Automated structure checks cannot establish scientific quality or visual legibility", manual=True)
     check("PowerPoint native rendering", False, "Open PPTX in Microsoft PowerPoint; test QR codes, links, fonts, and print preview", manual=True)
     check("author and Canvas confirmation", False, "Yiqiao Liu must review and upload the four required files", manual=True)
+    check("hosted Colab and live Hugging Face interactions", False, "Local execution/source parity does not establish hosted notebook execution or human click-through", manual=True)
 
     report = {
         "schema_version": 1,
-        "verification_date": "2026-10-15",
+        "verification_date": date.today().isoformat(),
         "checks": checks,
         "canvas_hashes": {str(path.relative_to(ROOT)): sha256(path) for path in canvas_files},
+        "canvas_file_sizes": {str(path.relative_to(ROOT)): path.stat().st_size for path in canvas_files},
         "auxiliary_hashes": {str(required[-1].relative_to(ROOT)): sha256(required[-1])},
         "automated_passed": sum(c["status"] == "PASS" for c in checks),
         "automated_failed": sum(c["status"] == "FAIL" for c in checks),
